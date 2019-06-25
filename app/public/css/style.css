@@ -607,6 +607,11 @@ cite {
   border: 2px solid transparent;
   color: #fff;
 }
+.checkboxclass{
+  margin: 4px 6px 4px !important; 
+  width: 17px; 
+  height: 17px;
+}
 .general-btn {
   clear: both;
   margin-top: 60px;
