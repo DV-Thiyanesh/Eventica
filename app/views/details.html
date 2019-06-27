@@ -1,73 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="utf-8" />
+<meta charset="utf-8" />
 
 <!-- Mobile Specific Metas
 ================================================== -->
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
 
-  <!-- Site Title -->
-  <title>Home | Document</title>
+<!-- Site Title -->
+<title>Home | Document</title>
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="http://www.eventica.io/images/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="http://www.eventica.io/images/favicon.ico" type="image/x-icon" />
-  <!-- CSS
+<!--Favicon-->
+<link rel="shortcut icon" href="http://www.eventica.io/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="http://www.eventica.io/images/favicon.ico" type="image/x-icon" />
+<!-- CSS
     ================================================== -->
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <!-- Template styles-->
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Responsive styles-->
-  <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="css/font-awesome.css" />
-  <!-- Animation -->
-  <!-- <link rel="stylesheet" href="css/animate.css"> -->
-  <!-- Colorbox -->
-  <link rel="stylesheet" href="css/colorbox.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel='stylesheet' id='tf_numbers-style-css'
-    href='https://eventica.pro/wp-content/plugins/tf-numbers-number-counter-animaton/assets/css/style.css?ver=4.9.10'
-    type='text/css' media='all' />
-  <style>
-    p {
-      padding-left: 10px;
-      text-align: justify;
-    }
-    .box {
-      overflow: hidden;
-      display: block;
-      /* padding:  0; */
-    }
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.css" />
+<!-- Template styles-->
+<link rel="stylesheet" href="css/style.css" />
+<!-- Responsive styles-->
+<!-- <link rel="stylesheet" href="css/responsive.css"> -->
+<!-- FontAwesome -->
+<link rel="stylesheet" href="css/font-awesome.css" />
+<!-- Animation -->
+<!-- <link rel="stylesheet" href="css/animate.css"> -->
+<!-- Colorbox -->
+<link rel="stylesheet" href="css/colorbox.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel='stylesheet' id='tf_numbers-style-css'
+  href='https://eventica.pro/wp-content/plugins/tf-numbers-number-counter-animaton/assets/css/style.css?ver=4.9.10'
+  type='text/css' media='all' />
+<style>
+  p {
+    padding-left: 10px;
+    text-align: justify;
+  }
 
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
-      width: 100%;
-      border-radius: 10px;
-      float: left;
-      border-right: 5px;
-      background: #e0dbdb;
-    }
+  .box {
+    overflow: hidden;
+    display: block;
+    
+  }
 
-    .row .column .card {
-      float: left;
-    }
+  #myform {
+    text-align: center;
+    padding: 5px;
+    margin: 2%;
+  }
 
-    /* img {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    } */
+  .qty {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
 
-    /* .description {
-      padding: 0px 1px 50px 2px;
-    } */
-  </style>
-</head>
+  .qtyplus {
+    width: 25px;
+    height: 25px;
+  }
+
+  .qtyminus {
+    width: 25px;
+    height: 25px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 10px;
+    float: left;
+    border-right: 5px;
+    background: #e0dbdb;
+  }
+
+  .row .column .card {
+    float: left;
+  }
+
+  .tickets {
+    padding-top: 10px;
+    color: blueviolet;
+    font-weight: bold;
+  }
+
+  .ticket-button {
+
+    padding-left: 150px;
+
+  }
+
+  .vl {
+    border-left: 2px solid green;
+    height: 150px;
+    position: absolute;
+    left: -5%;
+    /* margin-left: -3px; */
+    top: 0;
+  }
+
+  .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+  .label {
+    padding-left: 10px;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+
+  }
+
+  .qty {
+    height: 33px;
+    border-radius: 0;
+    font-size: 16px
+      /* width: 3.631em;
+    text-align: center; */
+  }
+
+  .input {
+
+    line-height: normal;
+    max-width: 100%;
+    padding: 7px;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+
+
+
+ 
+</style>
+</head> 
 
 <body>
   <div class="body-inner">
@@ -90,363 +164,277 @@
             <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Home </a></li>
-                <!-- <li><a href="#ts-intro">About Us</a></li> -->
+               
                 <li><a href="/events">Events</a></li>
-                <!-- <li><a href="#ts-speakers">Why Eventica?</a></li>
-                        <li><a href="#ts-schedule">What we do?</a></li> -->
-                <!-- <li><a href="#ts-pricing">Our Team</a> </li> -->
+               
                 <li><a href="/merchant">Merchandise</a></li>
-                <!-- <li><a href="#ts-sponsors">Coin Sale</a> </li> -->
-                <!-- <li><a href="#ts-pricing-1">Road Map</a></li>
-                        <li><a href="#ts-sponsors-1">Contact Us </a></li> -->
-                <!-- <li class="header-ticket">
-                          <a
-                            class="ticket-btn btn-primary"
-                            href="http://www.eventica.io/invest.php"
-                            ><i class="fa fa-dollar"></i> Invest</a
-                          >
-                        </li>
-                        <li class="header-ticket">
-                          <a
-                            class="ticket-btn btn-primary"
-                            href="http://www.eventica.io/logout.php"
-                            ><i class="fa fa-sign-out" aria-hidden="true"></i>
-                            Logout</a
-                          >
-                        </li> -->
-                </ul>
-              </nav>
-            </div>
+               
+              </ul>
+            </nav>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <h3 style="padding-left: 530px;">Start-up Events</h3>
+  <section style="margin-top: 0px; padding-top: 0px;">
+    <div class="col-md-6">
+      <img src="images/index11.png" alt="Avatar" style="width:100%" />
     </div>
+    <h2>Description</h2>
+    <div class="col-md-6">
+      <p>
+        &nbsp;&nbsp;&nbsp;An open house is a particularly warm way to
+        introduce your company to your potential hires. Hosting this event
+        after work is a good idea, as is selecting some key team members to
+        mingle with your guests. Your goal is to create a relaxed environment
+        and get useful conversations going, so keep the agenda simple and
+        casual. Networking, food and drinks and maybe a short talk or Q&A.
+        Simple doesn’t have to mean boring. Your attendees will be leaving
+        work to come to your event instead of going straight home. Make the
+        trip worth it. We like these examples of recruitment events from
+        Summa, a software company, and Bayada Pediatrics, a home healthcare
+        company. They’ve clearly thought about how to make their open house a
+        valuable experience for their candidates.
+      </p>
+    </div>
+  </section>
+  <br />
+  <br />
+  <div class="intro-pos">
     <br />
-    <br />
-    <br />
-    <br />
-    <h3 style="padding-left: 530px;">Start-up Events</h3>    
-     <section style="margin-top: 0px; padding-top: 0px;">
-      <div class="col-md-6">
-        <img src="images/index11.png" alt="Avatar" style="width:100%" />
-      </div>
-      <h2>Description</h2>
-      <div class="col-md-6">        
-        <p>
-          &nbsp;&nbsp;&nbsp;An open house is a particularly warm way to
-          introduce your company to your potential hires. Hosting this event
-          after work is a good idea, as is selecting some key team members to
-          mingle with your guests. Your goal is to create a relaxed environment
-          and get useful conversations going, so keep the agenda simple and
-          casual. Networking, food and drinks and maybe a short talk or Q&A.
-          Simple doesn’t have to mean boring. Your attendees will be leaving
-          work to come to your event instead of going straight home. Make the
-          trip worth it. We like these examples of recruitment events from
-          Summa, a software company, and Bayada Pediatrics, a home healthcare
-          company. They’ve clearly thought about how to make their open house a
-          valuable experience for their candidates.
-        </p>
-      </div>
-    </section>
-    <br />
-    <br />
-    <div class="intro-pos">
-      <br />
-      <div class="col-md-6">
-        <!-- <p> -->
-          <input
-            type="radio"
-            name="S"
-            value="S"
-            class="checkboxclass"
-          />Before Booking 1 month 1000 EVN <br />
-          <input
-            type="radio"
-            name="S"
-            value="S"
-            class="checkboxclass"
-          />Before Booking 15 days 1200 EVN <br />
-          <input type="radio" name="S" value="S" class="checkboxclass" />
-          Booking On Price 1500 EVN <br />
-        <!-- </p> -->
-        <div class="col-md-12">
-             <div class="form-group">
-              <input
-                type="number"
-                class="form-control form-control-name"
-                placeholder="How Many Participants"
-                name="number"
-                required=""
-              />
-            </div>
-           </div>
-               <button class="button buttonblue" style="margin-left: 60px;">
+    <div class="col-md-6">
+      <!-- <p> -->
+      <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 1 month 1000 EVN <br />
+      <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 15 days 1200 EVN <br />
+      <input type="radio" name="S" value="S" class="checkboxclass" />
+      Booking On Price 1500 EVN <br />
+      <div>
+        <label class="tickets">No.of.participants:</label>
+
+        <!-- <div class="quantity"> -->
+          <label class="screen-reader-text" for="quantity_5d130afe5e553">Quantity</label>
+          <input type="number" id="quantity_5d130afe5e553" class="input-text qty text" step="1" min="1" max=""
+            name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric"
+            aria-labelledby="Bitcoin Payment quantity" />
+        <!-- </div> -->
+        <button class="button buttonblue" style="margin-left: 60px; margin-top: 10px; ">
           <i class="fa fa-inr" aria-hidden="true"></i> BUY TICKET
         </button>
       </div>
 
-      <div class="col-md-6">
-        <div class="col-md-12">
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control form-control-email"
-              placeholder="Email"
-              name="email"
-              required=""
-            />
+
+
+    </div>
+  
+
+    <div class="vl"></div>
+    <div class="col-md-6">
+      <div class="col-md-12">
+        <div class="vl"></div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control-email" placeholder="Email" name="email" required="" />
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" class="form-control form-control-email" placeholder="Email" name="email" required="" />
+        </div>
+      </div>
+      <button class="button buttonblue" style="margin-left:35px; margin-top:35px;">
+        <i class="fa fa-share-alt" aria-hidden="true"></i> REFER TO FRIENDS
+      </button>
+    </div>
+  </div>
+  <h3 style="padding-left: 530px;"> Event Speakers</h3>
+  <div class="container">
+    <div class="row">
+      <div class=" col-sm-12 col-md-3">
+        <div class="team-item at-gray-bg init-animate zoomIn">
+          <div class="team-author">
+
+            <img width="250" height="300" src="images/speaker1.jpg" />
+            <div class="team-author-details ">
+              <h4 class="team-name"><a href="#" rel="bookmark">Tina Karki</a>
+              </h4>
+              <div class="team-details">
+                <p>Director<br />
+                  Egar Company</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-12">
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control form-control-email"
-              placeholder="Email"
-              name="email"
-              required=""
-            />
+      </div>
+      <div class=" col-sm-12 col-md-3">
+        <div class="team-item at-gray-bg init-animate zoomIn">
+          <div class="team-author">
+
+            <img width="250" height="300" src="images/speaker2.jpg" />
+
+            <div class="team-author-details ">
+              <h4 class="team-name"><a href="#" rel="bookmark">Laci Dobra</a>
+              </h4>
+              <div class="team-details">
+                <p>Director<br />
+                  Ferra Company</p>
+              </div>
+            </div>
           </div>
         </div>
-              <button class="button buttonblue" style="margin-left:35px; margin-top:40px;">
-          <i class="fa fa-share-alt" aria-hidden="true"></i> REFER TO FRIENDS
-        </button>
+      </div>
+      <div class=" col-sm-12 col-md-3">
+        <div class="team-item at-gray-bg init-animate zoomIn">
+          <div class="team-author">
+
+            <img width="250" height="300" src="images/speaker3.jpg" />
+            <div class="team-author-details ">
+              <h4 class="team-name"><a href="#" rel="bookmark">Asle Jenny</a>
+              </h4>
+              <div class="team-details">
+                <p>Director<br />
+                  Beta Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-3">
+        <div class="team-item at-gray-bg init-animate zoomIn">
+          <div class="team-author">
+            <img width="250" height="300" src="images/speaker4.jpg" />
+            <div class="team-author-details ">
+              <h4 class="team-name"><a href="#" rel="bookmark">John Doe</a>
+              </h4>
+              <div class="team-details">
+                <p>Director<br />
+                  Acme Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='clearfix'></div>
+    </div>
+    <div class=" col-sm-12 col-md-3">
+      <div class="team-item at-gray-bg init-animate zoomIn">
+        <div class="team-author">
+
+          <img width="250" height="300" src="images/speaker5.jpg" class="attachment-full size-full wp-post-image" />
+          <div class="team-author-details ">
+            <h4 class="team-name"><a href="#" rel="bookmark">Belmiro</a></h4>
+            <div class="team-details">
+              <p>Director<br />
+                Hire Company</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <h3 style="padding-left: 530px;"> Event Speakers</h3>
-    <div class="container">        
-        <div class="row">
-          <div class=" col-sm-12 col-md-3">
-            <div class="team-item at-gray-bg init-animate zoomIn">
-              <div class="team-author">
-    
-                <img width="250" height="300" src="images/speaker1.jpg" />
-                <div class="team-author-details ">
-                  <h4 class="team-name"><a href="#" rel="bookmark">Tina Karki</a>
-                  </h4>
-                  <div class="team-details">
-                    <p>Director<br />
-                      Egar Company</p>
-                  </div>
-                </div>
-              </div>
+    <div class=" col-sm-12 col-md-3">
+      <div class="team-item at-gray-bg init-animate zoomIn">
+        <div class="team-author">
+
+          <img width="250" height="300" src="images/speaker6.jpg" />
+          <div class="team-author-details ">
+            <h4 class="team-name"><a href="#" rel="bookmark">Pona Moon</a></h4>
+            <div class="team-details">
+              <p>Director<br />
+                Crayon Company</p>
             </div>
-          </div>
-          <div class=" col-sm-12 col-md-3">
-            <div class="team-item at-gray-bg init-animate zoomIn">
-              <div class="team-author">
-    
-                <img width="250" height="300" src="images/speaker2.jpg" />
-    
-                <div class="team-author-details ">
-                  <h4 class="team-name"><a href="#" rel="bookmark">Laci Dobra</a>
-                  </h4>
-                  <div class="team-details">
-                    <p>Director<br />
-                      Ferra Company</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class=" col-sm-12 col-md-3">
-            <div class="team-item at-gray-bg init-animate zoomIn">
-              <div class="team-author">
-    
-                <img width="250" height="300" src="images/speaker3.jpg" />
-                <div class="team-author-details ">
-                  <h4 class="team-name"><a href="#" rel="bookmark">Asle Jenny</a>
-                  </h4>
-                  <div class="team-details">
-                    <p>Director<br />
-                      Beta Company</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class=" col-sm-12 col-md-3">
-            <div class="team-item at-gray-bg init-animate zoomIn">
-              <div class="team-author">
-                              <img width="250" height="300" src="images/speaker4.jpg" />
-                  <div class="team-author-details ">
-                    <h4 class="team-name"><a href="#" rel="bookmark">John Doe</a>
-                    </h4>
-                    <div class="team-details">
-                      <p>Director<br />
-                        Acme Company</p>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class='clearfix'></div>
-        </div>
-        <div class=" col-sm-12 col-md-3">
-          <div class="team-item at-gray-bg init-animate zoomIn">
-            <div class="team-author">
-              
-                <img width="250" height="300" src="images/speaker5.jpg"
-                  class="attachment-full size-full wp-post-image"/> 
-              <div class="team-author-details ">
-                <h4 class="team-name"><a href="#" rel="bookmark">Belmiro</a></h4>
-                <div class="team-details">
-                  <p>Director<br />
-                    Hire Company</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" col-sm-12 col-md-3">
-          <div class="team-item at-gray-bg init-animate zoomIn">
-            <div class="team-author">
-              
-                <img width="250" height="300" src="images/speaker6.jpg"/> 
-              <div class="team-author-details ">
-                <h4 class="team-name"><a href="#" rel="bookmark">Pona Moon</a></h4>
-                <div class="team-details">
-                  <p>Director<br />
-                    Crayon Company</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" col-sm-12 col-md-3">
-          <div class="team-item at-gray-bg init-animate zoomIn">
-            <div class="team-author">
-              
-                <img width="250" height="300" src="images/speaker7.jpg"/> </a>
-              <div class="team-author-details ">
-                <h4 class="team-name"><a href="#" rel="bookmark">Justin Don</a>
-                </h4>
-                <div class="team-details">
-                  <p>Director<br />
-                    Decor Company</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" col-sm-12 col-md-3">
-          <div class="team-item at-gray-bg init-animate zoomIn">
-            <div class="team-author">
-             
-                <img width="250" height="300" src="images/speaker8.jpg"/> 
-              <div class="team-author-details ">
-                <h4 class="team-name"><a href="#" rel="bookmark">Ruben Shth</a>
-                </h4>
-                <div class="team-details">
-                  <p>Director<br />
-                    Gum Company</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='clearfix'></div>
-      </div>
-      <!-- </div>
-      </div> -->
-    <!-- <h4><b>&nbsp;&nbsp;Event Speakers</b></h4> -->
-    <!-- <section style="padding-top: 0px; padding-bottom:0px;">
-      <div class="row-md-12">
-        <div class="col-md-4">
-          <div class="card">
-            <h4>&nbsp;SARAVANAKUMAR MALAICHAMI</h4>
-            <h5>&nbsp;Director</h5>
-            <h5>&nbsp;SmartChainers Company</h5>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <h4>&nbsp;D.V THIYANESHWARAN</h4>
-            <h5>&nbsp;Director</h5>
-            <h5>&nbsp;Ferra Company</h5>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <h4>&nbsp;VISHWA NANDHU</h4>
-            <h5>&nbsp;Director</h5>
-            <h5>&nbsp;Beta Company</h5>
           </div>
         </div>
       </div>
-    </section> -->
-    <br />
-    <footer id="footer" class="footer ">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="copyright-info">
-              <span>Copyright © 2018 Eventica. All Rights Reserved.</span>
+    </div>
+    <div class=" col-sm-12 col-md-3">
+      <div class="team-item at-gray-bg init-animate zoomIn">
+        <div class="team-author">
+
+          <img width="250" height="300" src="images/speaker7.jpg" /> </a>
+          <div class="team-author-details ">
+            <h4 class="team-name"><a href="#" rel="bookmark">Justin Don</a>
+            </h4>
+            <div class="team-details">
+              <p>Director<br />
+                Decor Company</p>
             </div>
-            <!-- Copyright info end -->
-          </div>
-          <!-- Content col end -->
-          <div class="col-md-6">
-            <!-- Footer menu end -->
-            <div class="footer-social text-center">
-              <ul>
-                <li>
-                  <a
-                    href="https://www.facebook.com/1285978671536389"
-                    target="_blank"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/eventicaupdates" target="_blank"
-                    ><i class="fa fa-twitter" target="_blank"></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/channel/UCps8d1E0Q4v8-P4WNjHHCqA"
-                    target="_blank"
-                    ><i class="fa fa-youtube" target="_blank"></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://plus.google.com/u/1/117711261836707390891"
-                    target="_blank"
-                    ><i class="fa fa-google-plus"></i
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/eventicaofficial/"
-                    target="_blank"
-                    ><i class="fa fa-instagram"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="https://t.me/eventicaofficial" target="_blank"
-                    ><i class="fa fa-paper-plane"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-            <!-- Footer social end -->
           </div>
         </div>
-        <!-- Content row end -->
       </div>
-      <!-- Container end -->
-      <div
-        id="back-to-top"
-        data-spy="affix"
-        data-offset-top="10"
-        class="back-to-top affix"
-        style="display: block;"
-      >
-        <button class="btn btn-primary" title="Back to Top">
-          <i class="fa fa-angle-up"></i>
-        </button>
+    </div>
+    <div class=" col-sm-12 col-md-3">
+      <div class="team-item at-gray-bg init-animate zoomIn">
+        <div class="team-author">
+
+          <img width="250" height="300" src="images/speaker8.jpg" />
+          <div class="team-author-details ">
+            <h4 class="team-name"><a href="#" rel="bookmark">Ruben Shth</a>
+            </h4>
+            <div class="team-details">
+              <p>Director<br />
+                Gum Company</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-  </body>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+ 
+  <br />
+  <footer id="footer" class="footer ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="copyright-info">
+            <span>Copyright © 2018 Eventica. All Rights Reserved.</span>
+          </div>
+          <!-- Copyright info end -->
+        </div>
+        <!-- Content col end -->
+        <div class="col-md-6">
+          <!-- Footer menu end -->
+          <div class="footer-social text-center">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/1285978671536389" target="_blank"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/eventicaupdates" target="_blank"><i class="fa fa-twitter"
+                    target="_blank"></i></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCps8d1E0Q4v8-P4WNjHHCqA" target="_blank"><i
+                    class="fa fa-youtube" target="_blank"></i></a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/u/1/117711261836707390891" target="_blank"><i
+                    class="fa fa-google-plus"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/eventicaofficial/" target="_blank"><i
+                    class="fa fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://t.me/eventicaofficial" target="_blank"><i class="fa fa-paper-plane"></i></a>
+              </li>
+            </ul>
+          </div>
+          <!-- Footer social end -->
+        </div>
+      </div>
+      <!-- Content row end -->
+    </div>
+    <!-- Container end -->
+    <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix" style="display: block;">
+      <button class="btn btn-primary" title="Back to Top">
+        <i class="fa fa-angle-up"></i>  
+      </button>
+    </div>
+  </footer>
+</body>
+
 </html>
