@@ -1,7 +1,7 @@
 {
   "node": "Lynked ICO",
   "db1": "mongodb://127.0.0.1/lmico",
-  "db": "mongodb://lynked:lynkedPassword@ds111390.mlab.com:11390/lynked",
+  "db": "mongodb://admin:admin123@ds343887.mlab.com:43887/eventica",
 
   "webport": 80,
   "general": {

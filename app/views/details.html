@@ -34,71 +34,16 @@
   href='https://eventica.pro/wp-content/plugins/tf-numbers-number-counter-animaton/assets/css/style.css?ver=4.9.10'
   type='text/css' media='all' />
 <style>
-   /* nav {
-	margin: 50px auto;
-	width: 60px;
-}
-
-nav ul {
-	background-color: #505664;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	display: inline-table;
-	position: relative;
-}
-
-nav ul li {
-	float: left;
-}
-
-nav ul li a {
-	color: #6daeb0;
-	display: block;
-	height: 45px;
-	line-height: 45px;
-	text-align: center;
-	width: 60px;
-}
-
-nav ul li a:hover{
-	color: #fff;
-}
-
-nav ul li ul {
-	background-color: #6daeb0;
-	margin-top: 20px;
-	padding: 5px 0;
-	position: absolute;
-}
-
-nav ul li ul:before {
-	background-color: #6daeb0;
-	content: "";
-	display: block;
-	height: 8px;
-	left: 26px; 
-	position: absolute;
-	top: -4px;
-	transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	width: 8px;
-	z-index: -1;
-}
-
-nav ul li ul li {
-	float: none;
-}
-
-nav ul li ul li a {
-	color: #fff;
-}
-
-nav ul li ul li a:hover {
-	background-color: #5d9799;
-}  */
+   
+    .buttonblue{
+     color:#fff;
+     background: #ff0673;
+     width: 150px;
+     height: 50px;
+     border-radius: 10px;
+     border-color: #ff0673;
+     
+   } 
   p {
     padding-left: 10px;
     text-align: justify;
@@ -191,14 +136,13 @@ input {
     line-height: normal;
     max-width: 100%;
 }
-.share-btn > a {
-    border: 1px solid #ccc;
-    padding: 5px;
-    font-size: 12px;
-    font-family: Verdana, Arial;
-}
-.share-btn > a:hover {
-    cursor: pointer;
+#share-buttons img {
+width: 45px;
+padding: 10px;
+border: 0;
+box-shadow: 0;
+display: inline;
+padding-left: 5px;  
 }
 
 
@@ -272,10 +216,9 @@ input {
     <br />
     <div class="col-md-6">
       <!-- <p> -->
-      <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 1 month 1000 EVN <br />
-      <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 15 days 1200 EVN <br />
-      <input type="radio" name="S" value="S" class="checkboxclass" />
-      Booking On Price 1500 EVN <br />
+      <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 1 month  <i class="fa fa-inr"></i> 1000  <br />
+      <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 15 days <i class="fa fa-inr"></i> 1200  <br />
+      <input type="radio" name="S" value="S" class="checkboxclass" />Booking On Price <i class="fa fa-inr"></i> 1500  <br />
       <div>
         <label class="tickets">No.of.participants:</label>
          
@@ -285,8 +228,10 @@ input {
             name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric"
             aria-labelledby="Bitcoin Payment quantity" />
         <!-- </div> -->
-        <button class="button buttonblue" style="margin-left: 60px; margin-top: 10px; ">
-          <i class="fa fa-inr" aria-hidden="true"></i> BUY TICKET
+        
+
+        <button class="buttonblue" style="margin-left: 60px; margin-top: 10px;">
+          <!-- <i class="fa fa-inr" aria-hidden="true"></i>--> BUY TICKET 
         </button>
       </div>
 
@@ -309,16 +254,34 @@ input {
         </div>
       </div>
       
-      <div class="share-btn">
-    <a class="btn-vk" data-id="vk">VK</a>
-    <a class="btn-facebook" data-id="fb">Facebook</a>
-    <a class="btn-twitter" data-id="tw">Twitter</a>
-    <a class="btn-telegram" data-id="tg">Telegram</a>
-    <a class="btn-mail" data-id="mail">EMail</a>
-</div>
+      <div id="share-buttons">
+         <!-- Email -->
+      <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+    </a>
+ 
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+    </a>
     
-      <button class="button buttonblue" style="margin-left:35px; margin-top:35px;">
-        <i class="fa fa-share-alt" aria-hidden="true"></i> REFER TO FRIENDS
+    <!-- Google+ -->
+    <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+    </a>
+    
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+    </a>
+    <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+      <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+  </a>
+      </div>
+     
+        
+      <button class=" buttonblue" style="margin-left:55px; margin-top:10px; margin-bottom: 5px;">
+        <!-- <i class="fa fa-share-alt" aria-hidden="true"></i>--> REFER TO FRIENDS
       </button>
     </div>
   </div>

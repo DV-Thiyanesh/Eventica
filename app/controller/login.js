@@ -12,13 +12,13 @@ const path = require('path');
 module.exports = function(app){
 
 
-app.get('/login', function(req, res){
+app.get('/signin', function(req, res){
 
     // res.render('signin', {
     //             pageTitle: 'Welcome - ' ,
     //             layout: false             
     //         });
-      res.redirect('/');
+      res.redirect('/eventica');
 });
 
 
@@ -32,7 +32,7 @@ app.get('/signup', function(req, res){
 
 
 
-app.post("/login", function (req, res) {
+app.post("/signin", function (req, res) {
     sess = req.session;
     var email     = req.body.email;
     var password     = req.body.password;
@@ -87,7 +87,7 @@ app.post("/login", function (req, res) {
               //   msg:'Login successfully'
               // });
               
-              //res.redirect("/userorders");
+              res.redirect("/eventica");
            
            });
       });
@@ -132,18 +132,18 @@ app.post("/signup",  function (req, res) {
 
                if (password != repeatpassword){
                      req.flash('error', 'Password and Confirm password are not same....');
-                     return res.redirect('/login'); 
+                     return res.redirect('/signin'); 
                }
 
 
            User.findOne({ email: req.body.email }, (errUser, userFound) => {
                if (errUser){
                      req.flash('error', 'Sign up...error, please try again...');
-                     return res.redirect('/login'); 
+                     return res.redirect('/signin'); 
                }
                if (userFound) {
                          req.flash('error', 'User account exists for this email address, reset password if you forgot the password');
-                          return res.redirect('/login');
+                          return res.redirect('/signin');
                 }
                 else{
                   newUser.save((err) => {
@@ -214,12 +214,12 @@ app.post("/signup",  function (req, res) {
       }); //findUser
 }); // signup 
 
-app.post('/resetPassword',function(req, res){
+app.post('/forgot',function(req, res){
         console.log("reset password")
         sess = req.session;
         console.log(req.body);
         if(funcs.isEmpty(sess.user)) {
-            res.redirect('/login');
+            res.redirect('/signin');
        } else {
         User.findById(req.session.user["_id"], (err, user) => {
             user.comparePassword(req.body.oldPassword, (passwordErr, isMatch) => {
@@ -247,7 +247,7 @@ app.post('/resetPassword',function(req, res){
                             //       console.log(err);
                             //    } else {
                                   req.flash('success', 'Success! Your password has been changed.Login with new password'); 
-                                  res.redirect('/login');
+                                  res.redirect('/signin');
                                 // }
                             //   });  
                       });
