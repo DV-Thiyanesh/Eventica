@@ -1,0 +1,129 @@
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Token Sale | Lynked.World</title>
+	<!-- Fav Icon  -->
+    <link rel="shortcut icon" href="images/favicon.png">
+</head>
+<body>
+	<!-- Main navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/"><img src="assets/images/logo_light.png" alt=""></a>
+			<ul class="nav navbar-nav pull-right visible-xs-block">
+				<!-- <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li> -->
+				<li><a data-toggle="collapse" data-target="#navbar-mobile" class="sidebar-mobile-main-toggle"><i class="icon-user"></i></a></li>
+			</ul>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-mobile">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown dropdown-user" id="google_translate_element">
+					<a class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown"></a>
+					<script type="text/javascript">
+							function googleTranslateElementInit() {
+							  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,it,ja,ko,ms,nl,ru,th,ta,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+							}
+							</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				</li>
+				<li class="dropdown dropdown-user">
+					<a class="dropdown-toggle" data-toggle="dropdown">
+						<!-- <img src="assets/images/image.png" alt=""> -->
+						<span><%= name %> </span>
+						<i class="caret"></i>
+					</a>
+					<%
+						var account_setting_flag="/profile?flag=1";
+						if(typeof user!='undefined' && typeof user.is_login_qr!='undefined' && user.is_login_qr==1){
+							account_setting_flag='/profile';
+						}
+						if(typeof userInfo!='undefined' && typeof userInfo.is_login_qr!='undefined' && userInfo.is_login_qr==1){
+							account_setting_flag='/profile';
+						}
+					 %>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<!-- <li><a href="/profile"><i class="icon-user-plus"></i> My profile</a></li>
+						<li><a href="/userwallets"><i class="icon-coins"></i> My balance</a></li>
+						<li class="divider"></li> -->
+						<li><a href="<%=account_setting_flag%>"><i class="icon-cog5"></i> Account settings</a></li>
+						<li><a href="/logout"><i class="icon-switch2"></i> Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+	<!-- Second navbar -->
+	<div class="navbar navbar-default private-menu" id="navbar-second">
+		<ul class="nav navbar-nav no-border visible-xs-block">
+			<li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-menu7"></i></a></li>
+			<% if(typeof userInfo!='undefined' && typeof userInfo.status!='undefined' && userInfo.status == "ACTIVE"){ %>
+					<li><a href="/purchase"><i class="icon-cash4 position-left"></i> Invest Now</a></li>
+				<% }else if(typeof user!='undefined' && typeof user.status!='undefined' && user.status == "ACTIVE"){%>
+				<li><a href="/purchase"><i class="icon-cash4 position-left"></i> Invest Now</a></li>
+				<% }else{%>
+					<li><a href="javascript:;" class="notice_modal_show"><i class="icon-cash4 position-left"></i> Invest Now</a></li>
+				<%}%>
+		</ul>
+		<div class="navbar-collapse collapse" id="navbar-second-toggle">
+			<ul class="nav navbar-nav">
+				<% if (menuDashboard == "1") { %>
+				<li><a href="/userorders"><i class="icon-display4 position-left"></i> Dashboard</a></li>
+				<% } %>
+				<% if(typeof userInfo!='undefined' && typeof userInfo.status!='undefined' && userInfo.status == "ACTIVE"){ %>
+					<li><a href="/purchase"><i class="icon-cash4 position-left"></i> Invest Now</a></li>
+				<% }else if(typeof user!='undefined' && typeof user.status!='undefined' && user.status == "ACTIVE"){%>
+					<li><a href="/purchase"><i class="icon-cash4 position-left"></i> Invest Now</a></li>
+				<% }else{%>
+					<li><a href="javascript:;" class="notice_modal_show"><i class="icon-cash4 position-left"></i> Invest Now</a></li>
+				<%}%>
+				<li><a href="/profile"><i class="icon-user position-left"></i> My Profile</a></li>
+				<!-- <li><a href="https://lynked.world/rewards" target="_blank"><i class="icon-share2 position-left"></i> Refer A Friend</a></li> -->
+				<li><a href="/logout"><i class="icon-switch position-left"></i> Logout</a></li>
+		</ul>
+		<div><a href="mailto:support@lynked.world" target="_top" class="top_header_support pull-right">Contact Support:&nbsp;<i class="icon-envelope"></i>&nbsp;support@lynked.world</a></div>
+
+			<ul class="nav navbar-nav navbar-right">
+		
+				<!-- <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Token Details
+						
+						<span class="visible-xs-inline-block position-right">Dropdown</span>
+						<span class="caret"></span>
+					</a>
+
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li>   <a href="#">  Name   : <%= tokenName %> </a> </li>
+						<li><a href="#"> Symbol  : <%= tokenSymbol %> </a></li>
+				
+						<li class="divider"></li>
+						<li><a href="#"> Price </a></li>
+						<li class="divider"></li>
+						<li><a href="#">Total Supply :  <%= totalSupply %></a></li>
+						<li><a href="#">Total Used   :  <%= totalUsed %></a></li>
+					</ul>
+				</li> -->
+
+
+			<!--
+
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-cog3"></i>
+						<span class="visible-xs-inline-block position-right">Dropdown</span>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li class="divider"></li>
+						<li><a href="#">One more separated line</a></li>
+					</ul>
+				</li>
+					-->
+
+			</ul>
+		</div>
+	</div>
+	<!-- /second navbar -->

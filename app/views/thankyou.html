@@ -1,0 +1,16 @@
+<center>
+<img src="<%=site_home_url%>assets/images/header_img.png" style="width:210px;margin-top: 30px;margin-bottom:10px;">
+<p class="text-center">
+	<% if(typeof error!='undefined' && error==1){%>
+	<img src='<%=site_home_url%>images/warning-small.png' style="width: 15px;">
+	<% } else{%>
+	<img src='<%=site_home_url%>images/verified.png' style="width: 15px;">
+	<% } %>
+	<% if(typeof message!='undefined' && message!=''){%>
+		<%=message%>
+	<% } %>
+</p>
+</center>
+<script type="text/javascript">
+	setTimeout(function(){ window.location.href='/'; },7000);
+</script>

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lynked.World is a blockchain based  ecosystem  which enables individuals and organisations to share immutable identities, authenticated data and documents in conveniently and securely, which can again easily cross-verified.">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- Site Title  -->
+    <title>TOKEN SALE | Lynked.World</title>
+    <!-- Vendor Bundle CSS -->
+    <link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=122">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="assets/css/style.css?ver=122">
+    <link rel="stylesheet" href="assets/css/theme-java.css?ver=122">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body class="theme-dark io-azure io-azure-pro" data-spy="scroll" data-target="#mainnav" data-offset="80">
+
+	<!-- Header -->
+    <header class="site-header is-sticky">
+
+        <!-- Place Particle Js -->
+        <div id="particles-js" class="particles-container particles-js"></div>
+
+        <!-- Navbar -->
+        <div class="navbar navbar-expand-lg is-transparent" id="mainnav">
+            <nav class="container">
+
+                <a class="navbar-brand animated" data-animate="fadeInDown" data-delay=".65" href="./">
+                    <img class="logo logo-dark" alt="logo" src="images/logo.png" srcset="images/logo2x.png 2x">
+                    <img class="logo logo-light" alt="logo" src="images/logo-white.png" srcset="images/logo-white2x.png 2x">
+                </a>
+
+                <!-- <div class="language-switcher animated" data-animate="fadeInDown" data-delay=".75">
+                    <a href="#" data-toggle="dropdown">EN</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">FR</a>
+                        <a class="dropdown-item" href="#">CH</a>
+                        <a class="dropdown-item" href="#">BR</a>
+                    </div>
+                </div> -->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle">
+                    <span class="navbar-toggler-icon">
+						<span class="ti ti-align-justify"></span>
+                    </span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
+                    <ul class="navbar-nav navbar-btns animated remove-animation" data-animate="fadeInDown" data-delay="1.15">
+                        <li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link expand-trigger content-popup" href="#signup-popup">Sign Up</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link expand-trigger content-popup" href="#signin-popup">Log in</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <!-- Start Whitelist Popup  -->
+            <div id="whitelist-popup" class="join-whitelist mfp-hide signin-signup">
+                <div class="container">
+                    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                    <div class="row no-mg">
+                        <div class="whitelist-form auth-form">
+                            <form id="whitelist" class="whitelistform row">
+                                <h5 class="text-center center-block">Join Lynked.World Token Sale Whitelist</h5><br>
+                                <div class="form-group col-md-6 col-xs-12">
+                                    <input type="text" name="first" class="form-control" required="required" placeholder="First Name" required> 
+                                </div>
+                                <div class="form-group col-md-6 col-xs-12">
+                                    <input type="text" name="last" class="form-control" required="required" placeholder="Last Name" required> 
+                                </div>
+                                <div class="form-group col-md-6 col-xs-12">
+                                    <input type="email" name="email" class="form-control mail-field" required="required" placeholder="E-mail Address*" required> 
+                                </div>
+                                <div class="form-group col-md-6 col-xs-12">
+                                  <!-- <label for="sel1">Country of residence*</label> -->
+                                  <select class="form-control country_list" id="sel1" name="country">
+                                    <option>Please select Country of Residence</option>
+                                    <option value="india">India</option>
+                                    <option value="europe">Europe</option>
+                                    <option value="uk">UK</option>
+                                    <option value="usa">USA</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-12 col-xs-12">
+                                    <input type="text" name="erc" class="form-control" required="required" placeholder="Your ERC20 address (optional)"> 
+                                </div>
+                                <div class="form-group col-md-6 col-xs-12">
+                                    <label>Your intended purchase amount**</label>
+                                    <div class="radio">
+                                        <label><input type="radio" name="purchase_amount">&nbsp;0 to $1,000 <span class="checkmark"></span></label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="purchase_amount">&nbsp;$1000 to $5,000 <span class="checkmark"></span></label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="purchase_amount">&nbsp;$5000 to $10,000 <span class="checkmark"></span></label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="purchase_amount">&nbsp;Over to $10,000 <span class="checkmark"></span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6 col-xs-12">
+                                    <label>Purchase via**</label>
+                                    <div class="radio">
+                                        <label><input type="radio" name="purchase_via">&nbsp;BTC <span class="checkmark"></span></label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="purchase_via">&nbsp;ETH <span class="checkmark"></span></label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group col-md-12 ">
+                                    <p>In Order to be Whitelisted, you  have to join <a href="https://t.me/lynkedworld" class="form-links">Lynked.World Telegram Channel</a></p>
+                                    <div class="checkbox">
+                                        <label class="checkbox">
+                                            <input type="checkbox">&nbsp;I have Joined <a href="https://t.me/lynkedworld" class="form-links">Lynked.World Telegram Channel</a>
+                                            <span class="checkmark1"></span>
+                                        </label>    
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox">
+                                            <input type="checkbox">&nbsp;I have read and agree to <a href="https://lynked.world/terms-and-conditions" class="form-links" target="_blank">Terms of Token Sale</a>, <a href="https://lynked.world/privacy-policy" class="form-links" target="_blank">Privacy Policy</a>, and <a href="https://lynked.world/cookie-policy" class="form-links" target="_blank">Cookie Policy</a>,
+                                            <span class="checkmark1"></span>
+                                        </label>    
+                                    </div>
+                                </div>
+                                <div class="auth-bottom">
+                                    <button type="submit" class="btn btn-alt buy-tokens" onclick="">Add me to Whitelist</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Signup Popup  -->
+            <div id="signup-popup" class="signin-form mfp-hide signin-signup">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="signin-form auth-form col-md-6 col-xs-12">
+                            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                            <form method="post" class="social-logins" action="">
+                                <!-- <button type="submit" class="btn-social facebook-login" name="provider" value="Facebook"><img src="images/fb.png" class="float-left"><span>Sign up with Facebook</span></button>
+                                <button type="submit" class="btn-social google-login" name="provider" value="Google"><img src="images/google.png" class="float-left"><span>Sign up with Google</span></button> -->
+                                <a href="#lw_login_qr" class="btn-social lynkedworld-login expand-trigger content-popup" name="provider" value="Lynked"><img src="images/lynkedworld.png" class="float-left"><span>Continue with Lynked.World App</span><span class="pull-right">></span></a>
+                            </form>
+                            <div class="text-center text-primary">OR</div>
+                            <form id="form_sign_up" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="first" id="user_first_name" class="form-control" required="required" placeholder="First name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="last" id="user_last_name" class="form-control" required="required" placeholder="Last name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" id="user_email" class="form-control mail-field" required="required" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="user_password" class="form-control password-field" required="required" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="user_cpassword" class="form-control password-field" required="required" placeholder="Confirm Password">
+                                </div>
+                                <div class="form-group">
+                                    <div class="g-recaptcha" style="margin-left:10px;margin-bottom:10px;" data-sitekey="6LddMmQUAAAAADwoLTnTPf11dGytKGuN4w7272NF"></div>
+                                </div>
+                                <div class="auth-bottom1">
+                                    <button class="btn btn-alt buy-tokens" type="submit">Sign Up</button>
+                                    <br>
+                                    <div class="text-center auth-text-line last-line">Already have an account? <a href="#signin-popup" class="expand-trigger content-popup form-links">Login</a></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Signin Popup  -->
+            <div id="signin-popup" class="signin-form mfp-hide signin-signup">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="signin-form auth-form col-md-6 col-xs-12">
+                            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                            <form method="post" class="social-logins" action="">
+                                <!-- <button type="submit" class="btn-social facebook-login" name="provider" value="Facebook"><img src="images/fb.png" class="float-left"><span>Sign up with Facebook</span></button>
+                                <button type="submit" class="btn-social google-login" name="provider" value="Google"><img src="images/google.png" class="float-left"><span>Sign up with Google</span></button> -->
+                                <a href="#lw_login_qr" class="btn-social lynkedworld-login expand-trigger content-popup" name="provider" value="Lynked"><img src="images/lynkedworld.png" class="float-left"><span>Continue with Lynked.World App</span><span class="pull-right">></span></a>
+                            </form>
+                            <div class="text-center text-primary">OR</div>
+                            <form id="form_signin" method="POST">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control mail-field" required="required" placeholder="Email"> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" class="form-control password-field" required="required" placeholder="Password"> 
+                                </div>
+                                <p class="float-right">Forgot password? <a href="#fp-popup" class="expand-trigger content-popup form-links">Remind</a></p>
+                                <div class="clearfix"></div>
+                                <div class="auth-bottom1">
+                                    <input type="submit" class="btn btn-alt buy-tokens" value="Sign In" />
+                                    <!-- <a class="btn btn-alt buy-tokens" onclick="">Sign In</a> -->
+                                    <br>
+                                    <div class="text-center auth-text-line last-line">Don't have an account? <a href="#signup-popup" class="expand-trigger content-popup form-links">Signup</a></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start forgot password Popup  -->
+            <div id="fp-popup" class="signin-form mfp-hide signin-signup">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="signin-form auth-form col-md-6 col-xs-12">
+                            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                            <br>
+                            <p class="text-center text-primary nomg">Enter your email id</p>
+                            <form id="signin-forgot">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="forgot_email" class="form-control mail-field" required="required" placeholder="Email"> 
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="auth-bottom1">
+                                    <button class="btn btn-alt buy-tokens" onclick="">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Login with LW QR Start -->
+            <div id="lw_login_qr" class="lynked.world mfp-hide signin-signup">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="signin-form auth-form col-md-5 col-xs-12">
+                            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                            <br>
+                            <p class="text-center text-primary">Use the <a class="form-links" 
+                                href="https://play.google.com/store/apps/details?id=com.world.lynkedworld" target="_blank">Lynked.World app</a> to scan the QR code</p>
+                            <div class="qrbox">
+                                <div class="qr_code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39"><path d="M1 1h7v7h-7zM10 1h4v1h1v2h-1v-1h-1v1h-2v-1h1v-1h-2zM22 1h4v1h-2v1h-1v1h-1v-1h-1v-1h1zM29 1h1v4h-2v-1h-1v-1h1v-1h1zM31 1h7v7h-7zM2 2v5h5v-5zM16 2h2v1h-2zM19 2h1v1h-1zM26 2h1v1h-1zM32 2v5h5v-5zM3 3h3v3h-3zM9 3h1v1h1v1h1v1h-1v1h-1v2h-1zM24 3h2v1h1v1h-2v-1h-1zM33 3h3v3h-3zM13 4h1v1h1v1h-2zM15 4h5v1h-1v2h-1v1h-1v-2h1v-1h-1v1h-1v-1h-1zM21 4h1v1h-1zM20 5h1v1h-1zM22 5h3v1h-3zM27 5h1v1h-1zM12 6h1v1h-1zM26 6h1v1h-1zM28 6h2v2h-1v-1h-1zM11 7h1v1h-1zM13 7h1v1h1v-1h1v1h1v1h-2v2h-1v-1h-2v-1h1zM19 7h1v1h1v-1h1v1h1v1h-5v-1h1zM23 7h1v1h-1zM25 7h1v1h-1zM27 7h1v1h-1zM28 8h1v2h-4v-1h3zM1 9h1v1h-1zM3 9h5v1h-3v1h1v1h1v1h1v-1h1v1h1v-2h1v-1h1v3h-1v2h1v2h-4v-1h-2v-1h-1v-1h-1v-1h1v-1h-1v1h-1zM17 9h1v1h-1zM31 9h5v1h-5zM8 10h1v1h-1zM16 10h1v1h2v-1h1v1h1v1h2v1h-2v1h4v1h-2v2h-1v1h-1v-1h-1v-1h1v-1h-1v-1h-2v-1h1v-1h-2v2h-1v-1h-1v-1h1zM21 10h4v1h-4zM29 10h2v1h-2zM36 10h1v1h-1zM7 11h1v1h-1zM13 11h1v1h-1zM25 11h2v1h-2zM28 11h1v2h-1zM31 11h1v1h-1zM34 11h2v1h-1v1h-1zM37 11h1v1h-1zM32 12h1v1h1v1h-4v-1h2zM1 13h2v1h-1v1h1v1h-2zM13 13h1v1h-1zM25 13h3v1h-3zM35 13h3v1h-3zM3 14h1v1h-1zM7 14v1h3v-1zM12 14h1v1h-1zM14 14h1v1h-1zM17 14h1v1h-1zM29 14h1v1h2v1h-1v1h1v1h-4v-2h-1v-1h2zM34 14h1v1h3v3h-1v-2h-4v-1h1zM13 15h1v1h-1zM15 15h2v1h1v1h-1v1h2v1h-4v1h-1v-3h1v1h1v-1h-1zM19 15h1v1h-1zM3 16h1v1h-1zM25 16h1v1h-1zM29 16v1h1v-1zM32 16h1v1h-1zM2 17h1v1h-1zM4 17h1v2h1v1h1v1h-1v1h-1v1h-1v1h2v1h-2v2h-2v3h-1v-5h1v1h1v-2h-2v-4h1v-1h1v1h1v-1h-1v-1h1zM6 17h2v1h-2zM19 17h1v1h-1zM23 17h2v1h1v1h-2v-1h-1zM26 17h1v1h-1zM33 17h3v1h-3zM11 18h1v1h-1zM27 18h1v1h-1zM32 18h1v1h3v1h-1v1h-1v-1h-2v1h2v1h-6v-1h-1v-1h1v-1h4zM36 18h1v1h-1zM7 19h2v1h1v1h-1v1h1v1h2v-1h2v1h-1v2h2v1h1v-1h1v-1h-1v1h-1v-1h-1v-1h1v-2h1v2h2v-1h-1v-2h1v1h1v-2h1v3h-1v2h2v-1h1v1h1v3h1v1h-1v1h-1v1h-1v1h-1v-1h-4v-1h-1v-1h-1v1h1v1h-1v1h1v-1h1v1h1v1h1v1h-1v1h1v1h-2v-1h-1v-2h-1v2h1v1h1v1h-1v1h-1v1h-1v-1h-2v1h-2v-1h1v-1h-1v-4h1v-1h2v3h1v-4h-2v-1h2v-3h-2v-1h1v-1h-2v1h-1v1h2v1h-2v1h-3v-1h2v-1h-1v-1h1v-1h1v-1h-1v-1h-1v-1h1v-1h-1zM21 19h2v2h-1v-1h-1zM37 19h1v1h-1zM11 20h2v1h-1v1h-2v-1h1zM24 20h1v1h-1zM30 20v1h1v-1zM36 20h1v1h-1zM2 21v1h2v-1zM21 21h1v1h-1zM23 21h1v1h-1zM26 21h1v1h1v1h-2v2h-2v-1h1v-1h-1v-1h2zM35 21h1v1h-1zM37 21h1v1h-1zM6 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM36 22h1v1h-1zM7 23h1v1h-1zM23 23h1v1h-1zM28 23h1v1h-1zM30 23h3v1h-3zM37 23h1v3h-5v-2h1v1h2v-1h1zM18 25v1h-1v1h1v1h-1v1h2v-2h-1v-1h2v1h1v1h1v-1h-1v-1h1v-1zM26 25h1v1h-1zM28 25h4v1h-4zM5 26h1v1h-1zM24 26h2v1h1v-1h1v1h1v2h-2v-1h-2v-1h-1zM32 26h1v2h-1v1h1v-1h1v-1h1v2h-1v3h1v1h-1v1h1v1h-6v-1h-1v-2h1v-3h1v-1h1v-1h1zM4 27h1v1h1v1h2v1h-3v-1h-2v-1h1zM36 27h2v1h-2zM24 28h1v1h-1zM9 29h1v2h-1zM23 29h1v1h-1zM26 29h1v1h-1zM35 29h3v1h-3zM24 30h2v1h-2zM27 30h1v2h-1zM30 30v3h3v-3zM1 31h7v7h-7zM19 31h1v1h-1zM21 31h1v1h-1zM23 31h1v1h-1zM31 31h1v1h-1zM36 31h2v1h-2zM2 32v5h5v-5zM24 32h2v1h1v1h-2v-1h-1zM3 33h3v3h-3zM10 33v1h1v-1zM19 33h5v1h-1v1h-1v-1h-3zM35 33h3v5h-3v-1h2v-1h-1v-1h1v-1h-2zM24 34h1v1h-1zM27 34h1v1h1v1h-1v1h1v1h-5v-1h1v-1h1v1h1zM11 35v1h1v-1zM13 35v1h1v-1zM21 35h1v1h-1zM17 36h1v1h1v-1h1v2h-3zM22 36h1v1h-1zM29 36h3v1h1v1h-2v-1h-2zM34 36h1v1h-1zM21 37h1v1h-1z"></path></svg>
+                                </div>
+                                <span><img src="https://dev.lynked.world/themes/frontend/images/qrcode-logo.png"></span>
+								<script src="js/jquery.min.js"></script>
+								<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+								<script>
+									$(document).ready(function(){
+										var csocket = io('https://dev.lynked.world:2087');
+										var csocket_id = '';
+										csocket.on('connect', function () {
+											console.log('connected');
+											csocket_id = csocket.id;
+											//alert(csocket_id);
+											get_qr(csocket_id);
+										});
+										
+										var user_id = "0";
+										var socket_id = '';
+										csocket.on('connect', function (sockete_data) {
+											socket_id = csocket.id;
+											csocket.emit('connect_io',{socket_id:socket_id});
+										});
+										
+										csocket.on("received_p_msg",function(req_socket){
+											//console.log("IN -->>> ", req_socket);
+
+											$.ajax({
+                                                //url: 'https://dev.lynked.world/AttemptQRLogin',
+												url: 'https://dev.lynked.world/AttemptQRLoginUserData',
+												origin: '*',
+												dataType: 'json',
+												type: 'POST',
+												contentType: 'application/json',
+												data: JSON.stringify(req_socket['user_req']),
+												processData: false,
+												success: function( data, textStatus, jQxhr ){
+													/* session check and adding */
+													//window.location.href
+													/* $("<div class='form-holder'>" +
+													"<form name='input' action='#' method='get'>" +
+													"<input type='hidden' name='email' /><br/><br/>" +
+													"<input type='hidden' name='qr_type' /><br/><br/>" +
+													"<input type='submit' value='New' />" +
+													"</form>" +
+													"</div>").appendTo('#lw_login_qr'); */
+
+													//console.log(JSON.stringify(data.users));
+													
+                                                    login_call_qr(data.users);
+													//window.location.href = '/';
+												},
+												error: function( jqXhr, textStatus, errorThrown ){
+													console.log( errorThrown );
+												}
+											});
+										});
+									});
+									
+									function get_qr(user_socket_id){
+									  $.ajax({
+										  url: 'https://dev.lynked.world/qr_code',
+										  origin: '*',
+										  dataType: 'json',
+										  type: 'POST',
+										  contentType: 'application/json',
+										  data: JSON.stringify( { "socket_id": user_socket_id } ),
+										  processData: false,
+										  success: function( data, textStatus, jQxhr ){
+											$(".qr_code").html(data.qr);
+											setTimeout(function(){
+												get_qr(user_socket_id);
+											}, 15000);
+										  },
+										  error: function( jqXhr, textStatus, errorThrown ){
+											  console.log( "error: ", errorThrown );
+										  },
+											//beforeSend: setHeader
+										});
+									}
+									 
+									function login_call_qr(data){
+                                        var email = '';
+                                        var address = '';
+                                        var city = '';
+                                        var state = '';
+                                        var country = '';
+                                        var phone = '';
+                                        var headline = '';
+                                        var is_verify_email = 0;
+                                        var is_verify_phone = 0;
+                                        var profile_image = '';
+
+                                        if(typeof data!='undefined'){
+                                            if(typeof data.location!='undefined' && data.location!=''){
+                                                address = data.location;
+                                            }
+                                            if(typeof data.email!='undefined' && data.email!=''){
+                                                email = data.email;
+                                            }
+                                            if(typeof data.city!='undefined' && data.city!=''){
+                                                city = data.city;
+                                            }
+                                            if(typeof data.state!='undefined' && data.state!=''){
+                                                state = data.state;
+                                            }
+                                            if(typeof data.country!='undefined' && data.country!=''){
+                                                country = data.country;
+                                            }
+                                            if(typeof data.phone!='undefined' && data.phone!=''){
+                                                phone = data.phone;
+                                            }
+                                            if(typeof data.headline!='undefined' && data.headline!=''){
+                                                headline = data.headline;
+                                            }
+                                            if(typeof data.is_verify_phone!='undefined' && data.is_verify_phone!=null){
+                                                is_verify_phone = data.is_verify_phone;
+                                            }
+                                            if(typeof data.is_verify_email!='undefined' && data.is_verify_email!=null){
+                                                is_verify_email = data.is_verify_email;
+                                            }
+                                            if(typeof data.profile_image!='undefined' && data.profile_image!=''){
+                                                profile_image = data.profile_image;
+                                            }
+                                        }
+
+										$.ajax({
+											url: '/login_qr',
+											type: 'POST',
+											data: { "user_id": data.id,
+													"name": data.name,
+													"loginid":data.loginid,
+                                                    "address":address,
+                                                    "city":city,
+                                                    "email":email,
+                                                    "state":state,
+                                                    "country":country,
+                                                    "phone":phone,
+                                                    "headline":headline,
+                                                    "profile_image":profile_image,
+                                                    "is_verify_phone":is_verify_phone,
+                                                    "is_verify_email":is_verify_email,
+													"qr_login": "1"
+												},
+											success: function( data, textStatus, jQxhr ){
+												//alert(JSON.stringify(data));
+												window.location.href = '/userorders';
+											},
+											error: function( jqXhr, textStatus, errorThrown ){
+												console.log( "error: ", errorThrown );
+											}
+										});
+									}
+									
+									/* function setHeader(xhr) {
+										var token = '123';
+										xhr.setRequestHeader('Authorization', token);
+									} */
+								</script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- Banner/Slider -->
+        <div id="header" class="banner banner-full banner-tokensale d-flex align-items-center">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="row align-items-center mobile-center">
+                        <div class="col-lg-6 col-md-12 order-lg-first">
+                            <div class="header-txt">
+                                <h1 class="animated" data-animate="fadeInUp" data-delay="1.55"> Lynking World<br class="d-none d-xl-block"> Through Blockchain</h1>
+                                <p class="lead text-justify animated" data-animate="fadeInUp" data-delay="1.65">Here, at Lynked.World, our driving principle is to overcome the “trust barrier” in digital identities, data and documents with the help of our blockchain based application development platform.
+                                    <br class="d-none d-xl-block">
+                                    <!-- based on deeply research -->
+                                </p>
+                                <ul class="btns animated" data-animate="fadeInUp" data-delay="1.75">
+                                    <li><a href="#signup-popup" class="btn expand-trigger content-popup">Sign Up for Token Sale</a></li>
+                                    <li><a href="#tokenSale" class="btn btn-alt">TOKEN DISTRIBUTION</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .col  -->
+                        <div class="col-lg-6 col-md-12 order-first res-m-bttm-lg">
+                            <div class="header-image-alt animated" data-animate="fadeInRight" data-delay="1.25">
+                                <img src="images/header-image-blue.png" alt="header">
+                            </div>
+                            <div class="countdown-box countdown-transparent text-center animated" data-animate="fadeIn" data-delay="1.85">
+                                <span class="extra-line"></span>
+                                <h6 class="animated" data-animate="fadeInUp" data-delay="1.95">TOKEN SALE WILL START IN</h6>
+                                <div class="token-countdown d-flex align-content-stretch animated" data-animate="fadeInUp" data-delay="2.05" data-date="2018/08/1"></div>
+                                <div class="token-status-bar animated" data-animate="fadeInUp" data-delay="2.15">
+                                    <div class="token-status-percent" style="width:75%;"></div>
+                                    <span class="token-status-point token-status-point-1" style="left: 0%;">15<sup>st</sup> Aug</span>
+                                    <span class="token-status-point token-status-point-2" style="left: 25%;">1<sup>st</sup> Sep</span>
+                                    <span class="token-status-point token-status-point-3" style="left: 50%;">16<sup>th</sup> Sep</span>
+                                    <span class="token-status-point token-status-point-4" style="left: 75%;">1<sup>st</sup> Oct</span>
+                                    <span class="token-status-point token-status-point-5" style="left: 100%;">31<sup>st</sup>Oct</span>
+                                </div>
+                                <!-- <div class="animated" data-animate="fadeInUp" data-delay="2.25">
+                                    <a href="#whitelist-popup" class="btn btn-alt btn-sm expand-trigger content-popup">Join the Whitelist</a>
+                                </div> -->
+                                <ul class="token-details animated" data-animate="fadeInUp" data-delay="1.15">
+                                    <li>35%<span>Discount</span></li>
+                                    <li>25%<span>Discount</span></li>
+                                    <li>15%<span>Discount</span></li>
+                                    <li>0%<span>Discount</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .col  -->
+                    </div>
+                    <!-- .row  -->
+                </div>
+                <!-- .banner-content  -->
+            </div>
+            <!-- .container  -->
+        </div>
+        <!-- End Banner/Slider -->
+        <a href="#intro" class="scroll-down menu-link">SCROLL DOWN</a>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Social Media is-sticky -->
+    <div class="sticky-container">
+        <ul class="sticky">
+            <li>
+                <em class="fa fa-lynkedworld"></em>
+                <p><a href="https://lynked.world/company/lynkedworld" target="_blank">Follow Us on<br>Lynked.World</a></p>
+            </li>
+            <li>
+                <em class="fa fa-facebook"></em>
+                <p><a href="https://www.facebook.com/lynkedW/" target="_blank">Like Us on<br>Facebook</a></p>
+            </li>
+            <li>
+                <em class="fa fa-twitter"></em>
+                <p><a href="https://twitter.com/LynkedW" target="_blank">Follow Us on<br>Twitter</a></p>
+            </li>
+            <li>
+                <em class="fa fa-youtube-play"></em>
+                <p><a href="https://www.youtube.com/channel/UCfi3HFpLbIifFYmRUncV5PQ/videos" target="_blank">Subscribe on<br>YouYube</a></p>
+            </li>
+            <li>
+                <em class="fa fa-telegram"></em>
+                <p><a href="https://t.me/lynkedworld" target="_blank">Join Us on<br>Telegram</a></p>
+            </li>
+            <li>
+                <em class="fa fa-linkedin"></em>
+                <p><a href="https://www.linkedin.com/company/lynked-world/" target="_blank">Follow Us on<br>LinkedIn</a></p>
+            </li>
+            <li>
+                <em class="fa fa-medium"></em>
+                <p><a href="https://medium.com/@lynked.world" target="_blank">Follow Us on<br>Medium</a></p>
+            </li>
+        </ul>
+    </div>
+    <!-- End Social Media is-sticky -->
+
+ 
+	<!-- Start Section -->
+	<div class="section section-pad-md section-bg-alt section-pro blog-section" id="news">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="blog-list">
+						<div class="row">
+							<div class="col-lg-6 offset-lg-0 col-sm-6">
+								<div class="blog-item">
+									<div class="blog-photo"><a href="blog-single-azure-light-pro.html"><img src="images/blog-thumb-a.jpg" alt="blog-photo"></a></div>
+									<div class="blog-texts">
+										<ul class="blog-meta">
+											<li><a href="#">12 Mar, 2018</a></li>
+											<li><a href="#">Blockchain</a></li>
+										</ul>
+										<h5 class="blog-title"><a href="blog-single-azure-light-pro.html">The Intersection Where Blockchain Meets Energy</a></h5>
+										<p>Blockchain Meets Energy Surplus of electrical energy is sometimes ut perspiciatis unde omnis iste natus...</p>
+									</div>
+								</div>
+							</div><!-- .col -->
+							<div class="col-lg-6 offset-lg-0 col-sm-6">
+								<div class="blog-item">
+									<div class="blog-photo"><a href="blog-single-azure-light-pro.html"><img src="images/blog-thumb-b.jpg" alt="blog-photo"></a></div>
+									<div class="blog-texts">
+										<ul class="blog-meta">
+											<li><a href="#">26 Feb, 2018</a></li>
+											<li><a href="#">Cryptocurrency</a></li>
+										</ul>
+										<h5 class="blog-title"><a href="blog-single-azure-light-pro.html">Pros &amp; Cons of Premined Cryptocurrencies</a></h5>
+										<p>Premine involves mining large quantities of the coin before the sed do eiusmod tempor incididunt ut ...</p>
+									</div>
+								</div>
+							</div><!-- .col -->
+							<div class="col-lg-6 offset-lg-0 col-sm-6">
+								<div class="blog-item">
+									<div class="blog-photo"><a href="blog-single-azure-light-pro.html"><img src="images/blog-thumb-c.jpg" alt="blog-photo"></a></div>
+									<div class="blog-texts">
+										<ul class="blog-meta">
+											<li><a href="#">08 Feb, 2018</a></li>
+											<li><a href="#">Technology</a></li>
+										</ul>
+										<h5 class="blog-title"><a href="blog-single-azure-light-pro.html">How &amp; Where To Market Your ICO Startup</a></h5>
+										<p>So you've got a business idea, and a nifty way to incorporate sunt in culpa qui officia deserunt...</p>
+									</div>
+								</div>
+							</div><!-- .col -->
+							<div class="col-lg-6 offset-lg-0 col-sm-6">
+								<div class="blog-item">
+									<div class="blog-photo"><a href="blog-single-azure-light-pro.html"><img src="images/blog-thumb-a.jpg" alt="blog-photo"></a></div>
+									<div class="blog-texts">
+										<ul class="blog-meta">
+											<li><a href="#">12 Mar, 2018</a></li>
+											<li><a href="#">Blockchain</a></li>
+										</ul>
+										<h5 class="blog-title"><a href="blog-single-azure-light-pro.html">The Intersection Where Blockchain Meets Energy</a></h5>
+										<p>Blockchain Meets Energy Surplus of electrical energy is sometimes ut perspiciatis unde omnis iste natus...</p>
+									</div>
+								</div>
+							</div><!-- .col -->
+						</div><!-- .row -->
+					</div><!-- .news-list -->
+					<div class="row res-m-bttm">
+						<div class="col-md-12 text-center">
+							<ul class="page-pagination">
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#"><em class="ti ti-arrow-right"></em></a></li>
+							</ul>
+						</div>
+					</div>
+				</div><!-- .col -->
+				<div class="col-lg-4">
+				
+					<div class="sidebar-section">
+						<div class="sidebar-widget search">
+							<form action="#" class="search-form">
+								<input type="text" placeholder="Search Keyword">
+								<button><em class="ti ti-search"></em></button>
+							</form>
+						</div><!-- .sidebar-widget -->
+						<div class="sidebar-widget category">
+							<h5 class="sidebar-widget-title">Category</h5>
+							<ul>
+								<li><a href="#">Blockchain</a></li>
+								<li><a href="#">Cryptocurrency</a></li>
+								<li class="active"><a href="#">Technology</a></li>
+							</ul>
+						</div><!-- .sidebar-widget -->
+						<div class="sidebar-widget tags">
+							<h5 class="sidebar-widget-title">Tags</h5>
+							<ul>
+								<li><a href="#">ethereum</a></li>
+								<li><a href="#">bitcoin</a></li>
+								<li><a href="#">released</a></li>
+								<li><a href="#">tokens</a></li>
+							</ul>
+						</div><!-- .sidebar-widget -->
+						<div class="sidebar-widget archive">
+							<h5 class="sidebar-widget-title">Archive</h5>
+							<select name="post-archive" id="post-archive">
+								<option value="Select Month">Select Month</option>
+								<option value="January">January</option>
+								<option value="February">February</option>
+								<option value="March">March</option>
+								<option value="April">April</option>
+								<option value="May">May</option>
+								<option value="June">June</option>
+								<option value="July">July</option>
+								<option value="August">August</option>
+								<option value="September">September</option>
+							</select>
+						</div><!-- .sidebar-widget -->
+						
+						<div class="sidebar-widget cta-widget text-center">
+							<h5 class="cta-head">How can we help you?</h5>
+							<p>Contact our support team if you need help or have any questions? </p>
+							<a href="#" class="btn btn-plane btn-alt">Contact US</a>
+						</div><!-- .sidebar-widget -->
+						
+					</div><!-- .sidebar-section -->
+					
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div>
+	<!-- Start Section -->
+
+    <!-- Start Section -->
+    <div class="section footer-scetion footer-particle section-pad-sm section-bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xl-4 res-l-bttm">
+                    <a class="footer-brand animated" data-animate="fadeInUp" data-delay="0" href="./">
+                        <img class="logo logo-light" alt="logo" src="images/logo-white.png" srcset="images/logo-white2x.png 2x">
+                    </a>
+                    <ul class="social">
+                        <li class="animated" data-animate="fadeInUp" data-delay=".1"><a href="https://lynked.world/company/lynkedworld" target="_blank"><em class="fa fa-lynkedworld"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".1"><a href="https://www.facebook.com/lynkedW/" target="_blank"><em class="fa fa-facebook"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".2"><a href="https://twitter.com/LynkedW" target="_blank"><em class="fa fa-twitter"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".3"><a href="https://www.youtube.com/channel/UCfi3HFpLbIifFYmRUncV5PQ/videos" target="_blank"><em class="fa fa-youtube-play"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".3"><a href="https://t.me/lynkedw" target="_blank"><em class="fa fa-telegram"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".4"><a href="https://www.linkedin.com/company/lynked-world/" target="_blank"><em class="fa fa-linkedin"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".6"><a href="https://medium.com/@ur.lynked.world" target="_blank"><em class="fa fa-medium"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".4">
+                            <a href="https://bitcointalk.org/index.php?topic=5005646" target="_blank"><em class="fa fa-bitcoin"></em></a>
+                        </li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".5">
+                            <a href="https://www.reddit.com/r/lynkedworld" target="_blank"><em class="fa fa-reddit"></em></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .col  -->
+                <div class="col-sm-6 col-xl-4 res-l-bttm">
+                    <div class="footer-subscription">
+                        <h6 class="animated" data-animate="fadeInUp" data-delay=".6">Subscribe to our Newsletter</h6>
+                        <form id="subscribe-form" action="form/subscribe.php" method="post" class="subscription-form animated" data-animate="fadeInUp" data-delay=".7">
+                            <input type="text" name="youremail" class="input-round required email" placeholder="Enter your email">
+                            <input type="text" class="d-none" name="form-anti-honeypot" value="">
+                            <button type="submit" class="btn btn-plane">Subscribe</button>
+                            <div class="subscribe-results"></div>
+                        </form>
+                    </div>
+                </div>
+                <!-- .col  -->
+                <div class="col-xl-4">
+                    <ul class="link-widget animated" data-animate="fadeInUp" data-delay=".8">
+                        <li><a href="../#partners" class="menu-link">Our Partners</a></li>
+                        <!-- <li><a href="#faq" class="menu-link">FAQ</a></li> -->
+                        <li><a href="../#contact" class="menu-link">Contact</a></li>
+                        <li><a href="images/LynkedWorld_Whitepaper.pdf" target="_blank" class="menu-link">Whitepaper</a></li>
+                        <li><a href="../#tokenSale" class="menu-link">Token Sale</a></li>
+                        <li><a href="../#roadmap" class="menu-link">Roadmap</a></li>
+                        <li><a href="../#team" class="menu-link">Team</a></li>
+                        <li><a href="../#intro" class="menu-link">About Us</a></li>
+                    </ul>
+                </div>
+                <!-- .col  -->
+            </div>
+            <!-- .row  -->
+            <div class="gaps size-2x"></div>
+            <div class="row">
+                <div class="col-md-7">
+                    <span class="copyright-text animated" data-animate="fadeInUp" data-delay=".9">
+                        Copyright © 2018 Lynked.World (KoinWorx BV, Netherlands). All Rights Reserved.
+                        <!-- <span>All trademarks and copyrights belong to their respective owners.</span> -->
+                    </span>
+                </div>
+                <!-- .col  -->
+                <div class="col-md-5 text-right mobile-left">
+                    <ul class="footer-links animated" data-animate="fadeInUp" data-delay="1">
+                        <li><a href="/rewards">Rewards</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="images/terms-and-conditions.pdf" target="_blank">Terms & Conditions</a></li>
+                        <li>
+                            <div class="language-switcher">
+                                <a href="#" data-toggle="dropdown">EN</a>
+                                <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">FR</a>
+                                    <a class="dropdown-item" href="#">CH</a>
+                                    <a class="dropdown-item" href="#">BR</a>
+                                </div> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .col  -->
+            </div>
+            <!-- .row  -->
+        </div>
+        <!-- .container  -->
+    </div>
+    <!-- End Section -->
+	
+
+	<!-- Preloader !remove please if you do not want -->
+	<div id="preloader">
+		<div id="loader">
+			<img src="images/loader.gif" >
+		</div>
+		<div class="loader-section loader-top"></div>
+   		<div class="loader-section loader-bottom"></div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- JavaScript (include all script here) -->
+	<script src="assets/js/jquery.bundle.js?ver=122"></script>
+	<script src="assets/js/script.js?ver=122"></script>
+
+</body>
+</html>

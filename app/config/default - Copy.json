@@ -1,0 +1,96 @@
+{
+  "node": "Lynked ICO",
+  "db1": "mongodb://127.0.0.1/lmico", 
+  "db_old": "mongodb://lynked:lynkedPassword@ds111390.mlab.com:11390/lynked",
+  "db": "mongodb://ico_user_lynked:VHhxsu3tRE52ybNE@18.218.122.208:27017/lynked",
+
+
+  "webport": 80, 
+
+  "ethereum": {
+    "network": "4",  // 1- mainnet, 3-ropsten, 4-rinkeby 
+    "host1": "http://ec2-13-127-192-131.ap-south-1.compute.amazonaws.com",                                       
+    "host": "http://ec2-18-196-131-108.eu-central-1.compute.amazonaws.com",                                       
+    "port": "8545",                                              
+    "contractFile": "./contracts/LYNKToken.json",
+    "adminAddress":"0x1E8A1E3423214a4b78BFA87440709867e6163615",
+    "adminPassword":"password",
+    "gas":3000000,
+    "gasPrice":40000000000,  //40 Gwei
+    "transaction": "1",
+    "newwallet":"0"
+  },
+
+  // default currency 
+  "currency": "USD",  
+  
+  // mailchimp configurations
+    "mailchimp": {
+      "enabled": "0",
+      "mailchimpInstance": "us17", 
+      "listUniqueId": "4a4c2a0f58",
+      "mailchimpApiKey": "adc1834d485062b3f3e4355c1c8e4b75-us17",
+      "package" : "superagent",     
+      "listUniqueIdPendingPayment": "a1007ca35b" 
+    },
+
+
+    //smtp gateway
+    //
+    
+    "sendgrid": {
+      "enable": "0",
+      "api": "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"                                                                           
+    },
+
+    
+
+    "paypal": {
+      "mode": "sandbox", //sandbox or live
+      "client_id": "AaU8tQfmz1_MFDTKuf84yYERXvdDt2ZFJVrxhNW_49DazF4A_F0VBuKyV5_nntyEdZqUa5Oq9ZBj65GV",
+      "client_secret": "EAZ8aFDU4lHHLy1bQqULYWqznf3dBknXZW3AH__zFC0bUs8AGUyR6RNbm-jHvqtikX7PsSqMO5vxuvKm",
+      "package" : "paypal-rest-sdk",
+      "return_url": "http://localhost:9090/paypal_success",
+      "cancel_url": "http://localhost:9090/paypal_failed"                                 
+    },
+    
+    "stripe": {
+      "key": "pk_test_Nez7QF10VNMfZQ7i8y8MkxGZ",                                         
+      "secret": "sk_test_uqR3jkJhQjMrYwKwhiv9Msqw",
+      "package": "stripe"                                            
+    },
+  
+    "coinpayments_dev": {
+      "key" : "1d68743cc10d11aefab2f62cf6c4f4731206623274e4c5a6378b1d3a0f271070",
+      "secret" : "91ca5F40c6c40Eb31A10eAbb9F8595E86F4942efa62088Dd7C74Ed8e9510BAA5",
+      "package": "coinpayments"                                    
+    },
+
+    "coinpayments": {
+      "key" : "e13da65ac8f59a5b31a32ee1a26ed9a7aac6f695498b0eccf00defbd095b9cf3",
+      "secret" : "842cb2Cf5D3d1f04E104163BAaDF2FC55C96c0F6B6cd168320d753E864c6Abe1",
+      "package": "coinpayments"                                    
+    },
+
+  // admin user Ids 
+  "admin": [ "saravana.malaichami@gmail.com", "epagani@ocex.co.uk","saravana_ind@gmail.com"],
+
+  "menu": {
+      "dashboard" : "1",
+      "admin" : "1",
+      "invest": "1",
+      "user" : "1"                                   
+    },
+
+  "payment": {
+      "crypto"    : "1",
+      "paypal"    : "1",
+      "creditcard": "1",
+      "alipay"    : "0",
+      "bank"      : "0",   
+      "ach"       : "0"                                
+    },
+
+ "bounties": [  "Bitcoin Talk", "Facebook", "Twitter", "You Tube", "Other"],
+
+  }

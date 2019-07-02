@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/core.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="../assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/js/plugins/ui/nicescroll.min.js"></script>
+	<script type="text/javascript" src="../assets/js/plugins/ui/drilldown.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="../assets/js/core/app.js"></script>
+	<script type="text/javascript" src="../assets/js/pages/layout_sidebar_sticky_custom.js"></script>
+	<!-- /theme JS files -->
+<!-- Theme JS files -->
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/datatables.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/forms/selects/select2.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js"></script>
+
+<script type="text/javascript" src="../assets/js/core/app.js"></script>
+<script type="text/javascript" src="../assets/js/pages/datatables_extension_buttons_html5.js"></script>
+<!-- /theme JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+	<script type="text/javascript" src="assets/js/charts/echarts/pies_donuts.js"></script>
+	<!-- /theme JS files -->
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+
+	
+		<% include head %> 
+        <%
+                function isEmpty(obj) {
+
+                    if (obj == null) return true;
+                    if (obj.length > 0)    return false;
+                    if (obj.length === 0)  return true;
+                    if (typeof obj !== "object") return true;
+                    for (var key in obj) {
+                        if (hasOwnProperty.call(obj, key)) return false;
+                    }
+                    return true;
+                }
+                   
+
+				function formatDate(value1)
+				{
+					value = new Date(value1);
+					//month = value.getMonth() + 1
+   					//return value.getDate() +"/" + month + "/" +  value.getYear();
+   					return value.toLocaleString('en-IN', { hour12:false } )
+				}
+
+
+        %>
+	<!-- Page header -->
+	<div class="page-header">
+		<div class="page-header-content">
+			<div class="page-title">
+				<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">ICO Management</span> </h4>
+
+				<ul class="breadcrumb breadcrumb-caret position-right">
+						<li><a href="/">Home</a></li>
+					<li><a href="/">ICO</a></li>
+				<li class="active">Invest Now</li>
+				</ul>
+			</div>
+
+	
+		</div>
+	</div>
+	<!-- /page header -->
+
+
+	<!-- Page container -->
+	<div class="page-container">
+
+		<!-- Page content -->
+		<div class="page-content">
+<% if(sidebar) { %> 
+			<!-- Main sidebar -->
+			<div class="sidebar sidebar-main sidebar-default">
+				<div class="sidebar-fixed">
+					<div class="sidebar-content">
+
+						<!-- Main navigation -->
+						<div class="sidebar-category sidebar-category-visible">
+							<div class="category-title h6">
+								<span>Main sidebar</span>
+								<ul class="icons-list">
+									<li><a href="#" data-action="collapse"></a></li>
+								</ul>
+							</div>
+
+							<div class="category-content no-padding">
+								<ul class="navigation navigation-main navigation-accordion">
+
+									<!-- Main -->
+									<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+									<li><a href="/dashboard"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+									<li>
+										<a href="#"><i class="icon-stack"></i> <span>ICO</span></a>
+										<ul>
+											<li><a href="/invest">Invest Now..  </a></li>
+											<li><a href="/asset_display_myassets">Users / Investors List </a></li>
+											<li><a href="/asset_issue">Orders Dashboard </a></li>
+
+
+											<li><a href="/asset_display_complete">Total Assets - Blokchain  </a></li>
+											<li><a href="/asset_display_myassets">My Assets </a></li>
+											<li><a href="/asset_issue">Issue New Asset </a></li>
+											
+											
+										</ul>
+									</li>
+
+									<li>
+										<a href="#"><i class="icon-stack"></i> <span>GPI</span></a>
+										<ul>
+											<li><a href="/gpi">my GPI  </a></li>
+											<li><a href="/new_gpi">New GPI </a></li>
+											<li><a href="/list_gpi">GPI List </a></li>										
+											<li><a href="/asset_display_myassets">Access & Rights </a></li>
+									
+										</ul>
+									</li>
+
+
+
+									<li><a href="../changelog.html"><i class="icon-list-unordered"></i> <span>Changelog</span></a></li>
+									<!-- /main -->
+
+								</ul>
+							</div>
+						</div>
+						<!-- /main navigation -->
+
+					</div>
+				</div>
+			</div>
+			<!-- /main sidebar -->
+			<% } %>
+
+
+
+			<!-- Main content -->
+			<div class="content-wrapper">
+		
+		  	  <div class="col-md-4 asset-collapse" style="padding: 0 20px;">
+					  <h3> Welcome to <%=tokenName %> Sale Program </h3> 
+					  <p>You can participate the Private Sale program, and please note of the following ..</p>
+					  <ul>
+						<li>You need to provide an Ethereum Public address to receive <%= tokenSymbol%> tokens  </li>
+						<li>You can invest using any of the following payment method </li>
+					  <ul>
+						<li> Ethereum </li>
+						<li> Bitcoin </li>
+					  </ul>
+					  <li>We will contact you with private sale token distributions details after receiveing the payment </li>
+					 							  
+					  </ul>
+					</div>
+		  
+				
+					
+				  <div class="col-md-8">
+				   <div class="panel panel-primary" style="margin-top: 20px;">
+					 <!-- <div class="panel-heading text-center"><h4>Issue Your Assets</h4></div>  -->
+				
+					 <div class="panel-body">
+					   <div class="panel-group" id="accordion">
+						 <div class="panel panel-default">
+							  <div style="text-align: center" class="panel-body">
+									  <div class="row asset-collapse">
+											<div class="col-md-12">
+												<h4>Thank you for your interest...
+												</h4>
+											  </div>
+											  <div class="col-md-12">
+												  <label><%= walletmsg %> <br> </label>
+											</div>
+											
+											<div class="col-md-12">
+												<h4> <b> <%= address %>  </b>   </h4>
+											  </div>
+																			  
+											<div class="col-md-12">
+												It is highly recommended that you make the payment within the one hour window otherwise you will experience significant delays. It may take upto 1 confirmation for your payment to be verified. This page does not require to be open in order for the payment to be processed. 
+											</div>
+										  </div>
+										  <br>
+										  <div class="row asset-collapse">
+											  <div class="col-md-12">
+												  <%= recordlink %> 
+												  <% if(coin == "Bitcoin"){ %>
+													<% url1 = "https://live.blockcypher.com/btc-testnet/address/"+ address + "/"; %>
+													<br>
+													<a href="<%= url1 %>"> Click here to check BTC transfer status after transferring.. </a> 
+												  <% } %>
+											  </div>
+											</div>
+										  <div class="row asset-collapse">
+											<div class="col-md-12">
+											  <label>&nbsp;</label>
+											</div>
+										  </div>
+					  
+										  <div class="col-sm-12  asset-collapse text-center">
+										  <button type="button" class="btn btn-primary" ><a  style="color:white" href="/userorders"> Thanks </a></button>
+										</div>
+								  </div>
+								</div>
+			
+							</div> 
+						  </div>
+					   </div>
+					</div>
+					</div>
+				
+		  
+		
+
+
+			</div>
+			<!-- /main content -->
+
+		</div>
+		<!-- /page content -->
+
+	</div>
+	<!-- /page container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 					 <div class="panel-body">
+					   <div class="panel-group" id="accordion">
+						 <div class="panel panel-default">
+							  <div style="text-align: center" class="panel-body">
+									  <div class="row asset-collapse">
+												<div class="col-md-12">
+													<h4>Thank you for your interest...
+													</h4>
+											  </div>
+										</div>
+
+									  <div class="row asset-collapse">
+											<div class="col-md-12">
+												It is highly recommended that you make the payment within the one hour window otherwise you will experience significant delays. It may take upto 1 confirmation for your payment to be verified. This page does not require to be open in order for the payment to be processed. 
+											</div>
+										</div>
+									  </div>
+									  <br>
+									  <div class="col-sm-12  asset-collapse text-center">
+										  <input type="button" class="btn btn-primary" value="Thanks, go to Orders">
+									</div>
+
+								  </div>
+								</div>
+						</div> 
+ -->				
+
+ <% include footer %>
+</body>
+</html>
+
+				

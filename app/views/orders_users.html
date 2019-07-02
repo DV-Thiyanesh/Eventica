@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/core.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script type="text/javascript" src="../assets/js/core/libraries/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/js/plugins/ui/nicescroll.min.js"></script>
+	<script type="text/javascript" src="../assets/js/plugins/ui/drilldown.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="../assets/js/core/app.js"></script>
+	<script type="text/javascript" src="../assets/js/pages/layout_sidebar_sticky_custom.js"></script>
+	<!-- /theme JS files -->
+<!-- Theme JS files -->
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/datatables.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/forms/selects/select2.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js"></script>
+<script type="text/javascript" src="../assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js"></script>
+
+<script type="text/javascript" src="../assets/js/core/app.js"></script>
+<script type="text/javascript" src="../assets/js/pages/datatables_extension_buttons_html5.js"></script>
+<!-- /theme JS files -->
+
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+
+	<script type="text/javascript" src="assets/js/core/app.js"></script>
+	<script type="text/javascript" src="assets/js/charts/echarts/pies_donuts.js"></script>
+	<!-- /theme JS files -->
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+
+	
+		<% include head %> 
+        <%
+                function isEmpty(obj) {
+
+                    if (obj == null) return true;
+                    if (obj.length > 0)    return false;
+                    if (obj.length === 0)  return true;
+                    if (typeof obj !== "object") return true;
+                    for (var key in obj) {
+                        if (hasOwnProperty.call(obj, key)) return false;
+                    }
+                    return true;
+                }
+                   
+
+				function formatDate(value1)
+				{
+					value = new Date(value1);
+					//month = value.getMonth() + 1
+   					//return value.getDate() +"/" + month + "/" +  value.getYear();
+   					return value.toLocaleString('en-IN', { hour12:false } )
+				}
+
+
+        %>
+
+
+	<!-- Page header -->
+	<!-- <div class="page-header">
+		<div class="page-header-content">
+			<div class="page-title">
+				<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Users Orders List </span> </h4>
+
+				<ul class="breadcrumb breadcrumb-caret position-right">
+					<li><a href="index.html">Home</a></li>
+				<li><a href="/">Orders</a></li>
+				</ul>
+			</div>
+		</div>
+	</div> -->
+	<!-- /page header -->
+
+	<!-- Page container -->
+	<div class="page-container">
+		<!-- Page content -->
+		<div class="page-content">
+
+			<div class="content-wrapper">
+				<!-- User Profile -->
+				<!-- Widgets list -->
+				<div class="row">
+					
+					<!-- List of files -->
+					<div class="col-sm-12 col-lg-6">
+						<div class="panel panel-white">
+							<div class="panel-heading">
+									<%
+									var profile_img = 'assets/images/default-user.png';
+									if(typeof sess.user.profile_image!='undefined' && sess.user.profile_image!=''){
+										profile_img=profile_image_url+sess.user.profile_image;
+									}
+								%>
+									<img src="<%=profile_img%>" class="img-circle img-responsive position-left pull-left" alt="" style="width: 40px; height: 40px; max-height: auto !important">
+									<%
+										var display_name = '';
+										if(typeof sess.user!='undefined'){
+											if(typeof sess.user.firstname!='undefined' && sess.user.firstname!=''){
+												display_name = sess.user.firstname;
+											}
+											if(typeof sess.user.lastname!='undefined' && sess.user.lastname!=''){
+												display_name = display_name+' '+sess.user.lastname;
+											}
+										}
+									%>
+									<h5 class="no-margin"><%=display_name%>
+										<span class="display-block small-designation">
+											<%
+												var headline='Head of UX';
+												if(typeof sess.user.headline!='undefined' && sess.user.headline!=''){
+													headline=sess.user.headline;
+												}
+											%>
+											<%=headline%>
+										</span>
+									</h5>
+								<div class="heading-elements">
+									<span class="heading-text text-muted">Status</span>
+								</div>
+							</div>
+
+							<div class="list-group no-border">
+								<div href="#" class="list-group-item">
+									<i class="icon-envelop2"></i> 
+									<% 	
+										var email_id = 'victoria.davisone@gmail.com';
+										if(typeof sess.user.email!='undefined' && sess.user.email!=''){
+											email_id=sess.user.email;
+										}
+									%>
+								<%=email_id%><span class="label bg-success-400">Verified</span>
+								</div>
+
+								<a href="#" class="list-group-item">
+									<i class="icon-mobile2"></i> 
+									<%
+										var phone='9429551145';
+										if(typeof sess.user.phone!='undefined' && sess.user.phone!=''){
+											phone=sess.user.phone;
+										}
+									%>
+									<%=phone%><span class="label bg-danger-400">Pending</span>
+								</a>
+
+								<a href="#" class="list-group-item" data-toggle="modal" data-target="#add-doc">
+									<i class="icon-file-word"></i> Identity <span class="label bg-slate">Add Document</span>
+								</a>
+
+								<div href="#" class="list-group-item">
+									<i class="icon-map4"></i> 
+									<%
+										var address='Address';
+										if(typeof sess.user.address!='undefined' && sess.user.address!=''){
+											address=sess.user.address;
+										}
+									%>
+									<%=address%><span class="label bg-success-400">Verified</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /list of files -->
+
+					<!-- socialmedia -->
+					<div class="col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header bg-primary text-white header-elements-inline">
+								<h6 class="card-title">Follow and Join Us on Social Media</h6>
+							</div>
+
+							<div class="card-body">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
+								<ul class="list-inline list-inline-condensed mt-3 mb-0">
+									<li class="list-inline-item"><a href="https://lynked.world/company/lynkedworld" class="lw-icon btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-lynkedworld"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://www.facebook.com/lynkedW/" class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-facebook"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://twitter.com/LynkedW" class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-twitter"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://www.youtube.com/channel/UCfi3HFpLbIifFYmRUncV5PQ/videos" class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-youtube"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://t.me/lynkedworld" class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-paperplane"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://medium.com/@lynked.world" class="md-icon btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-medium"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /user details (with sample pattern) -->
+				<!-- <div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="card">
+							<div class="card-header bg-primary text-white header-elements-inline">
+								<h6 class="card-title">Follow and Join Us on Social Media</h6>
+							</div>
+
+							<div class="card-body">
+								<ul class="list-inline list-inline-condensed mt-3 mb-0">
+									<li class="list-inline-item"><a href="https://lynked.world/company/lynkedworld" class="lw-icon btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-lynkedworld"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://www.facebook.com/lynkedW/" class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-facebook"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://twitter.com/LynkedW" class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-twitter"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://www.youtube.com/channel/UCfi3HFpLbIifFYmRUncV5PQ/videos" class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-youtube"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://t.me/lynkedworld" class="btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-paperplane"></i></a>
+									</li>
+									<li class="list-inline-item"><a href="https://medium.com/@lynked.world" class="md-icon btn btn-outline bg-info btn-icon text-info border-info border-2 rounded-round">
+										<i class="icon-medium"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header bg-primary text-white header-elements-inline">
+								<h6 class="card-title">Refer a freinds and earn rewards</h6>
+							</div>
+
+							<div class="card-body">
+								<div class="mb-4">
+									<div class="row">
+									<div class="mb-3 text-center col-md-5 col-sm-12">
+										<a href="#" class="d-inline-block">
+											<img src="images/twitter-cover.png" class="img-fluid img-responsive" alt="">
+										</a>
+									</div>
+
+									<div class="col-md-7 col-sm-12">
+										<h4 class="font-weight-semibold mb-1">
+											<a href="#" class="text-default">The Lynked.World referral program lets you earn rewards for each successful referral registered in your account! </a>
+										</h4>
+										<p>How it works</p>
+										<ul class="list list-unstyled">
+											<li>
+												<i class="icon-checkmark3 text-success mr-2"></i>
+												You start by visiting Refer A Friend page. From this page you can copy your referral link or send an invite email to a friend.
+											</li>
+											<li>
+												<i class="icon-checkmark3 text-success mr-2"></i>
+												Your friend can click the referral link (or the link in the email) and sign up for a Lynked.World account.
+											</li>
+											<li>
+												<i class="icon-checkmark3 text-success mr-2"></i>
+												Depending lisIf your friend successfully created an account using the referral link you both will receive a 5 LBD as referral bonus.
+											</li>
+											<li>
+												<i class="icon-checkmark3 text-success mr-2"></i>
+												If your friend refers his friend and his friend successfully create an account, you will receive 2 LBD as 1st indirect referral.
+											</li>
+											<li>
+												<i class="icon-checkmark3 text-success mr-2"></i>
+												If your friend’s friend refers his friend and his friend successfully create an account, you will receive 1 LBD as 2nd indirect referral.
+											</li>
+										</ul>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+								
+				<!-- /page content -->
+			</div>
+		</div>
+	</div>
+	<!-- /page container -->
+
+	<script type="text/javascript">
+
+		function removeOrder(order){
+			 	  $.post('/removeOrder/'+order, function (data) {
+				        alert(data);
+					});
+		   
+		}
+
+
+	    function updateTokens(order){
+			 	  $.post('/updateTokens/'+order, function (data) {
+				        alert(data);
+					});
+		   
+		}
+
+		function popupCenter(url, title, w, h) {
+				var left = (screen.width/2)-(w/2);
+				var top = (screen.height/2)-(h/2);
+				return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+		}
+
+
+
+
+
+	</script>
+
+<% include footer %>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.png">
+
+    <title>Eventica | signup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/ico.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body class="auth-page">
+
+    <main role="main">
+        <section class="signin-signup">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-5">
+                        <!-- <img src="images/logo.png" class="img-fluid auth-logo center-block"> -->
+                        <div class="signin-form auth-form">
+                            <!-- <form method="post" class="social-logins" action="/signup" method="post"> -->
+                                <!-- <button type="submit" class="btn-social facebook-login" name="provider" value="Facebook"><img src="images/fb.png" class="float-left"><span>Sign up with Facebook</span></button>
+                                <button type="submit" class="btn-social google-login" name="provider" value="Google"><img src="images/google.png" class="float-left"><span>Sign up with Google</span></button> -->
+                                <!-- <button type="submit" class="btn-social lynkedworld-login" name="provider" value="Lynked"><img src="images/lynkedworld.png" class="float-left"><span>Sign up with Lynked.World</span></button> -->
+                            <!-- </form> -->
+                            <!-- <div class="text-center">OR</div> -->
+
+                            <script src="js/jquery.min.js"></script>
+									<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+                               <form method="post" class="social-logins" action="/signup" method="post">
+                                               
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control mail-field" required="required" placeholder="Email"> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" class="form-control password-field" required="required" placeholder="Password"> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="repeatpassword" class="form-control password-field" required="required" placeholder="Confirm Password"> 
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="firstname" class="form-control password-field" required="required" placeholder="First Name"> 
+                                </div>
+
+                                <div class="form-group">
+                                   <input type="text" name="lastname" class="form-control password-field" required="required" placeholder="Last Name"> 
+                                </div>
+
+
+                                <div class="g-recaptcha" data-sitekey="6Lf-ZEUUAAAAAPtYfUgJHIG1_0xwpHcPIBDDdqqq"></div>
+                                <div class="auth-bottom">
+                                
+                                     <button class="btn btn-primary buy-tokens">Sign Up </button>
+                                    <div class="auth-text-line last-line">Already have an account? <a href="/signin">Login</a></div>
+                                </div>
+                            </form>
+                        <!-- messages section -->
+                      
+
+
+
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
+
+
+
+   <br>
+                  
+                        <% if ( messages.info) { %>
+                                <div class="alert alert-primary no-border">
+                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    <span class="text-semibold"><%= messages.info %>
+                                </div>
+                        <% } %>
+
+                        <% if ( messages.error) { %>
+                                <div class="alert alert-danger no-border">
+                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    <span class="text-semibold"><%= messages.error %>
+                                </div>
+
+                        <% } %>
+
+                        <% if ( messages.success) { %>
+                                <div class="alert alert-success no-border">
+                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    <span class="text-semibold"><%= messages.success %>
+                                </div>
+
+                        <% } %>
+                        <!-- messages - end -->
+
+
+
+
+forgot.html file:
+
+                          <% if ( messages.info) { %>
+                                <div class="alert alert-primary no-border">
+                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    <span class="text-semibold"><%= messages.info %>
+                                </div>
+                        <% } %>
+
+                        <% if ( messages.error) { %>
+                                <div class="alert alert-danger no-border">
+                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    <span class="text-semibold"><%= messages.error %>
+                                </div>
+
+                        <% } %>
+
+                        <% if ( messages.success) { %>
+                                <div class="alert alert-success no-border">
+                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    <span class="text-semibold"><%= messages.success %>
+                                </div>
+
+                        <% } %>

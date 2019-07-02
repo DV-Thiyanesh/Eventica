@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.png">
+
+    <title>Token Sale | Lynked.World</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="/css/ico.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/vendor.bundle.css?ver=122">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/assets/css/style.css?ver=122">
+    <link rel="stylesheet" href="/assets/css/theme-java.css?ver=122">
+    <link href="/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body class="auth-page">
+
+    <main role="main">
+        <section class="signin-signup">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-5">
+                        <img src="<%=site_home_url%>images/logo.png" class="img-fluid auth-logo center-block">
+                        
+                        <div class="signin-form auth-form">
+                            <!-- <form class="social-logins" action="/login" method="post"> -->
+                                <!-- <button type="submit" class="btn-social facebook-login" name="provider" value="Facebook"><img src="images/fb.png" class="float-left"><span>Sign up with Facebook</span></button>
+                                <button type="submit" class="btn-social google-login" name="provider" value="Google"><img src="images/google.png" class="float-left"><span>Sign up with Google</span></button> -->
+                    
+                            <!-- </form> -->
+                  
+                            <form action="/forgot" method="post">
+                    <div class="panel panel-body login-form">
+                        <div class="text-center">
+                            <div class="icon-object border-warning text-warning"><i class="icon-spinner11"></i></div>
+                            <h5 class="content-group">Password recovery</h5>
+                            <p>&nbsp;</p>
+                        </div>
+
+                        <% if ( messages.info) { %>
+                                <div class="alert alert-primary no-border">
+                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    <span class="text-semibold"><%= messages.info %>
+                                </div>
+                        <% } %>
+
+                        <% if ( messages.error) { %>
+                                <div class="alert alert-danger no-border">
+                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    <span class="text-semibold"><%= messages.error %>
+                                </div>
+
+                        <% } %>
+
+                        <% if ( messages.success) { %>
+                                <div class="alert alert-success no-border">
+                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    <span class="text-semibold"><%= messages.success %>
+                                </div>
+
+                        <% } %>
+<!--                        <% if ( messages.info) { %>
+                        <div class="<%= messages.type %>">
+                            <strong>FLASH!</strong> <%= messages.info %>
+                        </div>
+                        <% } %>
+                        <% if ( messages.error) { %>
+                        <div class="<%= messages.type %>">
+                            <strong>FLASH!</strong> <%= messages.error %>
+                        </div>
+                        <% } %> -->
+
+                        <div class="form-group has-feedback">
+                            <input type="email" name="email" class="form-control" placeholder="Your email">
+                            <div class="form-control-feedback">
+                                <i class="icon-mail5 text-muted"></i>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn bg-blue btn-block">Reset password <i class="icon-arrow-right14 position-right"></i></button>
+                    </div>
+                </form>
+
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

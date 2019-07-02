@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lynked.World is a blockchain based  ecosystem  which enables individuals and organisations to share immutable identities, authenticated data and documents in conveniently and securely, which can again easily cross-verified.">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- Site Title  -->
+    <title>TOKEN SALE | Lynked.World</title>
+    <!-- Vendor Bundle CSS -->
+    <link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=122">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="assets/css/style.css?ver=122">
+    <link rel="stylesheet" href="assets/css/theme-java.css?ver=122">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125118386-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-125118386-1');
+    </script>
+    <style type="text/css">
+        p span {
+            color: #313c56;
+        }
+        .topic-subtitle {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .040em;
+        }
+        .text-block ol li {
+            list-style-type: decimal
+        }
+    </style>
+</head>
+
+<%
+var referral_string = (typeof referral_code!='undefined' && referral_code!='')?referral_code:'';
+%>
+<body class="theme-dark io-azure io-azure-pro" data-spy="scroll" data-target="#mainnav" data-offset="80">
+
+	<!-- Header -->
+    <header class="site-header is-sticky">
+
+        <!-- Place Particle Js -->
+        <div id="particles-js" class="particles-container particles-js"></div>
+
+        <!-- Navbar -->
+        <div class="navbar navbar-expand-lg is-transparent" id="mainnav">
+            <nav class="container">
+
+                <a class="navbar-brand animated" data-animate="fadeInDown" data-delay=".65" href="./">
+                    <img class="logo logo-dark" alt="logo" src="images/logo.png" srcset="images/logo2x.png 2x">
+                    <img class="logo logo-light" alt="logo" src="images/logo-white.png" srcset="images/logo-white2x.png 2x">
+                </a>
+
+                <!-- <div class="language-switcher animated" data-animate="fadeInDown" data-delay=".75">
+                    <a href="#" data-toggle="dropdown">EN</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">FR</a>
+                        <a class="dropdown-item" href="#">CH</a>
+                        <a class="dropdown-item" href="#">BR</a>
+                    </div>
+                </div> -->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle">
+                    <span class="navbar-toggler-icon">
+						<span class="ti ti-align-justify"></span>
+                    </span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
+                    <ul class="navbar-nav navbar-btns animated remove-animation" data-animate="fadeInDown" data-delay="1.15">
+                        <li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link expand-trigger content-popup" href="#signup-popup">Sign Up</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-sm btn-outline menu-link expand-trigger content-popup" href="#signin-popup">Log in</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <!-- Start Signup Popup  -->
+            <div id="signup-popup" class="signin-form mfp-hide signin-signup">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="signin-form auth-form col-md-6 col-xs-12">
+                            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                            <form method="post" class="social-logins" action="">
+                                <a href="#lw_login_qr" class="btn-social lynkedworld-login expand-trigger content-popup" name="provider" value="Lynked"><img src="images/lynkedworld.png" class="float-left"><span>Sign up with Lynked.World Digital Identity</span><span class="pull-right"><i class="fa fa-angle-right"></i></span></a>
+                            </form>
+                            <div class="text-center text-primary">OR</div>
+                            <form id="form_sign_up" method="POST">
+                                <p class="text-center"><b>SignUp with Email</b></p>
+                                <div class="form-group">
+                                    <input type="text" name="first" id="user_first_name" class="form-control" required="required" placeholder="First name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="last" id="user_last_name" class="form-control" required="required" placeholder="Last name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" id="user_email" class="form-control mail-field" required="required" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="user_password" class="form-control password-field" required="required" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="user_cpassword" class="form-control password-field" required="required" placeholder="Confirm Password">
+                                </div>
+                                <div class="form-group">
+                                
+                                    <input type="text" name="referred_by" id="referred_by" class="form-control" placeholder="Referred By (optional)" value="<%-referral_string%>">
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="user_join_check" name="user_join_check" required="">&nbsp;I have Joined <a href="https://t.me/lynkedw" class="form-links" target="_blank">Lynked.World Telegram Channel</a>
+                                            <span class="checkmark1"></span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="user_term_check" name="user_term_check" required="">&nbsp;I have read and agree to <a href="images/terms-and-conditions.pdf" class="form-links" target="_blank">Terms of Token Sale</a>, <a href="/privacy-policy" class="form-links" target="_blank">Privacy Policy</a>,
+                                            <span class="checkmark1"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="g-recaptcha" style="margin-left:10px;margin-bottom:10px;" data-sitekey="6LddMmQUAAAAADwoLTnTPf11dGytKGuN4w7272NF"></div>
+                                </div>
+                                <div class="auth-bottom1">
+                                    <button class="btn btn-alt buy-tokens" type="submit">Sign Up</button>
+                                    <br>
+                                    <div class="text-center auth-text-line last-line">Already have an account? <a href="#signin-popup" class="expand-trigger content-popup form-links">Login</a></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Signin Popup  -->
+            <div id="signin-popup" class="signin-form mfp-hide signin-signup">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="signin-form auth-form col-md-6 col-xs-12">
+                            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                            <form method="post" class="social-logins" action="">
+                                <!-- <button type="submit" class="btn-social facebook-login" name="provider" value="Facebook"><img src="images/fb.png" class="float-left"><span>Sign up with Facebook</span></button>
+                                <button type="submit" class="btn-social google-login" name="provider" value="Google"><img src="images/google.png" class="float-left"><span>Sign up with Google</span></button> -->
+                                <a href="#lw_login_qr" class="btn-social lynkedworld-login expand-trigger content-popup" name="provider" value="Lynked"><img src="images/lynkedworld.png" class="float-left"><span>Continue with Lynked.World App</span><span class="pull-right">></span></a>
+                            </form>
+                            <div class="text-center text-primary">OR</div>
+                            <form id="form_signin" method="POST">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control mail-field" required="required" placeholder="Email"> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" class="form-control password-field" required="required" placeholder="Password"> 
+                                </div>
+                                <p class="float-right">Forgot password? <a href="#fp-popup" class="expand-trigger content-popup form-links">Remind</a></p>
+                                <div class="clearfix"></div>
+                                <div class="auth-bottom1">
+                                    <input type="submit" class="btn btn-alt buy-tokens" value="Sign In" />
+                                    <!-- <a class="btn btn-alt buy-tokens" onclick="">Sign In</a> -->
+                                    <br>
+                                    <div class="text-center auth-text-line last-line">Don't have an account? <a href="#signup-popup" class="expand-trigger content-popup form-links">Signup</a></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start forgot password Popup  -->
+            <div id="fp-popup" class="signin-form mfp-hide signin-signup">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="signin-form auth-form col-md-6 col-xs-12">
+                            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                            <br>
+                            <p class="text-center text-primary nomg">Enter your email id</p>
+                            <form id="signin-forgot">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="forgot_email" class="form-control mail-field" required="required" placeholder="Email"> 
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="auth-bottom1">
+                                    <button class="btn btn-alt buy-tokens" onclick="">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Login with LW QR Start -->
+            <div id="lw_login_qr" class="lynked.world mfp-hide signin-signup">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="signin-form auth-form col-md-5 col-xs-12">
+                            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                            <br>
+                            <p class="text-center text-primary">Use the <a class="form-links" 
+                                href="https://play.google.com/store/apps/details?id=com.world.lynkedworld" target="_blank">Lynked.World app</a> to scan the QR code</p>
+                            <div class="qrbox">
+                                <div class="qr_code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39"><path d="M1 1h7v7h-7zM10 1h4v1h1v2h-1v-1h-1v1h-2v-1h1v-1h-2zM22 1h4v1h-2v1h-1v1h-1v-1h-1v-1h1zM29 1h1v4h-2v-1h-1v-1h1v-1h1zM31 1h7v7h-7zM2 2v5h5v-5zM16 2h2v1h-2zM19 2h1v1h-1zM26 2h1v1h-1zM32 2v5h5v-5zM3 3h3v3h-3zM9 3h1v1h1v1h1v1h-1v1h-1v2h-1zM24 3h2v1h1v1h-2v-1h-1zM33 3h3v3h-3zM13 4h1v1h1v1h-2zM15 4h5v1h-1v2h-1v1h-1v-2h1v-1h-1v1h-1v-1h-1zM21 4h1v1h-1zM20 5h1v1h-1zM22 5h3v1h-3zM27 5h1v1h-1zM12 6h1v1h-1zM26 6h1v1h-1zM28 6h2v2h-1v-1h-1zM11 7h1v1h-1zM13 7h1v1h1v-1h1v1h1v1h-2v2h-1v-1h-2v-1h1zM19 7h1v1h1v-1h1v1h1v1h-5v-1h1zM23 7h1v1h-1zM25 7h1v1h-1zM27 7h1v1h-1zM28 8h1v2h-4v-1h3zM1 9h1v1h-1zM3 9h5v1h-3v1h1v1h1v1h1v-1h1v1h1v-2h1v-1h1v3h-1v2h1v2h-4v-1h-2v-1h-1v-1h-1v-1h1v-1h-1v1h-1zM17 9h1v1h-1zM31 9h5v1h-5zM8 10h1v1h-1zM16 10h1v1h2v-1h1v1h1v1h2v1h-2v1h4v1h-2v2h-1v1h-1v-1h-1v-1h1v-1h-1v-1h-2v-1h1v-1h-2v2h-1v-1h-1v-1h1zM21 10h4v1h-4zM29 10h2v1h-2zM36 10h1v1h-1zM7 11h1v1h-1zM13 11h1v1h-1zM25 11h2v1h-2zM28 11h1v2h-1zM31 11h1v1h-1zM34 11h2v1h-1v1h-1zM37 11h1v1h-1zM32 12h1v1h1v1h-4v-1h2zM1 13h2v1h-1v1h1v1h-2zM13 13h1v1h-1zM25 13h3v1h-3zM35 13h3v1h-3zM3 14h1v1h-1zM7 14v1h3v-1zM12 14h1v1h-1zM14 14h1v1h-1zM17 14h1v1h-1zM29 14h1v1h2v1h-1v1h1v1h-4v-2h-1v-1h2zM34 14h1v1h3v3h-1v-2h-4v-1h1zM13 15h1v1h-1zM15 15h2v1h1v1h-1v1h2v1h-4v1h-1v-3h1v1h1v-1h-1zM19 15h1v1h-1zM3 16h1v1h-1zM25 16h1v1h-1zM29 16v1h1v-1zM32 16h1v1h-1zM2 17h1v1h-1zM4 17h1v2h1v1h1v1h-1v1h-1v1h-1v1h2v1h-2v2h-2v3h-1v-5h1v1h1v-2h-2v-4h1v-1h1v1h1v-1h-1v-1h1zM6 17h2v1h-2zM19 17h1v1h-1zM23 17h2v1h1v1h-2v-1h-1zM26 17h1v1h-1zM33 17h3v1h-3zM11 18h1v1h-1zM27 18h1v1h-1zM32 18h1v1h3v1h-1v1h-1v-1h-2v1h2v1h-6v-1h-1v-1h1v-1h4zM36 18h1v1h-1zM7 19h2v1h1v1h-1v1h1v1h2v-1h2v1h-1v2h2v1h1v-1h1v-1h-1v1h-1v-1h-1v-1h1v-2h1v2h2v-1h-1v-2h1v1h1v-2h1v3h-1v2h2v-1h1v1h1v3h1v1h-1v1h-1v1h-1v1h-1v-1h-4v-1h-1v-1h-1v1h1v1h-1v1h1v-1h1v1h1v1h1v1h-1v1h1v1h-2v-1h-1v-2h-1v2h1v1h1v1h-1v1h-1v1h-1v-1h-2v1h-2v-1h1v-1h-1v-4h1v-1h2v3h1v-4h-2v-1h2v-3h-2v-1h1v-1h-2v1h-1v1h2v1h-2v1h-3v-1h2v-1h-1v-1h1v-1h1v-1h-1v-1h-1v-1h1v-1h-1zM21 19h2v2h-1v-1h-1zM37 19h1v1h-1zM11 20h2v1h-1v1h-2v-1h1zM24 20h1v1h-1zM30 20v1h1v-1zM36 20h1v1h-1zM2 21v1h2v-1zM21 21h1v1h-1zM23 21h1v1h-1zM26 21h1v1h1v1h-2v2h-2v-1h1v-1h-1v-1h2zM35 21h1v1h-1zM37 21h1v1h-1zM6 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM36 22h1v1h-1zM7 23h1v1h-1zM23 23h1v1h-1zM28 23h1v1h-1zM30 23h3v1h-3zM37 23h1v3h-5v-2h1v1h2v-1h1zM18 25v1h-1v1h1v1h-1v1h2v-2h-1v-1h2v1h1v1h1v-1h-1v-1h1v-1zM26 25h1v1h-1zM28 25h4v1h-4zM5 26h1v1h-1zM24 26h2v1h1v-1h1v1h1v2h-2v-1h-2v-1h-1zM32 26h1v2h-1v1h1v-1h1v-1h1v2h-1v3h1v1h-1v1h1v1h-6v-1h-1v-2h1v-3h1v-1h1v-1h1zM4 27h1v1h1v1h2v1h-3v-1h-2v-1h1zM36 27h2v1h-2zM24 28h1v1h-1zM9 29h1v2h-1zM23 29h1v1h-1zM26 29h1v1h-1zM35 29h3v1h-3zM24 30h2v1h-2zM27 30h1v2h-1zM30 30v3h3v-3zM1 31h7v7h-7zM19 31h1v1h-1zM21 31h1v1h-1zM23 31h1v1h-1zM31 31h1v1h-1zM36 31h2v1h-2zM2 32v5h5v-5zM24 32h2v1h1v1h-2v-1h-1zM3 33h3v3h-3zM10 33v1h1v-1zM19 33h5v1h-1v1h-1v-1h-3zM35 33h3v5h-3v-1h2v-1h-1v-1h1v-1h-2zM24 34h1v1h-1zM27 34h1v1h1v1h-1v1h1v1h-5v-1h1v-1h1v1h1zM11 35v1h1v-1zM13 35v1h1v-1zM21 35h1v1h-1zM17 36h1v1h1v-1h1v2h-3zM22 36h1v1h-1zM29 36h3v1h1v1h-2v-1h-2zM34 36h1v1h-1zM21 37h1v1h-1z"></path></svg>
+                                </div>
+                                <span><img src="https://dev.lynked.world/themes/frontend/images/qrcode-logo.png"></span>
+								<script src="js/jquery.min.js"></script>
+								<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+								<script>
+									$(document).ready(function(){
+										var csocket = io('https://dev.lynked.world:2087');
+										var csocket_id = '';
+										csocket.on('connect', function () {
+											console.log('connected');
+											csocket_id = csocket.id;
+											//alert(csocket_id);
+											get_qr(csocket_id);
+										});
+										
+										var user_id = "0";
+										var socket_id = '';
+										csocket.on('connect', function (sockete_data) {
+											socket_id = csocket.id;
+											csocket.emit('connect_io',{socket_id:socket_id});
+										});
+										
+										csocket.on("received_p_msg",function(req_socket){
+											//console.log("IN -->>> ", req_socket);
+
+											$.ajax({
+                                                //url: 'https://dev.lynked.world/AttemptQRLogin',
+												url: 'https://dev.lynked.world/AttemptQRLoginUserData',
+												origin: '*',
+												dataType: 'json',
+												type: 'POST',
+												contentType: 'application/json',
+												data: JSON.stringify(req_socket['user_req']),
+												processData: false,
+												success: function( data, textStatus, jQxhr ){
+													/* session check and adding */
+													//window.location.href
+													/* $("<div class='form-holder'>" +
+													"<form name='input' action='#' method='get'>" +
+													"<input type='hidden' name='email' /><br/><br/>" +
+													"<input type='hidden' name='qr_type' /><br/><br/>" +
+													"<input type='submit' value='New' />" +
+													"</form>" +
+													"</div>").appendTo('#lw_login_qr'); */
+
+													//console.log(JSON.stringify(data.users));
+													
+                                                    login_call_qr(data.users);
+													//window.location.href = '/';
+												},
+												error: function( jqXhr, textStatus, errorThrown ){
+													console.log( errorThrown );
+												}
+											});
+										});
+									});
+									
+									function get_qr(user_socket_id){
+									  $.ajax({
+										  url: 'https://dev.lynked.world/qr_code',
+										  origin: '*',
+										  dataType: 'json',
+										  type: 'POST',
+										  contentType: 'application/json',
+										  data: JSON.stringify( { "socket_id": user_socket_id } ),
+										  processData: false,
+										  success: function( data, textStatus, jQxhr ){
+											$(".qr_code").html(data.qr);
+											setTimeout(function(){
+												get_qr(user_socket_id);
+											}, 15000);
+										  },
+										  error: function( jqXhr, textStatus, errorThrown ){
+											  console.log( "error: ", errorThrown );
+										  },
+											//beforeSend: setHeader
+										});
+									}
+									 
+									function login_call_qr(data){
+                                        var email = '';
+                                        var address = '';
+                                        var city = '';
+                                        var state = '';
+                                        var country = '';
+                                        var phone = '';
+                                        var headline = '';
+                                        var is_verify_email = 0;
+                                        var is_verify_phone = 0;
+                                        var profile_image = '';
+
+                                        if(typeof data!='undefined'){
+                                            if(typeof data.location!='undefined' && data.location!=''){
+                                                address = data.location;
+                                            }
+                                            if(typeof data.email!='undefined' && data.email!=''){
+                                                email = data.email;
+                                            }
+                                            if(typeof data.city!='undefined' && data.city!=''){
+                                                city = data.city;
+                                            }
+                                            if(typeof data.state!='undefined' && data.state!=''){
+                                                state = data.state;
+                                            }
+                                            if(typeof data.country!='undefined' && data.country!=''){
+                                                country = data.country;
+                                            }
+                                            if(typeof data.phone!='undefined' && data.phone!=''){
+                                                phone = data.phone;
+                                            }
+                                            if(typeof data.headline!='undefined' && data.headline!=''){
+                                                headline = data.headline;
+                                            }
+                                            if(typeof data.is_verify_phone!='undefined' && data.is_verify_phone!=null){
+                                                is_verify_phone = data.is_verify_phone;
+                                            }
+                                            if(typeof data.is_verify_email!='undefined' && data.is_verify_email!=null){
+                                                is_verify_email = data.is_verify_email;
+                                            }
+                                            if(typeof data.profile_image!='undefined' && data.profile_image!=''){
+                                                profile_image = data.profile_image;
+                                            }
+                                        }
+
+										$.ajax({
+											url: '/login_qr',
+											type: 'POST',
+											data: { "user_id": data.id,
+													"name": data.name,
+													"loginid":data.loginid,
+                                                    "address":address,
+                                                    "city":city,
+                                                    "email":email,
+                                                    "state":state,
+                                                    "country":country,
+                                                    "phone":phone,
+                                                    "headline":headline,
+                                                    "profile_image":profile_image,
+                                                    "is_verify_phone":is_verify_phone,
+                                                    "is_verify_email":is_verify_email,
+													"qr_login": "1"
+												},
+											success: function( data, textStatus, jQxhr ){
+												//alert(JSON.stringify(data));
+												window.location.href = '/userorders';
+											},
+											error: function( jqXhr, textStatus, errorThrown ){
+												console.log( "error: ", errorThrown );
+											}
+										});
+									}
+									
+									/* function setHeader(xhr) {
+										var token = '123';
+										xhr.setRequestHeader('Authorization', token);
+									} */
+								</script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- Banner -->
+		<div id="header" class="page-banner d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="page-head text-center">
+							<h2 class="page-heading">Privacy Policy</h2>
+						</div>
+					</div>
+				</div>
+			</div><!-- .container  -->
+		</div>
+		<!-- End Banner -->
+        <!-- <a href="#intro" class="scroll-down menu-link">SCROLL DOWN</a> -->
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Social Media is-sticky -->
+    <div class="sticky-container">
+        <ul class="sticky">
+            <li>
+                <em class="fa fa-lynkedworld"></em>
+                <p><a href="https://lynked.world/company/lynkedworld" target="_blank">Follow Us on<br>Lynked.World</a></p>
+            </li>
+            <li>
+                <em class="fa fa-facebook"></em>
+                <p><a href="https://www.facebook.com/lynkedW/" target="_blank">Like Us on<br>Facebook</a></p>
+            </li>
+            <li>
+                <em class="fa fa-twitter"></em>
+                <p><a href="https://twitter.com/LynkedW" target="_blank">Follow Us on<br>Twitter</a></p>
+            </li>
+            <li>
+                <em class="fa fa-youtube-play"></em>
+                <p><a href="https://www.youtube.com/channel/UCfi3HFpLbIifFYmRUncV5PQ/videos" target="_blank">Subscribe on<br>YouYube</a></p>
+            </li>
+            <li>
+                <em class="fa fa-telegram"></em>
+                <p><a href="https://t.me/lynkedw" target="_blank">Join Us on<br>Telegram</a></p>
+            </li>
+            <li>
+                <em class="fa fa-linkedin"></em>
+                <p><a href="https://www.linkedin.com/company/lynked-world/" target="_blank">Follow Us on<br>LinkedIn</a></p>
+            </li>
+            <li>
+                <em class="fa fa-medium"></em>
+                <p><a href="https://medium.com/@lynked.world" target="_blank">Follow Us on<br>Medium</a></p>
+            </li>
+        </ul>
+    </div>
+    <!-- End Social Media is-sticky -->
+
+ 
+	<!-- Start Section -->
+	<div class="section section-pad-md section-bg-alt section-pro blog-section" id="news">
+		<div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                    <div class="static-pages">
+                        <p>
+                            At <a href="javascript:;"><b>Lynked.World</b></a>, we believe in total transparency on how we collect, store and use data related to you. This Privacy Policy explains how information about you is collected, stored, used and discloses by Lynked.World. This policy applies to information we collect when you access or use our services <i>https://lynked.world</i> websites, mobile applications and other online services offered by Lynked.World.
+                        </p><br>
+                        <p>
+                            <b class="topic-title">1. Information User Provide To Us</b><br><br>
+                            <span class="topic-subtitle">a. Account Creation</span>
+                            <span>To create an account, you provide data including your name, login id &amp; password (optional applicable for web version of application).</span><br><br>
+                            <span class="topic-subtitle">b. Profile</span>
+                            <span>To complete your Lynked.World profile you may provide us information such as</span><br>
+                        </p>
+                        <div class="text-block">
+                        <ul class="static-listing">
+                            <li>Email address, mailing address & telephone number</li>
+                            <li>Biographic or demographic data such as your date of birth, gender, photo, language you speak</li>
+                            <li>Your identity information such as Social Security Number, Aadhar, Passport, Drivers License</li>
+                            <li>Education, work experience, skills, and endorsements</li>
+                        </ul>
+                        </div><br>
+                        <p>
+                            <span class="topic-subtitle">c. Other Data</span>
+                            <span>You give other data to us, such as when you create a blog, comment on post, respond to a survey or participate in a poll.</span><br><br>
+                            <span>You and others may post content that includes information about you on our Services (as part of blog posts, feed updates and comments, photos, videos).</span><br><br>
+                            <span>We receive personal data about you when others import or sync their address book with our Services, or send messages using our Services (including invites or connection requests).</span><br><br>
+                            <span>We receive personal data about you when you use the Services of our customers and partners, such as prospective employers, job application data etc.</span><br><br>
+                            <span>When you visit or leave our Services, we receive the URL of both the site you came from and the one you go to next. We also get information about your IP address, proxy server, operating system, web browser and add-ons, device identifier and features, and/or ISP or your mobile carrier. If you use our Services from a mobile device, that device will send us data about your location.</span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">2. How We Use Your Information</b><br>
+                            <span>We may use the information we collect from you for various purposes: </span><br>
+                        </p>
+                        <div class="text-block">
+                        <ul class="static-listing">
+                            <li>We use your data to authenticate you and authorize access to our Services.</li>
+                            <li>Provide the Lynked.World Services and customer support.</li>
+                            <li>Manage your account(s) and send technical notices, updates, security alerts and support and administrative messages. Please be aware that you cannot opt out of receiving Service messages from us, including security and legal notices. Please be aware that you cannot opt out of receiving Service messages from us, including security and legal notices.</li>
+                            <li>Your profile can be found by those looking to hire (for a job or a specific task) or be hired by you. We will use your data to recommend jobs, show you and others who work at a company, in an industry, function or location or have certain skills and connections.</li>
+                            <li>It is possible that we will need to disclose information about you when required by law, subpoena, or other legal process or if we have a good faith belief that disclosure is reasonably necessary. We attempt to notify Members about legal demands for their personal data when appropriate in our judgment, unless prohibited by law or court order or when the request is an emergency.</li>
+                        </ul>
+                        </div><br>
+                        <p>
+                            <b class="topic-title">3. Security</b><br>
+                            <span>Lynked.World implement reasonable security practices and procedures to help protect the confidentiality and security of your information, including any non public personal information. We take appropriate security, administrative, and technical measures to protect any personal identification information you provide regarding the collection, storage, and processing, as well as security measures to protect your User Account against unauthorized access, modification, ​disclosure ​or ​destruction ​of ​your ​personal ​identification ​information, including by limiting access to your information to Lynked.World employees with a need to know such information.</span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">4. Change to Privacy Policy Agreement</b><br>
+                            <span>Lynked.World reserves the right to update and/or change the terms of our Privacy Policy. If we make changes, we will notify you by revising the date of Privacy Policy agreement, and in some circumstances, we may provide you with additional notice, including, for example by sending you an email notification. We strongly encourage you to review the Privacy Policy whenever you access or use Lynked.World Services to stay informed about our information practices and your privacy rights and choices.</span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">5. Acceptance of Terms</b><br>
+                            <span>Through the use of this website and/or Service, you herby accepting the terms and conditions stipulated within aforementioned Privacy Policy Agreement. If you are not in agreement with our Privacy Policy, then you should refrain from further use of our website and/or Services. In addition, your continued use of our website and/Services following the posting of any updates or changes to Privacy Policy shall mean you are in agreement and acceptance of such changes. You acknowledge, that subsequent use of the Website (or Portal/Platform) or the Services after changes to this Policy will also be considered ​as ​your ​acceptance ​of ​these ​changes.</span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">6. External Links On The Website</b><br>
+                            <span>The Website may include advertisements, hyperlinks to other websites, applications, content or resources. We have no control over any websites or resources, which are provided by companies or persons other than Us. You acknowledge and agree that We are not responsible for the availability of any such external sites or resources, and do not endorse any advertising, services/products or other materials on or available from such websites or resources. You acknowledge and agree that We are not liable for any loss or damage which may be incurred by you as a result of the availability of those external sites or resources, or as a result of any reliance placed by you on the completeness, accuracy or existence of any advertising, products or other materials on, or available from, such websites or resources. These external websites and resource providers may have their own privacy policies governing the collection, storage, retention and disclosure of Your Personal Information that You may be subject to. We recommend that You enter the external Website and review their privacy policy. If you require a list of third-party links on our Website, <i>please write to us at</i> <a href="/cdn-cgi/l/email-protection#b1c2c4c1c1dec3c5f1ddc8dfdad4d59fc6dec3ddd5"></a> and we will provide you with the same. </span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">7. Your Rights</b><br>
+                            <span>Unless subject to an exemption, you have the following rights with respect to your personal data: </span><br>
+                        </p>
+                        <div class="text-block">
+                        <ul class="static-listing">
+                            <li>The right to request a copy of your personal data which we hold about you;</li>
+                            <li>The right to request for any correction to any personal data if it is found to be inaccurate or out of date;</li>
+                            <li>The right to withdraw Your consent to the processing at any time;</li>
+                            <li>The right to object to the processing of personal data;</li>
+                            <li>The right to lodge a complaint with a supervisory authority</li>
+                            <li>The right to obtain information as to whether personal data are transferred to a third country or to an international organization.</li>
+                        </ul>
+                        </div><br>
+                        <p>
+                            <b class="topic-title">8. Postings</b><br>
+                            <span>Postings related to articles on the c sites are publicly available. You should exercise caution when deciding to disclose any of your personal information in a public posting. We advise please do not post or add personal data in your post or comments on a post that you would not want to be publicly available. </span><br><br>
+                            <span>Lynked.World don&#39;t store user personal data. These data are stored permanently on Your mobile devices. </span><br><br>
+                            <span>When You choose some of information to be public such as Your Name, Location, Education, Certifications, Employment etc. then these detailes would be stored on our server.</span><br><br>
+                            <span>During data transition while using Lynked.World Services your data may be stored temporally on our server in the encrypted form as it is needed to provide you Services. </span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">9. Account Closure</b><br>
+                            <span>If you choose to close your Lynked.World account, your personal data will generally stop being visible to others. We generally delete closed account information within 40 days of account closure, except as noted below. </span><br><br>
+                            <span>We retain your personal data even after you have closed your account if reasonably necessary to comply with our legal obligations, meet regulatory requirements, resolve disputes, maintain security, prevent fraud and abuse, enforce our User Agreement etc. We will retain de-personalized information after your account has been closed. </span><br><br>
+                            <span>Information you have shared with others (e.g., through InMail, message or group posts) will remain visible after you closed your account or deleted the information from your own profile or mailbox, and we do not control data that other Members copied out of our Services. Groups content associated with closed accounts will show an unknown user as the source. Your profile may continue to be displayed in the Services of others (e.g., search engine results) until they refresh their cache. 
+                            </span><br><br>
+                            <span>Please note that on Account closure, all your balance reward LBD &amp; Lynk tokens present in your wallet would be transferred to Lynked.World reward pool. </span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">10. Control Of Your Password</b><br>
+                            <span>When you sign up to become a Member, you will also be asked to choose a password. You are entirely responsible for maintaining the confidentiality of your password. It is important that you protect it against unauthorized access of your account and information by choosing your password carefully, and keeping your password and computer secure by signing out after using our services. </span><br><br>
+                            <span>You agree not to use the account, username, email address or password of another Member at any time or to disclose your password to any third party. You are responsible for all actions taken with your login information and password, including fees. If you lose control of your password, you may lose substantial control over your personally identifiable information and may be subject to legally binding actions taken on your behalf. Therefore, if your password has been compromised for any reason, you should immediately change your password. You agree to notify us immediately if you suspect any consistent unauthorized use of your account or access to your password even after changing it. </span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">11. Severability</b><br>
+                            <span>Each paragraph of this privacy policy shall be and remain separate from and independent of and severable from all and any other paragraphs herein except where otherwise expressly indicated or indicated by the context of the agreement. The decision or declaration that one or more of the paragraphs are null and void shall have no effect on the remaining paragraphs of this privacy policy. </span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">12. Amendment</b><br>
+                            <span>Our Privacy Policy may change from time to time. The most current version of the policy will govern our use of your information and will always be at the Website. </span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">13. Automated Decision Making</b><br>
+                            <span>As a responsible company, we do not use automatic decision-making or profiling. </span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">14. Consent Withdrawal, Data Download &amp; Data Removal Requests</b><br>
+                            <span>To withdraw your consent, or to request the download or delete your data with us for any or all our products &amp; services at any time, please email to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87f4f2f7f7e8f5f3c7ebfee9ece2e3a9f0e8f5ebe3">[email&#160;protected]</a> from your registered email address. </span><br><br>
+                        </p>
+                        <p>
+                            <b class="topic-title">15. Contact us</b><br>
+                            <span>Lynked.World welcome your questions and suggestions with respect to the implementation or amendment of this Policy. If you have any questions or concerns regarding this Privacy Policy, please contact us at  <a href="/cdn-cgi/l/email-protection#3645434646594442765a4f585d5352184159445a52" target="top"><u><span class="__cf_email__" data-cfemail="7a090f0a0a15080e3a160314111f1e540d1508161e">[email&#160;protected]</span></u></a></span><br><br>
+                            <span><b>Effective on May 25<sup>th</sup>, 2018</b></span><br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<!-- Start Section -->
+
+
+	<!-- Start Section -->
+    <div class="section footer-scetion footer-particle section-pad-sm section-bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xl-4 res-l-bttm">
+                    <a class="footer-brand animated" data-animate="fadeInUp" data-delay="0" href="./">
+                        <img class="logo logo-light" alt="logo" src="images/logo-white.png" srcset="images/logo-white2x.png 2x">
+                    </a>
+                    <ul class="social">
+                        <li class="animated" data-animate="fadeInUp" data-delay=".1"><a href="https://lynked.world/company/lynkedworld" target="_blank"><em class="fa fa-lynkedworld"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".1"><a href="https://www.facebook.com/lynkedW/" target="_blank"><em class="fa fa-facebook"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".2"><a href="https://twitter.com/LynkedW" target="_blank"><em class="fa fa-twitter"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".3"><a href="https://www.youtube.com/channel/UCfi3HFpLbIifFYmRUncV5PQ/videos" target="_blank"><em class="fa fa-youtube-play"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".3"><a href="https://t.me/lynkedw" target="_blank"><em class="fa fa-telegram"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".4"><a href="https://www.linkedin.com/company/lynked-world/" target="_blank"><em class="fa fa-linkedin"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".6"><a href="https://medium.com/@ur.lynked.world" target="_blank"><em class="fa fa-medium"></em></a></li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".4">
+                            <a href="https://bitcointalk.org/index.php?topic=5005646" target="_blank"><em class="fa fa-bitcoin"></em></a>
+                        </li>
+                        <li class="animated" data-animate="fadeInUp" data-delay=".5">
+                            <a href="https://www.reddit.com/r/lynkedworld" target="_blank"><em class="fa fa-reddit"></em></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .col  -->
+                <div class="col-sm-6 col-xl-4 res-l-bttm">
+                    <div class="footer-subscription">
+                        <h6 class="animated" data-animate="fadeInUp" data-delay=".6">Subscribe to our Newsletter</h6>
+                        <form id="form_subscribe_user" method="post" class="subscription-form animated" data-animate="fadeInUp" data-delay=".7">
+                            <input type="text" name="subscriber_email" id="subscriber_email" class="input-round required email" placeholder="Enter your email">
+                            <input type="text" class="d-none" name="form-anti-honeypot" value="">
+                            <button type="submit" class="btn btn-plane">Subscribe</button>
+                            <div class="subscribe-results"></div>
+                        </form>
+                    </div>
+                </div>
+                <!-- .col  -->
+                <div class="col-xl-4">
+                    <ul class="link-widget animated" data-animate="fadeInUp" data-delay=".8">
+                        <li><a href="../#partners" class="menu-link">Our Partners</a></li>
+                        <!-- <li><a href="#faq" class="menu-link">FAQ</a></li> -->
+                        <li><a href="../#contact" class="menu-link">Contact</a></li>
+                        <li><a href="images/Lynked.World_Whitepaper_EN.pdf" target="_blank" class="menu-link">Whitepaper</a></li>
+                        <li><a href="../#tokenSale" class="menu-link">Token Sale</a></li>
+                        <li><a href="../#roadmap" class="menu-link">Roadmap</a></li>
+                        <li><a href="../#team" class="menu-link">Team</a></li>
+                        <li><a href="../#intro" class="menu-link">About Us</a></li>
+                    </ul>
+                </div>
+                <!-- .col  -->
+            </div>
+            <!-- .row  -->
+            <div class="gaps size-2x"></div>
+            <div class="row">
+                <div class="col-md-7">
+                    <span class="copyright-text animated" data-animate="fadeInUp" data-delay=".9">
+                        Copyright © 2018 Lynked.World (KoinWorx BV, Netherlands). All Rights Reserved.
+                        <!-- <span>All trademarks and copyrights belong to their respective owners.</span> -->
+                    </span>
+                </div>
+                <!-- .col  -->
+                <div class="col-md-5 text-right mobile-left">
+                    <ul class="footer-links animated" data-animate="fadeInUp" data-delay="1">
+                        <li><a href="/rewards">Rewards</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="images/terms-and-conditions.pdf" target="_blank">Terms & Conditions</a></li>
+                        <li>
+                            <div class="language-switcher">
+                                <a href="#" data-toggle="dropdown">EN</a>
+                                <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">FR</a>
+                                    <a class="dropdown-item" href="#">CH</a>
+                                    <a class="dropdown-item" href="#">BR</a>
+                                </div> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .col  -->
+            </div>
+            <!-- .row  -->
+        </div>
+        <!-- .container  -->
+    </div>
+    <!-- End Section -->
+
+	<!-- Preloader !remove please if you do not want -->
+	<div id="preloader">
+		<div id="loader">
+			<img src="images/loader.gif" >
+		</div>
+		<div class="loader-section loader-top"></div>
+   		<div class="loader-section loader-bottom"></div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- JavaScript (include all script here) -->
+	<script src="assets/js/jquery.bundle.js?ver=122"></script>
+	<script src="assets/js/script.js?ver=122"></script>
+    <script src="assets/js/jquery.bootstrap-growl.min.js"></script>
+    <script src="assets/js/ajax_functions.js"></script>
+
+</body>
+</html>
