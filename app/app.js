@@ -1,25 +1,32 @@
 
 var express = require('express'),
   app = module.exports = express();
+  var session = require('express-session');
+  app.use(session({secret: 'ssshhhhh'}));
+ 
+  app.engine('.html', require('ejs').__express);
+  app.use(express.static(__dirname + '/public'));
+ 
+  bodyParser = require('body-parser');
+  app.use(bodyParser.urlencoded({ extended: false }))
+  app.use(bodyParser.json())
+  var flash = require('express-flash');
+  app.use(flash());
+
+  app.set('view engine', 'html');
+  app.set('views', __dirname + '/views');
+
+ require('./controller/login')(app);   
 
 //app.set('view engine', 'ejs');
-app.engine('.html', require('ejs').__express);
-
-app.set('view engine', 'html');
-app.set('views', __dirname + '/views');
-// var config = require('/config');
+ // Require body-parser (to receive post data from clients)
+ // var config = require('/config');
 // require('./models').connect(config.get('db'));
-// require('./controller/login')(app);   
 // const User = require('./models/User.js');
-app.use(express.static(__dirname + '/public'));
-// Require body-parser (to receive post data from clients)
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
 
 const mongoose = require('mongoose')
 const path = require('path');
-const port = 3000
+const port = 8080
 
 mongoose.connect('mongodb://admin:admin123@ds343887.mlab.com:43887/eventica', {
     useNewUrlParser: true
@@ -34,8 +41,8 @@ mongoose.connect('mongodb://admin:admin123@ds343887.mlab.com:43887/eventica', {
 
 
 if (!module.parent) {
-  app.listen(3001)
-  console.log('Running in port 3001');
+  app.listen(8080)
+  console.log('Running in port 8080');
 }
 
 app.get('/', function (req, res) {
@@ -149,7 +156,7 @@ if(typeof req.param('ref')!='undefined' && req.param('ref')!='' && req.param('re
            });
          } else {
 
-            res.redirect('/eventica');
+            res.redirect('/');
          }
 
 
