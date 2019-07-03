@@ -59,7 +59,7 @@ app.get('/details', function (req, res) {
   });
 });
 app.get('/eventica', function (req, res) {
-  res.render('eventica  ', {
+  res.render('eventica', {
   });
 });
 app.get('/signin', function (req, res) {
