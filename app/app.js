@@ -22,7 +22,7 @@ var express = require('express'),
  // Require body-parser (to receive post data from clients)
  // var config = require('/config');
 // require('./models').connect(config.get('db'));
-// const User = require('./models/User.js');
+const User = require('./models/User.js');
 
 const mongoose = require('mongoose')
 const path = require('path');
@@ -46,9 +46,14 @@ if (!module.parent) {
 }
 
 app.get('/', function (req, res) {
+  res.render('firsteventica', {
+  });
+});
+app.get('/eventica', function (req, res) {
   res.render('eventica', {
   });
 });
+
 app.get('/merchant', function (req, res) {
   res.render('merchantise', {
   });
@@ -63,10 +68,6 @@ app.get('/events', function (req, res) {
 });
 app.get('/details', function (req, res) {
   res.render('details', {
-  });
-});
-app.get('/eventica', function (req, res) {
-  res.render('eventica', {
   });
 });
 app.get('/signin', function (req, res) {

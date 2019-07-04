@@ -14,11 +14,11 @@ module.exports = function (app) {
 
   app.get('/signin', function (req, res) {
 
-    // res.render('signin', {
-    //             pageTitle: 'Welcome - ' ,
-    //             layout: false             
-    //         });
-    res.redirect('/');
+      res.render('signin', {
+               pageTitle: 'Welcome - ' ,
+                  layout: false             
+           });
+     //res.redirect('/signin');
   });
 
 
@@ -56,8 +56,8 @@ module.exports = function (app) {
       }
 
       // check if a hashed user's password is equal to a value saved in the database
-      user.comparePassword(userData.password, (passwordErr, isMatch) => {
-        if (err) { throw err; }
+       user.comparePassword(userData.password, (passwordErr, isMatch) => {
+         if (err) { throw err; }
 
         if (!isMatch) {
           return res.json({
@@ -75,24 +75,24 @@ module.exports = function (app) {
 
 
           sess.user = user;
-          return res.json({
-            status: 'OK',
-            msg: 'Login successful'
-          });
+          // return res.json({
+          //   status: 'OK',
+          //   msg: 'Login successful'
+          // });
+          res.redirect("/eventica");
+        } 
 
-        }
-
-        // return res.json({
-        //   status:'OK',
-        //   msg:'Login successfully'
+        //  return res.json({
+        //    status:'OK',
+        //    msg:'Login successfully'
         // });
 
-        // res.redirect("/eventica");
+          
 
       });
     });
   });
-  //
+  
 
 
   app.get('/logout', function (req, res) {
@@ -124,90 +124,33 @@ module.exports = function (app) {
     //       currency = "KRW"
     //  } 
         
-        userData["status"] = config.get('general.userSignupInitStatus'); // "PENDING";
+       // userData["status"] = config.get('general.userSignupInitStatus'); // "PENDING";
         // userData["currency"] = currency;
 
     const newUser = new User(userData);
 
     if (password != repeatpassword) {
       //  req.flash('error', 'Password and Confirm password are not same....');
-      return res.redirect('/signin');
+      return res.redirect('/signup');
     }
 
 
     User.findOne({ email: req.body.email }, (errUser, userFound) => {
       if (errUser) {
         req.flash('error', 'Sign up...error, please try again...');
-        return res.redirect('/signin');
+        return res.redirect('/signup');
       }
       if (userFound) {
         req.flash('error', 'User account exists for this email address, reset password if you forgot the password');
-        return res.redirect('/signin');
+        return res.redirect('/signup');
       }
       else {
         newUser.save((err) => {
           if (err) { console.log(err); throw err.message; }
           // mail chimp integration 
-          if (config.get('mailchimp.enabled') == "1") {
-            var request = require('superagent');
-            var mailchimpInstance = config.get('mailchimp.mailchimpInstance'); //'us17',
-            var listUniqueId = config.get('mailchimp.listUniqueId');  // '4a4c2a0f58',
-            var mailchimpApiKey = config.get('mailchimp.mailchimpApiKey');   //'adc1834d485062b3f3e4355c1c8e4b75-us17';
-
-            request
-              .post('https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueId + '/members/')
-              .set('Content-Type', 'application/json;charset=utf-8')
-              .set('Authorization', 'Basic ' + new Buffer('any:' + mailchimpApiKey).toString('base64'))
-              .send({
-                'email_address': email.trim(),
-                'status': 'subscribed',
-                'merge_fields': {
-                  'FNAME': firstname,
-                  'LNAME': lastname
-                }
-              })
-              .end(function (err, response) {
-                if (response.status < 300 || (response.status === 400 && response.body.title === "Member Exists")) {
-                  console.log('Signed up....');
-
-                } else {
-                  console.log('Sign Up Failed :(', err);
-
-                }
-
-              });
-
-            var sleep = require('system-sleep');
-            sleep(2000); // sleep 2 sec
-
-
-            var request = require('superagent');
-            var mailchimpInstance = config.get('mailchimp.mailchimpInstance'); //'us17',
-            var listUniqueId = config.get('mailchimp.listUniqueId');  // '4a4c2a0f58',
-            var listUniqueIdPendingPayment = config.get('mailchimp.listUniqueIdPendingPayment');   //'adc1834d485062b3f3e4355c1c8e4b75-us17';
-
-            request
-              .post('https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueIdPendingPayment + '/members/')
-              .set('Content-Type', 'application/json;charset=utf-8')
-              .set('Authorization', 'Basic ' + new Buffer('any:' + mailchimpApiKey).toString('base64'))
-              .send({
-                'email_address': email.trim(),
-                'status': 'subscribed',
-                'merge_fields': {
-                  'FNAME': firstname,
-                  'LNAME': lastname
-                }
-              })
-              .end(function (err, response) {
-                if (response.status < 300 || (response.status === 400 && response.body.title === "Member Exists")) {
-                  console.log('Signed up to second list......');
-                } else {
-                  console.log('Sign Up Failed :(', err);
-                }
-              });
-          } // if mailchimp - enabled...
+         
           sess.user = newUser;
-          res.redirect("/");
+          res.redirect("/eventica");
         }); // save
       } // if user found
     }); //findUser
@@ -221,45 +164,45 @@ module.exports = function (app) {
       res.redirect('/signin');
     } else {
       User.findById(req.session.user["_id"], (err, user) => {
-        user.comparePassword(req.body.oldPassword, (passwordErr, isMatch) => {
-          if (err) { throw err; }
+        // user.comparePassword(req.body.oldPassword, (passwordErr, isMatch) => {
+        //   if (err) { throw err; }
 
-          if (!isMatch) {
-            req.flash('error', 'Current password is  Incorrect');
-            return res.redirect('/profile');
+        //   if (!isMatch) {
+        //     req.flash('error', 'Current password is  Incorrect');
+        //     return res.redirect('/profile');
             // const error = new Error('Incorrect email or password');
             // error.name = 'IncorrectCredentialsError';
             // console.log("Password doesnt match...")
             //res.json(error);
-          } else {
-            if (req.body.newPassword != req.body.repeatPassword) {
-              req.flash('error', 'New password and Repeat password is mismatch');
-              return res.redirect('/profile');
-            }
-            user.password = req.body.newPassword;
-            user.save((err, usr) => {
-              if (err) {
-                console.log(err); throw err.message;
-              }
-              sess.user = "";
-              //   req.session.destroy(function(err) {
-              //     if(err) {
-              //       console.log(err);
-              //    } else {
-              req.flash('success', 'Success! Your password has been changed.Login with new password');
-              res.redirect('/signin');
+          // } else {
+          //   if (req.body.newPassword != req.body.repeatPassword) {
+          //     req.flash('error', 'New password and Repeat password is mismatch');
+          //     return res.redirect('/profile');
+          //   }
+          //   user.password = req.body.newPassword;
+          //   user.save((err, usr) => {
+          //     if (err) {
+          //       console.log(err); throw err.message;
+          //     }
+          //     sess.user = "";
+          //     //   req.session.destroy(function(err) {
+          //     //     if(err) {
+          //     //       console.log(err);
+          //     //    } else {
+          //     req.flash('success', 'Success! Your password has been changed.Login with new password');
+          //     res.redirect('/signin');
               // }
               //   });  
             });
           }
 
 
-        });
+        // });
 
-      })
-    }
-  })
-
+      // })
+     });
+  //  })
+    
 
   app.get("/disclaimer", function (req, res) {
     //res.render("login");
