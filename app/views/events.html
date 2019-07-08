@@ -179,16 +179,21 @@
 
   <div class="box">
     <h3 class="subheading-1"><span>Start-Up Events</span></h3>
+          
     <div class="first-row">
-      <div class="column">
+        <% events.forEach(function(events){ %>
+
+        <% if(events.eventType=="Start-up_Events"){ %>
+          
+    <div class="column">
         <div class="card">
-          <a href="/details">
+            <a href="/details">
             <div class="images">
-              <img src="images/index11.png" alt="Avatar">
+              <img src="<%=imageurl+events.proimg%>" alt="Avatar">
             </div>
             <div class="inner-container">
               <h2>
-                <span class="eveHeadWrap">TEDxHyderabad 2019</span>
+                <span class="eveHeadWrap"><%=events.eventName%></span>
               </h2>
               <div class="info">
                 <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
@@ -197,9 +202,14 @@
 
             </div>
         </div>
+       
       </div>
+      <%} %>
+      <% });%>
       </a>
+      </div>
 
+      <!-- 
 
       <div class="column">
         <div class="card">
@@ -241,19 +251,22 @@
       </div>
 
       </a>
-    </div>
+    </div> -->
     <!-- second row -->
     <h3 class="subheading-1"><span>ICO Events</span></h3>
+   
     <div class="first-row">
+        <% events.forEach(function(events){ %>
+        <% if(events.eventType=="ICO_Event"){ %>
       <div class="column">
         <div class="card">
           <a href="/details">
             <div class="images">
-              <img src="images/index11.png" alt="Avatar">
+              <img src="<%=imageurl+events.proimg%>" alt="Avatar">
             </div>
             <div class="inner-container">
               <h2>
-                <span class="eveHeadWrap">TEDxHyderabad 2019</span>
+                <span class="eveHeadWrap"><%=events.eventName%></span>
               </h2>
               <div class="info">
                 <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
@@ -262,10 +275,14 @@
 
             </div>
         </div>
+         
       </div>
+      <%} %>
+      <% });%>
       </a>
+    </div>
 
-      <div class="column">
+      <!-- <div class="column">
         <div class="card">
           <a href="/details">
             <div class="images">
@@ -304,20 +321,23 @@
         </div>
       </div>
     </div>
-    </a>
+    </a> -->
     <!-- Third event -->
 
     <h3 class="subheading-1"><span>Social Entertainment Events</span></h3>
+    
     <div class="first-row">
+        <% events.forEach(function(events){ %>
+        <% if(events.eventType=="Social_Entertinment_Events"){ %>
       <div class="column">
         <div class="card">
           <a href="/details">
             <div class="images">
-              <img src="images/index12.png" alt="Avatar">
+              <img src="<%=imageurl+events.proimg%>" alt="Avatar">
             </div>
             <div class="inner-container">
               <h2>
-                <span class="eveHeadWrap">TEDxHyderabad 2019</span>
+                <span class="eveHeadWrap"><%=events.eventName%></span>
               </h2>
               <div class="info">
                 <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
@@ -325,10 +345,14 @@
               </div>
             </div>
         </div>
+       
       </div>
+      <%} %> 
+      <% }); %>
       </a>
+    </div>
 
-      <div class="column">
+      <!-- <div class="column">
         <div class="card">
           <a href="/details">
             <div class="images">
@@ -367,7 +391,7 @@
         </div>
       </div>
       </a>
-    </div>
+    </div> -->
 
   </div>
   <footer id="footer" class="footer ">

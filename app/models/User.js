@@ -30,7 +30,7 @@ const UserSchema = new Schema({
         type: Boolean,
         default: false
     },
-   
+
     status: {
         type: String,
         default: 'New'
@@ -39,7 +39,6 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    seed: String,
     restToken: String,
     accountType: {
         type: String,
@@ -71,28 +70,29 @@ UserSchema.methods.comparePassword = function comparePassword(password, callback
 // UserSchema.pre('save', function (next) {
 //     const user = this;
 
-    UserSchema.pre('save', function saveHook(next) {
-        const user = this;
-    
-        // proceed further only if the password is modified or the user is new
-        if (!user.isModified('password')) return next();
-    
-    
-        return bcrypt.genSalt((saltError, salt) => {
-            if (saltError) { return next(saltError); }
-    
-            return bcrypt.hash(user.password, salt, (hashError, hash) => {
-                if (hashError) { return next(hashError); }
-    
-                // replace a password string with hash value
-                user.password = hash;
-    
-                return next();
-            });
+UserSchema.pre('save', function saveHook(next) {
+    const user = this;
+
+    // proceed further only if the password is modified or the user is new
+    if (!user.isModified('password')) return next();
+
+
+    return bcrypt.genSalt((saltError, salt) => {
+        if (saltError) { return next(saltError); }
+
+        return bcrypt.hash(user.password, salt, (hashError, hash) => {
+            if (hashError) { return next(hashError); }
+
+            // replace a password string with hash value
+            user.password = hash;
+
+            return next();
         });
     });
-    
-    module.exports = mongoose.model('User', UserSchema);
+});
+
+
+module.exports = mongoose.model('User', UserSchema);
 
 //     if (!user.isModified('password')) return next();
 //     if (user.isModified('password')) {

@@ -16,7 +16,9 @@ var express = require('express'),
   app.set('view engine', 'html');
   app.set('views', __dirname + '/views');
 
- require('./controller/login')(app);   
+ require('./controller/login')(app);  
+ require('./controller/event')(app);
+ require('./controller/product')(app); 
 
 //app.set('view engine', 'ejs');
  // Require body-parser (to receive post data from clients)

@@ -5,9 +5,9 @@ var funcs = require('../functions');
 var config = require('config');
 Web3 = require('web3')
 
-web3 = new Web3(new Web3.providers.HttpProvider(config.get('ethereum.host')));
-const fs = require("fs");
-const path = require('path');
+// web3 = new Web3(new Web3.providers.HttpProvider(config.get('ethereum.host')));
+// const fs = require("fs");
+// const path = require('path');
 
 module.exports = function (app) {
 
@@ -124,7 +124,7 @@ module.exports = function (app) {
     //       currency = "KRW"
     //  } 
         
-       // userData["status"] = config.get('general.userSignupInitStatus'); // "PENDING";
+       //userData["status"] = config.get('general.userSignupInitStatus'); // "PENDING";
         // userData["currency"] = currency;
 
     const newUser = new User(userData);
