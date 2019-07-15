@@ -36,16 +36,16 @@
       padding: 100px 0;
     }
 
-    .first-row {
-      display: flex;
+    .container-fluid{
+      /* display: flex; */
       justify-content: center;
-      flex-direction: row;
+      /* flex-direction: row; */
     }
 
     .column {
       align-content: center;
       float: left;
-      width: 30%;
+      max-width: 33.33%;
       padding: 0 10px;
     }
 
@@ -55,6 +55,7 @@
       transition: 0.3s;
       /* width: 30%; */
       border-radius: 10px;
+      margin-bottom: 20px;
 
     }
 
@@ -99,9 +100,10 @@
     }
 
     .subheading-1 span {
-      padding: 70px;
+      padding: 30px;
       font-size: 20px;
       font-weight: 700;
+      color:#ff0673;
     }
 
     /* On mouse-over, add a deeper shadow */
@@ -162,9 +164,9 @@
             </button>
             <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="/eventica">Home </a></li>
+                <li ><a href="/eventica">Home </a></li>
 
-                <li><a href="/events">Events</a></li>
+                <li class="active"><a href="/events">Events</a></li>
 
                 <li><a href="/merchant">Merchandise</a></li>
 
@@ -178,9 +180,11 @@
   <br />
 
   <div class="box">
-    <h3 class="subheading-1"><span>Start-Up Events</span></h3>
+    <h3 class="subheading-1"><span>START-UP EVENTS</span></h3>
           
-    <div class="first-row">
+    <!-- <div class="first-row"> -->
+        <div class="container-fluid">
+          
         <% events.forEach(function(events){ %>
 
         <% if(events.eventType=="Start-up_Events"){ %>
@@ -197,7 +201,8 @@
               </h2>
               <div class="info">
                 <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-                  2019</span>
+                  2019
+                </span>
               </div>
 
             </div>
@@ -209,53 +214,11 @@
       </a>
       </div>
 
-      <!-- 
-
-      <div class="column">
-        <div class="card">
-          <a href="/details">
-            <div class="images">
-              <img src="images/index2.jpg" alt="Avatar">
-            </div>
-            <div class="inner-container">
-              <h2>
-                <span class="eveHeadWrap">TEDxHyderabad 2019</span>
-              </h2>
-              <div class="info">
-                <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-                  2019</span>
-              </div>
-
-
-            </div>
-        </div>
-      </div>
-      </a>
-      <div class="column">
-        <div class="card">
-          <a href="/details">
-            <div class="images">
-              <img src="images/index3.png" alt="Avatar">
-            </div>
-            <div class="inner-container">
-              <h2>
-                <span class="eveHeadWrap">TEDxHyderabad 2019</span>
-              </h2>
-              <div class="info">
-                <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-                  2019</span>
-              </div>
-
-            </div>
-        </div>
-      </div>
-
-      </a>
-    </div> -->
-    <!-- second row -->
-    <h3 class="subheading-1"><span>ICO Events</span></h3>
+      
+    <h3 class="subheading-1"><span>ICO EVENTS</span></h3>
    
-    <div class="first-row">
+    <!-- <div class="first-row"> -->
+        <div class="container-fluid">
         <% events.forEach(function(events){ %>
         <% if(events.eventType=="ICO_Event"){ %>
       <div class="column">
@@ -282,51 +245,12 @@
       </a>
     </div>
 
-      <!-- <div class="column">
-        <div class="card">
-          <a href="/details">
-            <div class="images">
-              <img src="images/index5.png" alt="Avatar">
-            </div>
-            <div class="inner-container">
-              <h2>
-                <span class="eveHeadWrap">TEDxHyderabad 2019</span>
-              </h2>
-              <div class="info">
-                <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-                  2019</span>
-              </div>
+     
 
-
-            </div>
-        </div>
-      </div>
-      </a>
-      <div class="column">
-        <div class="card">
-          <a href="/details">
-            <div class="images">
-              <img src="images/index7.jpg" alt="Avatar">
-            </div>
-            <div class="inner-container">
-              <h2>
-                <span class="eveHeadWrap">TEDxHyderabad 2019</span>
-              </h2>
-              <div class="info">
-                <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-                  2019</span>
-              </div>
-
-            </div>
-        </div>
-      </div>
-    </div>
-    </a> -->
-    <!-- Third event -->
-
-    <h3 class="subheading-1"><span>Social Entertainment Events</span></h3>
+    <h3 class="subheading-1"><span>SOCIAL ENTERTAINMENT EVENTS</span></h3>
     
-    <div class="first-row">
+    <!-- <div class="first-row"> -->
+        <div class="container-fluid">
         <% events.forEach(function(events){ %>
         <% if(events.eventType=="Social_Entertinment_Events"){ %>
       <div class="column">
@@ -352,46 +276,7 @@
       </a>
     </div>
 
-      <!-- <div class="column">
-        <div class="card">
-          <a href="/details">
-            <div class="images">
-              <img src="images/index2.jpg" alt="Avatar">
-            </div>
-            <div class="inner-container">
-              <h2>
-                <span class="eveHeadWrap">TEDxHyderabad 2019</span>
-              </h2>
-              <div class="info">
-                <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-                  2019</span>
-              </div>
-
-
-            </div>
-        </div>
-      </div>
-      </a>
-
-      <div class="column">
-        <div class="card">
-          <a href="/details">
-            <div class="images">
-              <img src="images/index13.png" alt="Avatar">
-            </div>
-            <div class="inner-container">
-              <h2>
-                <span class="eveHeadWrap">TEDxHyderabad 2019</span>
-              </h2>
-              <div class="info">
-                <span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-                  2019</span>
-              </div>
-            </div>
-        </div>
-      </div>
-      </a>
-    </div> -->
+     
 
   </div>
   <footer id="footer" class="footer ">

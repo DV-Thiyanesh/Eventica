@@ -19,6 +19,7 @@ var express = require('express'),
  require('./controller/login')(app);  
  require('./controller/event')(app);
  require('./controller/product')(app); 
+   require('./controller/eventica')(app);
 
 //app.set('view engine', 'ejs');
  // Require body-parser (to receive post data from clients)
@@ -87,6 +88,35 @@ app.get('/forgot', function (req, res) {
 app.get('/redirect', function(req, res) {
   var url = share(req.query.service, req.query);
   res.redirect(url);
+});
+app.get('/exchange',function(req, res){
+  res.render('exchange',{
+
+  });
+});
+
+app.get('/payment',function(req,res){
+  res.render('payment',{
+
+  });
+});
+app.get('/payment1',function(req,res){
+  res.render('payment1',{
+
+  });
+ 
+});
+  app.get('/cart',function(req,res){
+    res.render('cart',{
+  
+    });
+  });
+  
+
+app.get('/booking',function(req,res){
+  res.render('booking',{
+
+  });
 });
 
 app.get('/email', function(req, res){

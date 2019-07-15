@@ -44,7 +44,7 @@ module.exports = function (app) {
 
     // find a user by email address
     User.findOne({ email: userData.email }, (err, user) => {
-      //console.log ("user...", user);
+      console.log ("user...", user);
 
       if (err) { throw err; }
 

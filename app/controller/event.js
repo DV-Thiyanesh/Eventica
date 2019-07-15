@@ -1,5 +1,5 @@
 const events = require('../models/event.js');
-const imageurl = "http://192.168.0.112:3000/static/doc/"
+const imageurl = "http://eventica.smartchain.in:3000/static/doc/"
 
 module.exports = function (app) {
 
@@ -21,7 +21,7 @@ module.exports = function (app) {
             });
 
             
-            
+            console.log(events);
 
         });
     });

@@ -27,7 +27,7 @@
   <!-- Template styles-->
   <link rel="stylesheet" href="css/style.css" />
   <!-- Responsive styles-->
-  <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+  <link rel="stylesheet" href="css/responsive.css">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="css/font-awesome.css" />
   <!-- Animation -->
@@ -35,7 +35,48 @@
   <!-- Colorbox -->
   <link rel="stylesheet" href="css/colorbox.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+  /* .nav navbar-nav li:hover{
+          background-color: #ff0673;
+  } */
+  /* .active{
+          background-color: #ff0673;
+  }   */
+  .dropdown-menu dropdown-menu-right img{
+    float: left;
+  }
+  .dropdown i:hover{
+  background:#ff0673;
+  }
+  .droplist p{
+    font-weight: 600;
+  }
+  /* .qr {
+  float: left;
+  margin-left: -3%;
+  width: 85px;
+} */
+#qrcode {
+  float:left;
+  width: 20px;
+  height: 30px;
+  /* margin-top:10px; */
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+  </style>
 
+<script type="text/javascript" src="js/qr/jquery.min.js"></script>
+<script type="text/javascript" src="js/qr/qrcode.js"></script>
+
+</head>
 <body>
   <div class="body-inner">
     <!-- Header start -->
@@ -57,20 +98,74 @@
             </button>
             <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="/eventica">Home </a></li>
+                <li class="active"  ><a href="/eventica">Home </a></li>
                 <li><a href="#ts-intro">About Us</a></li>
                 <li><a href="/events">Events</a></li>
                 <li><a href="#ts-speakers">Why Eventica?</a></li>
                 <li><a href="#ts-schedule">What we do?</a></li>
 
                 <li><a href="/merchant">Merchandise</a></li>
+                <li><a href="/exchange">Exchange</a></li>
+
 
                 <li><a href="#ts-sponsors-1">Contact Us </a></li>
+                <li>
+                <div class="dropdown">
+                    <i class="fa fa-user" class="btn btn-primary dropdown-toggle" style="color: cornsilk;" aria-hidden="true" data-toggle="dropdown"></i>
+                  
+                  <ul class="dropdown-menu dropdown-menu-right" style="width:350px;">
+                    <!-- <img src="https://img.icons8.com/office/80/000000/user.png"> -->
+                    <input id="text" type="text" value="http://eventica.smartchain.in:8080/" style="display:none;" />
+                    <div id="qrcode" style="width:25px; height:50px;"></div>
+                    
+                    <script type="text/javascript">
+                    var qrcode = new QRCode(document.getElementById("qrcode"), {
+                      width : 70,
+                      height : 80
+                    });
+                    
+                    function makeCode () {		
+                      var elText = document.getElementById("text");
+                      
+                      if (!elText.value) {
+                        alert("Input a text");
+                        elText.focus();
+                        return;
+                      }
+                      
+                      qrcode.makeCode(elText.value);
+                    }
+                    
+                    makeCode();
+                    
+                    $("#text").
+                      on("blur", function () {
+                        makeCode();
+                      }).
+                      on("keydown", function (e) {
+                        if (e.keyCode == 13) {
+                          makeCode();
+                        }
+                      });
+                    </script>                 
+                     
+                    <span class="droplist"  style="line-break: normal; float:right;"><p>Name: <strong><%=sess.user.firstname+" "+sess.user.lastname%></strong>  </p>
+                    <p>E-Mail: <strong><%=sess.user.email%></strong></p>
+                    <p>Balance: <strong>10,000 EVN</strong></p>
+                    
+                      <hr>
+                    
+                    <h5 style="font-size: 16px; margin-bottom: 0px;"><a href="/eventica">Update Profile</a></h2>
+                  </span>
+                
+                  </ul>
+                </div>
+              </li>
+
+
                 <li><a href="/logout">Logout </a></li>
 
-                <!-- <li class="header-ticket">
-                        <a class="ticket-btn btn-primary" href="http://www.eventica.io/invest.php"><i class="fa fa-dollar"></i> Invest</a>
-                        </li>                         -->
+              
               </ul>
               <!--/ Nav ul end -->
             </nav>
@@ -587,254 +682,7 @@
       </div>
       <!--/ Container end -->
     </section>
-    <!-- Schedule end -->
-
-    <!-- <section id="ts-pricing" class="ts-pricing">
-        <div class="container">
-            <div class="row">
-                <div class="row text-center" style="padding:40px 0px 40px 0px;">
-                    <h2 class="section-title" style="font-size:35px; color:#fff;">OUR TEAM</h2>
-                </div>
-                <div class="row text-center">
-				<div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="ts-speaker">
-                            <div class="ts-speaker-image"> <img class="img-responsive" src="images/ashish.jpg" alt="">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                                                     <div class="ts-speaker-info text-center">
-                                <h3 class="ts-speaker-name"><a href="#">Ashish Kumar</a></h3>
-                                <p class="ts-speaker-designation">Principal Advisor</p>
-                            </div>
-                           
-                        </div>
-                    
-                    </div>
-			
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="ts-speaker">
-                            <div class="ts-speaker-image"> <img class="img-responsive" src="images/sanjay.jpg" alt="">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                                          <div class="ts-speaker-info text-center">
-                                <h3 class="ts-speaker-name"><a href="#">Dr.Sanjay</a></h3>
-                                <p class="ts-speaker-designation">Business Advisor</p>
-                            </div>                          
-                        </div>                      
-                    </div>            
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="ts-speaker">
-                            <div class="ts-speaker-image"> <img class="img-responsive" src="images/sarvana.jpg" alt="">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>                           
-                            <div class="ts-speaker-info ">
-                                <h3 class="ts-speaker-name"><a href="#">Vijay Saravana</a></h3>
-                                <p class="ts-speaker-designation ">Digital Marketing Strategist</p>
-                            </div>                           
-                        </div>                        
-                    </div>
-                 
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="ts-speaker">
-                            <div class="ts-speaker-image"> <img class="img-responsive" src="images/raj.jpg" alt="">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                           
-                            <div class="ts-speaker-info">
-                                <h3 class="ts-speaker-name text-center"><a href="#">Shiridish Raj</a></h3>
-                                <p class="ts-speaker-designation">Technical Head</p>
-                            </div>
-                         
-                        </div>
-                                         </div>
-                    
-
-                     <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-3">
-                         <br><br>
-                        <div class="ts-speaker">
-                            <div class="ts-speaker-image"> <img class="img-responsive" src="images/kapil.jpg" alt="">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                           
-                            <div class="ts-speaker-info">
-                                <h3 class="ts-speaker-name text-center"><a href="#">Kapil Bhola</a></h3>
-                                <p class="ts-speaker-designation">Bounty Manager</p>
-                            </div>
-                           
-                        </div>
-                        
-                    </div>
-                    
-                     <div class="col-xs-12 col-sm-6 col-md-3">
-                         <br><br>
-                        <div class="ts-speaker">
-                            <div class="ts-speaker-image"> <img class="img-responsive" src="images/narendar.jpg" alt="">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                           
-                            <div class="ts-speaker-info">
-                                <h3 class="ts-speaker-name text-center"><a href="#">Narendar Yadav</a></h3>
-                                <p class="ts-speaker-designation">Legal Consultant</p>
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
-                  
-                </div>
-            </div>
-            
-        </div>
-       
-    </section> -->
-    <!-- <section id="ts-sponsors" class="ts-sponsors">
-        <div class="container">
-            <div class="row text-center" style="padding:100px 0px 40px 0px;">
-                <h3 class="section-sub-title">ICO SUMMARY</h3>
-            </div>
-                       <div class="row">
-                <div class="col-md-12">
-                    <p class="intro-desc"> Eventica will seek funding 
-through an ICO (Initial Coin Offering) in April 2018. The coin sold 
-during the coin launch is known as the EVNT COIN. This is the only time 
-that these coins can be created, and therefore the total supply of EVNT 
-COIN is fixed. </p>
-                    <p> To achieve all the goals stated in the roadmap 
-with regard to the development of the Eventica, the team launches a 
-crowd funding campaign based on the coin Sale model.</p>
-                    <p>The total coins supply: 300,000,000 - three hundred million coins. </p>
-               
-                </div>
-                    <div class="col-md-5">
-                    <div class="row text-center">
-                        <h3 class="section-sub-title">Coin Allocation</h3>
-                    </div>
-                    <img class="img-responsive" src="images/coinsale.png" alt=""> </div>
-                <div class="col-md-5 col-md-offset-1">
-                    <div class="row text-center">
-                        <h3 class="section-sub-title">Fund Allocation</h3>
-                    </div>
-                    <img class="img-responsive" src="images/fund.png" alt=""> </div>
-            </div>          
-        </div>        
-    </section> -->
-    <!-- <section id="ts-pricing-1" class="gradient-bg">
-        <div class="container">
-            <div class="row">
-                <div class="row text-center" style="padding:100px 0px 40px 0px;">
-                    <h2 class="section-title" style="font-size:35px; color:#fff; ">ROAD MAP</h2>
-                </div>
-                <div class="col-md-12">
-                    <div class="ts-pricing-box1">
-                        <div class="row">
-                            <div class="col-md-9 col-md-offset-2">
-                                <div class="main-timeline">
-                                    <div class="timeline">
-                                        <div class="timeline-icon"> <img src="images/icon.png"> </div>
-                                        <div class="timeline-content">
-                                            <h2 class="title">October 2018</h2>
-                                            <p class="description">Presale</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline">
-                                        <div class="timeline-icon"> <img src="images/icon.png"> </div>
-                                        <div class="timeline-content right">
-                                            <h2 class="title">November 2018</h2>
-                                            <p class="description">ICO Crowdsale</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline">
-                                        <div class="timeline-icon"> <img src="images/icon.png"> </div>
-                                        <div class="timeline-content ">
-                                            <h2 class="title">January 2019</h2>
-                                            <p class="description">Token Distribution</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline">
-                                        <div class="timeline-icon"> <img src="images/icon.png"> </div>
-                                        <div class="timeline-content right">
-                                            <h2 class="title">January 2019</h2>
-                                            <p class="description">Practical use case enabling In Events</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline">
-                                        <div class="timeline-icon"> <img src="images/icon.png"> </div>
-                                        <div class="timeline-content">
-                                            <h2 class="title">February 2019</h2>
-                                            <p class="description">Exchange / Coin MarketCap Listing</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline">
-                                        <div class="timeline-icon"> <img src="images/icon.png"> </div>
-                                        <div class="timeline-content right">
-                                            <h2 class="title">April 2019</h2>
-                                            <p class="description">Q1.ITP Program Initiation
-(Independent Ticket partners)<br>
-                                                Q2.Building Strategic Partnerships<br>
-                                               Q3.Android &amp; IOS Application Lanuch<br>
-                                               Q4.Media House for Live Crypto news &amp; Interviews </p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline">
-                                        <div class="timeline-icon"> <img src="images/icon.png"> </div>
-                                        <div class="timeline-content">
-                                            <h2 class="title">July 2019</h2>
-                                            <p class="description">
-Android &amp; IOS 
-Application Launch
-
- </p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline">
-                                        <div class="timeline-icon"> <img src="images/icon.png"> </div>
-                                        <div class="timeline-content right">
-                                            <h2 class="title">October 2019</h2>
-                                            <p class="description">
-Launch of Media House for Live Crypto News &amp; Interviews
-
- </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-            </div>         
-        </div>       
-    </section>
-     -->
-
+   
     <section id="ts-sponsors-1" class="ts-sponsors">
       <div class="container">
         <div class="row text-center" style="padding:100px 0px 40px 0px;">
@@ -959,8 +807,8 @@ Launch of Media House for Live Crypto News &amp; Interviews
 
     <!-- Bootstrap jQuery -->
 
+   
     <script type="text/javascript" src="js/bootstrap.js"></script>
-
     <!-- Counter -->
     <script type="text/javascript" src="js/jquery_002.js"></script>
     <!-- Countdown -->
@@ -973,6 +821,7 @@ Launch of Media House for Live Crypto News &amp; Interviews
     <script type="text/javascript" src="js/smoothscroll.js"></script>
 
     <script type="text/javascript" src="js/web3.js"></script>
+   
 
     <script type="text/javascript">
       function showSnackbar() {
@@ -993,6 +842,7 @@ Launch of Media House for Live Crypto News &amp; Interviews
     </script>
   </div>
   <!-- Body inner end -->
+ 
   <script>
     function getTimeRemaining(endtime) {
       var t = Date.parse(endtime) - Date.parse(new Date());
@@ -1036,7 +886,7 @@ Launch of Media House for Live Crypto News &amp; Interviews
     var deadline = new Date("May 7, 2019 09:30:00");
     initializeClock("clockdiv", deadline);
   </script>
-
+     
   <div id="cboxOverlay" style="display: none;"></div>
   <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
     <div id="cboxWrapper">
@@ -1066,6 +916,6 @@ Launch of Media House for Live Crypto News &amp; Interviews
     <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
   </div>
 </body>
-</head>
+
 
 </html>

@@ -82,13 +82,13 @@
                 class="collapse navbar-collapse navbar-responsive-collapse pull-right"
               >
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="/eventica">Home </a></li>
+                  <li ><a href="/eventica">Home </a></li>
                   <!-- <li><a href="#ts-intro">About Us</a></li> -->
                   <li><a href="/events">Events</a></li>
                   <!-- <li><a href="#ts-speakers">Why Eventica?</a></li>
                   <li><a href="#ts-schedule">What we do?</a></li> -->
                   <!-- <li><a href="#ts-pricing">Our Team</a> </li> -->
-                  <li><a href="/merchant">Merchandise</a></li>
+                  <li class="active"><a href="/merchant">Merchandise</a></li>
                   <!-- <li><a href="#ts-sponsors">Coin Sale</a> </li> -->
                   <!-- <li><a href="#ts-pricing-1">Road Map</a></li>
                   <li><a href="#ts-sponsors-1">Contact Us </a></li> -->
@@ -117,220 +117,33 @@
       <br />
       <br />
       <section>
+          <% product.forEach(function(product){ %>
         <div class="col-md-3">
+            
           <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
+          
+          <a class="popup cboxElement" href="/merchantview">
               <img
                 class="img-responsiveval"
-                src="images/merchant-tshirt.jpg"
+                src="<%=imageurl+product.proimg%>"
                 alt=""
               />
               <hr />
               <h5 style="text-align: center">
-                Stylish T-shirt
+               <%=product.productName%>
               </h5>
               <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 799.00
+                From  <i class="fa fa-inr"></i><%=product.productPrice%>  
               </p>
               <p style="text-align: center">Flexible with everyone</p>
             </a>
+            
           </div>
+          
         </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img
-                class="img-responsiveval"
-                style="align-items: center;"
-                src="images/event-tshirt.jpg"
-                alt=""
-              />
-              <div class="overlay">Sale</div>
-
-              <hr />
-              <h5 style="text-align: center">
-                Stylish T-shirt
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 599.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img
-                class="img-responsiveval"
-                src="images/event-tshirt2.jpg"
-                alt=""
-              />
-              <hr />
-              <h5 style="text-align: center">
-                Stylish T-shirt
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 799.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img
-                class="img-responsiveval"
-                src="images/event-tshirt3.jpg"
-                alt=""
-              />
-              <hr />
-              <h5 style="text-align: center">
-                Stylish T-shirt
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 799.00
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img
-                class="img-responsiveval"
-                src="images/event-tshirt4.jpg"
-                alt=""
-              />
-
-              <hr />
-              <h5 style="text-align: center">
-                Stylish T-shirt
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 799.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img
-                class="img-responsiveval"
-                src="images/mm-tshirt.jpeg"
-                alt=""
-              />
-
-              <hr />
-              <h5 style="text-align: center">
-                Stylish T-shirt
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 799.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img class="img-responsiveval" src="images/cap.jpg" alt="" />
-              <hr />
-              <h5 style="text-align: center">
-                Stylish Event Cap
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 799.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img class="img-responsiveval" src="images/cap1.jpg" alt="" />
-
-              <hr />
-              <h5 style="text-align: center">
-                Stylish Event Cap
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 599.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img class="img-responsiveval" src="images/cap2.jpg" alt="" />
-              <hr />
-              <h5 style="text-align: center">
-                Stylish Event Cap
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 399.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img class="img-responsiveval" src="images/capwhite.jpg" alt="" />
-              <hr />
-              <h5 style="text-align: center">
-                Stylish Event Cap
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 699.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img class="img-responsiveval" src="images/cap4.jpg" alt="" />
-              <hr />
-              <h5 style="text-align: center">
-                Stylish Event Cap
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 499.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="intro-pos">
-            <a class="popup cboxElement" href="/merchantview">
-              <img
-                class="img-responsiveval"
-                src="images/macbookpro.jpg"
-                alt=""
-              />
-              <hr />
-              <h5 style="text-align: center">
-                MacBook Pro
-              </h5>
-              <p style="text-align: center">
-                From  <i class="fa fa-inr"></i> 75000.00 
-              </p>
-              <p style="text-align: center">Flexible with everyone</p>
-            </a>
-          </div>
-        </div>
+        <%});%>
+      
+        
       </section>
     </div>
   </body>
