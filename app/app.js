@@ -111,7 +111,11 @@ app.get('/payment1',function(req,res){
   
     });
   });
+  app.get('/carts',function(req,res){
+    res.render('carts',{
   
+    });
+  });
 
 app.get('/booking',function(req,res){
   res.render('booking',{

@@ -35,31 +35,6 @@
       type="image/x-icon"
     />
 
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-      function hideURLbar(){ window.scrollTo(0,1); } </script>
-  <!-- //for-mobile-apps -->
-  <link href="css/addtocart/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/addtocart/css/style.css" rel="stylesheet" type="text/css" media="all" />
-  <!-- font-awesome icons -->
-  <link href="css/addtocart/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
-  <!-- //font-awesome icons -->
-  <!-- js -->
-  <script src="js/addtocart/js/jquery-1.11.1.min.js"></script>
-  <!-- //js -->
-  <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-  <!-- start-smoth-scrolling -->
-  <script type="text/javascript" src="js/addtocart/js/move-top.js"></script>
-  <script type="text/javascript" src="js/addtocart/js/easing.js"></script>
-  <script type="text/javascript">
-    jQuery(document).ready(function($) {
-      $(".scroll").click(function(event){		
-        event.preventDefault();
-        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-      });
-    });
-  </script>
-
     <!-- CSS
     ================================================== -->
 
@@ -108,130 +83,70 @@
               >
                 <ul class="nav navbar-nav">
                   <li ><a href="/eventica">Home </a></li>
-                  
+                  <!-- <li><a href="#ts-intro">About Us</a></li> -->
                   <li><a href="/events">Events</a></li>
-                
+                  <!-- <li><a href="#ts-speakers">Why Eventica?</a></li>
+                  <li><a href="#ts-schedule">What we do?</a></li> -->
+                  <!-- <li><a href="#ts-pricing">Our Team</a> </li> -->
                   <li class="active"><a href="/merchant">Merchandise</a></li>
-                  <div class="product_list_header">  
-                    <form action="#" method="post" class="last">
-                      <fieldset>
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="display" value="1" />
-                        <input type="submit" name="submit" value="VIEW YOUR CART" class="button" />
-                      </fieldset>
-                    </form>
-                  </div>
-                 
+                  <!-- <li><a href="#ts-sponsors">Coin Sale</a> </li> -->
+                  <!-- <li><a href="#ts-pricing-1">Road Map</a></li>
+                  <li><a href="#ts-sponsors-1">Contact Us </a></li> -->
+                  <!-- <li class="header-ticket">
+                    <a
+                      class="ticket-btn btn-primary"
+                      href="http://www.eventica.io/invest.php"
+                      ><i class="fa fa-dollar"></i> Invest</a
+                    >
+                  </li>
+                  <li class="header-ticket">
+                    <a
+                      class="ticket-btn btn-primary"
+                      href="http://www.eventica.io/logout.php"
+                      ><i class="fa fa-sign-out" aria-hidden="true"></i>
+                      Logout</a
+                    >
+                  </li> -->
                 </ul>
               </nav>
             </div>
           </div>
         </div>
       </header>
-       <br>
-       <br>
-       <br>
-       
+
       <br />
       <br />
-     
-      <div class="w3ls_w3l_banner_nav_right_grid">
-				<h3>Popular Brands</h3>
-				<div class="w3ls_w3l_banner_nav_right_grid1">
-          <!-- <h6>food</h6> -->
+      <section>
           <% product.forEach(function(product){ %>
-					<div class="col-md-3 w3ls_w3l_banner_left" style="margin-bottom: 30px;">
-						<div class="hover14 column" >
-						<div class="agile_top_brand_left_grid w3l_agile_top_brand_left_grid">
-							<div class="agile_top_brand_left_grid_pos">
-								<img src="images/addtocart/images/offer.png" alt=" " class="img-responsive" />
-							</div>
-							<div class="agile_top_brand_left_grid1">
-								<figure>
-									<div class="snipcart-item block">
-										<div class="snipcart-thumb">
-
-											<a href="/merchantview"><img src="<%=imageurl+product.proimg%>" alt=" " class="img-responsiveval" /></a>
-											<p style="text-align: center; font-weight: 600;"> <%=product.productName%></p>
-											<h4 style="text-align: center;"><i class="fa fa-inr"></i> <%=product.productPrice%><!--<span>$5.00</span>--></h4>
-										</div>
-										<div class="snipcart-details">
-											<form action="#" method="post">
-												<fieldset>
-													<input type="hidden" name="cmd" value="_cart" />
-													<input type="hidden" name="add" value="1" />
-													<input type="hidden" name="business" value=" " />
-													<input type="hidden" name="item_name" value="<%=product.productName%>" />
-													<input type="hidden" name="amount" value="<%=product.productPrice%>" />
-													<input type="hidden" name="discount_amount" value="0.00" />
-													<input type="hidden" name="currency_code" value="INR" />
-													<input type="hidden" name="return" value=" " />
-													<input type="hidden" name="cancel_return" value=" " />
-													<input type="submit" name="submit" value="Add to cart" class="button" />
-												</fieldset>
-											</form>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-						</div>
+        <div class="col-md-3">
+            
+          <div class="intro-pos">
+          
+          <a class="popup cboxElement" href="/merchantview">
+              <img
+                class="img-responsiveval"
+                src="<%=imageurl+product.proimg%>"
+                alt=""
+              />
+              <hr />
+              <h5 style="text-align: center">
+               <%=product.productName%>
+              </h5>
+              <p style="text-align: center">
+                From  <i class="fa fa-inr"></i><%=product.productPrice%>  
+              </p>
+              <p style="text-align: center">Flexible with everyone</p>
+            </a>
+            
           </div>
-          <%});%>
-				
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-  </div>
-  <script src="js/addtocart/js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function(){
-    $(".dropdown").hover(            
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
-            $(this).toggleClass('open');        
-        },
-        function() {
-            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
-            $(this).toggleClass('open');       
-        }
-    );
-});
-</script>
-<!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-<!-- //here ends scrolling icon -->
-<script src="js/addtocart/js/minicart.js"></script>
-<script>
-		paypal.minicart.render();
-
-		paypal.minicart.cart.on('checkout', function (evt) {
-			var items = this.items(),
-				len = items.length,
-				total = 0,
-				i;
-
-			// Count the number of each item in the cart
-			for (i = 0; i < len; i++) {
-				total += items[i].get('quantity');
-			}
-
-			if (total <	1) {
-				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-				evt.preventDefault();
-			}
-		});
-
-	</script>
+          
+        </div>
+        <%});%>
+      
+        
+      </section>
+    </div>
+  </body>
   <br />
   <footer id="footer" class="footer ">
     <div class="container">

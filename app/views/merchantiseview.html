@@ -37,11 +37,14 @@
 
     <!-- CSS
       ================================================== -->
+      
+    
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css" />
     <!-- Template styles-->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/addtocart/addtocart.css" />
     <!-- Responsive styles-->
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <!-- FontAwesome -->
@@ -54,6 +57,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script type="text/javascript" src="js/addtocart/addtocart.js"></script>
   </head>
   <body>
     <div class="body-inner">
@@ -89,24 +93,16 @@
                   <li><a href="#ts-schedule">What we do?</a></li> -->
                   <!-- <li><a href="#ts-pricing">Our Team</a> </li> -->
                   <li class="active"><a href="/merchant">Merchandise</a></li>
-                  <!-- <li><a href="#ts-sponsors">Coin Sale</a> </li> -->
-                  <!-- <li><a href="#ts-pricing-1">Road Map</a></li>
-                  <li><a href="#ts-sponsors-1">Contact Us </a></li> -->
-                  <!-- <li class="header-ticket">
-                    <a
-                      class="ticket-btn btn-primary"
-                      href="http://www.eventica.io/invest.php"
-                      ><i class="fa fa-dollar"></i> Invest</a
-                    >
-                  </li>
-                  <li class="header-ticket">
-                    <a
-                      class="ticket-btn btn-primary"
-                      href="http://www.eventica.io/logout.php"
-                      ><i class="fa fa-sign-out" aria-hidden="true"></i>
-                      Logout</a
-                    >
-                  </li> -->
+                  <!-- <li><a href="#"> Cart</a></li> -->
+
+                  
+                  
+                 
+               
+                   
+                
+                 
+                 
                 </ul>
               </nav>
             </div>
@@ -192,7 +188,7 @@
           <button class="button buttonblue"><a href="/payment1">
             <i class="fa fa-inr" aria-hidden="true"></i> BUY</a>
           </button>
-          <button class="button buttonblue"><a href="/cart">
+          <button class="button buttonblue">
            <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart</a>
           </button>
         </div>
@@ -270,5 +266,45 @@
         </button>
       </div>
     </footer>
+
+    <!-- cart -->
+    <div class="container">
+  <div class="shopping-cart">
+    <div class="shopping-cart-header">
+      <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+      <div class="shopping-cart-total">
+        <span class="lighter-text">Total:</span>
+        <span class="main-color-text">$2,229.97</span>
+      </div>
+    </div> <!--end shopping-cart-header -->
+
+    <ul class="shopping-cart-items">
+      <li class="clearfix">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+        <span class="item-name">Sony DSC-RX100M III</span>
+        <span class="item-price">$849.99</span>
+        <span class="item-quantity">Quantity: 01</span>
+      </li>
+
+      <li class="clearfix">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg" alt="item1" />
+        <span class="item-name">KS Automatic Mechanic...</span>
+        <span class="item-price">$1,249.99</span>
+        <span class="item-quantity">Quantity: 01</span>
+      </li>
+
+      <li class="clearfix">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg" alt="item1" />
+        <span class="item-name">Kindle, 6" Glare-Free To...</span>
+        <span class="item-price">$129.99</span>
+        <span class="item-quantity">Quantity: 01</span>
+      </li>
+    </ul>
+
+    <a href="#" class="button">Checkout</a>
+  </div> <!--end shopping-cart -->
+</div> <!--end container -->
+                   
+  
   </body>
 </html>
