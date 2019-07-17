@@ -259,14 +259,14 @@ ul.dropdown-menu.drp-mnu li a i {
 	width:80%;
 }
 .w3l_banner_nav_right{
-	float:right;
+	margin-left: 120px;;
 	width:80%;
 }
 .navbar-nav > li {
     float: none;
 }
 .nav > li > a:hover, .nav > li > a:focus {
-    background-color: #84C639;
+    /* background-color: #84C639; */
     color: #fff;
 }
 .navbar-nav {
@@ -277,7 +277,7 @@ ul.dropdown-menu.drp-mnu li a i {
 .navbar-nav > li > a {
     color: #212121;
     padding:10px 0px 10px 40px;
-    border-bottom: 1px dotted #CDCDCD;
+ 
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background-color: #84C639;
@@ -496,12 +496,12 @@ ul.dropdown-menu.drp-mnu li a i {
 }
 .top-brands h3,.fresh-vegetables h3,.mail h3,.testimonials h3,.w3_login h3,.w3ls_w3l_banner_nav_right_grid h3,h3.title,.faq h3,.services h3,.about h3,.team h3,.events h3{
 	text-align:center;
-	color:#212121;
+	color:#ff0673	;
 	padding-bottom:.5em;
 	position:relative;
 	font-size: 2.5em;
 }
-.top-brands h3:after,.fresh-vegetables h3:after,.mail h3:after,.w3_login h3:after,.testimonials h3:after,.w3ls_w3l_banner_nav_right_grid h3:after,h3.title:after,.faq h3:after,.services h3:after,.about h3:after,.team h3:after,.events h3:after{
+/* .top-brands h3:after,.fresh-vegetables h3:after,.mail h3:after,.w3_login h3:after,.testimonials h3:after,.w3ls_w3l_banner_nav_right_grid h3:after,h3.title:after,.faq h3:after,.services h3:after,.about h3:after,.team h3:after,.events h3:after{
 	content: '';
     background: #FA1818;
     height: 2px;
@@ -509,7 +509,7 @@ ul.dropdown-menu.drp-mnu li a i {
     position: absolute;
     bottom: 0%;
     left: 46%;
-}
+} */
 .agile_top_brand_left_grid{
 	background: #FFFFFF;
     padding: .5em;
@@ -571,8 +571,8 @@ ul.dropdown-menu.drp-mnu li a i {
     text-decoration: none;
     position: relative;
     border: none;
-    border-radius: 0;
-    width: 100%;
+    border-radius: 5px;
+    width: 75%;
     text-transform: uppercase;
     padding: .5em 0;
     outline: none;
@@ -586,15 +586,18 @@ ul.dropdown-menu.drp-mnu li a i {
     font-size: 14px;
     outline: none;
     text-transform: capitalize;
-    padding: .5em 2.5em .5em 1em;
-	border: 1px solid #ff0673;
+    padding: 2px 6px;
+	/* border: 1px solid #ff0673; */
 	text-align: center;
 	
-	margin-top:30px; 
-	background: #ff0673;
-    /* background: url(../images/cart.png) no-repeat 116px 9px; */
+	margin-top:36px; 
+	/* background: #ff0673; */
+    background: url(../images/cart.png) no-repeat 116px 9px;
 }
-
+.product_list_header input.button:hover{
+	background: #ff0673;
+	border-radius: 2px;
+}
 #PPMiniCart form {
     width: 590px !important;
 	padding: 10px 20px 40px !important;
@@ -1805,7 +1808,8 @@ h2.typoh2{
 	}
 }
 .typo,.privacy,.faq,.services,.events,.mail,.agileinfo_single,.w3_login{
-    padding: 5em;
+	padding: 5em;
+	margin-left: 120px;
 }
 /*--//Typography --*/
 /*-- pet-food --*/
@@ -2367,7 +2371,8 @@ ul.wmuSliderPagination {
     color: #212121;
     line-height: 1.5em;
     text-transform: uppercase;
-    margin-bottom: 2em;
+	/* margin-bottom: 2em; */
+	text-align: center;
 }
 .agileinfo_single_left {
     padding: 2em;
@@ -2484,7 +2489,7 @@ td.invert-image a img {
 	position:relative;
 }
 .close1,.close2,.close3 {
-    background: url('../images/close_1.png') no-repeat 0px 0px;
+    background: url('../images/addtocart/images/close_1.png') no-repeat 0px 0px;
     cursor: pointer;
     width: 28px;
     height: 28px;

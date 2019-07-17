@@ -734,7 +734,7 @@ select:focus { outline: none; border: none; }
 
 .site-header { position: relative; }
 .site-header .navbar { padding: 0; transition: all .5s ease; border-bottom: 1px solid transparent; }
-.site-header .navbar-nav > li > a { color: #fff; }
+.site-header { color: #fff; }
 .site-header .navbar-nav > li.quote-btn { margin-top: 23px; }
 .site-header .navbar-nav > li:last-child:not(.quote-btn) { margin-right: -15px; }
 .site-header .navbar-collapse ul + ul { margin-top: 0; }

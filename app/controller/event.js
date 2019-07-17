@@ -21,7 +21,7 @@ module.exports = function (app) {
             });
 
             
-            console.log(events);
+            console.log("events...",events);
 
         });
     });

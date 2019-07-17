@@ -20,6 +20,8 @@ var express = require('express'),
  require('./controller/event')(app);
  require('./controller/product')(app); 
    require('./controller/eventica')(app);
+   require('./controller/details')(app);
+
 
 //app.set('view engine', 'ejs');
  // Require body-parser (to receive post data from clients)
@@ -73,6 +75,7 @@ app.get('/details', function (req, res) {
   res.render('details', {
   });
 });
+
 app.get('/signin', function (req, res) {
   res.render('signin', {
   });
@@ -100,12 +103,12 @@ app.get('/payment',function(req,res){
 
   });
 });
-app.get('/payment1',function(req,res){
-  res.render('payment1',{
+// app.get('/payment1',function(req,res){
+//   res.render('payment1',{
 
-  });
+//   });
  
-});
+// });
   app.get('/cart',function(req,res){
     res.render('cart',{
   
@@ -119,6 +122,16 @@ app.get('/payment1',function(req,res){
 
 app.get('/booking',function(req,res){
   res.render('booking',{
+
+  });
+});
+app.post('/checkout',function(req,res){
+  res.render('checkout',{
+
+  });
+});
+app.get('/checkout',function(req,res){
+  res.render('checkout',{
 
   });
 });
