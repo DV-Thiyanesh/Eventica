@@ -175,9 +175,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="w3l_banner_nav_right">
 			
 			<div class="agileinfo_single">
-				<h5>charminar pulao basmati rice 5 kg</h5>
+				<h5>Event Cap Adidas Pure</h5>
 				<div class="col-md-4 agileinfo_single_left">
-					<img id="example" src="images/addtocart/images/76.png" alt=" " class="img-responsive" />
+					<img id="example" src="images/cap1.jpg" alt=" " class="img-responsive" />
 				</div>
 				<div class="col-md-8 agileinfo_single_right">
 					<div class="rating1">
@@ -251,7 +251,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
 					<div class="snipcart-item block">
 						<div class="snipcart-thumb agileinfo_single_right_snipcart">
-							<h4>$21.00 <!-- <span>$25.00</span>--></h4>
+							<h4><i class="fa fa-inr"></i> 788 <!-- <span>$25.00</span>--></h4>
 						</div>
 						<div class="snipcart-details agileinfo_single_right_details">
 							<form action="#" method="post">
@@ -259,10 +259,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<input type="hidden" name="cmd" value="_cart" />
 									<input type="hidden" name="add" value="1" />
 									<input type="hidden" name="business" value=" " />
-									<input type="hidden" name="item_name" value="pulao basmati rice" />
-									<input type="hidden" name="amount" value="21.00" />
-									<input type="hidden" name="discount_amount" value="1.00" />
-									<input type="hidden" name="currency_code" value="USD" />
+									<input type="hidden" name="item_name" value="Event Cap Adidas Pure" />
+									<input type="hidden" name="amount" value="788" />
+									<input type="hidden" name="discount_amount" value="0.00" />
+									<input type="hidden" name="currency_code" value="INR" />
 									<input type="hidden" name="return" value=" " />
 									<input type="hidden" name="cancel_return" value=" " />
 									<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -317,7 +317,7 @@ $(document).ready(function(){
 <script>
 		paypal.minicart.render();
 
-		paypal.minicart.cart.on('checkout', function (evt) {
+		paypal.minicart.cart.on('merchantcheckout', function (evt) {
 			var items = this.items(),
 				len = items.length,
 				total = 0,
@@ -328,12 +328,62 @@ $(document).ready(function(){
 				total += items[i].get('quantity');
 			}
 
-			if (total < 3) {
+			if (total < 1) {
 				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
 				evt.preventDefault();
 			}
 		});
 
 	</script>
+	 <footer id="footer" class="footer ">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-6">
+			  <div class="copyright-info">
+				<span>Copyright © 2018 Eventica. All Rights Reserved.</span>
+			  </div>
+			  <!-- Copyright info end -->
+			</div>
+			<!-- Content col end -->
+			<div class="col-md-6">
+			  <!-- Footer menu end -->
+			  <div class="footer-social text-center">
+				<ul>
+				  <li>
+					<a href="https://www.facebook.com/1285978671536389" target="_blank"><i class="fa fa-facebook"></i></a>
+				  </li>
+				  <li>
+					<a href="https://twitter.com/eventicaupdates" target="_blank"><i class="fa fa-twitter"
+						target="_blank"></i></a>
+				  </li>
+				  <li>
+					<a href="https://www.youtube.com/channel/UCps8d1E0Q4v8-P4WNjHHCqA" target="_blank"><i
+						class="fa fa-youtube" target="_blank"></i></a>
+				  </li>
+				  <li>
+					<a href="https://plus.google.com/u/1/117711261836707390891" target="_blank"><i
+						class="fa fa-google-plus"></i></a>
+				  </li>
+				  <li>
+					<a href="https://www.instagram.com/eventicaofficial/" target="_blank"><i
+						class="fa fa-instagram"></i></a>
+				  </li>
+				  <li>
+					<a href="https://t.me/eventicaofficial" target="_blank"><i class="fa fa-paper-plane"></i></a>
+				  </li>
+				</ul>
+			  </div>
+			  <!-- Footer social end -->
+			</div>
+		  </div>
+		  <!-- Content row end -->
+		</div>
+		<!-- Container end -->
+		<div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix" style="display: block;">
+		  <button class="btn btn-primary" title="Back to Top">
+			<i class="fa fa-angle-up"></i>
+		  </button>
+		</div>
+	  </footer>
 </body>
 </html>

@@ -13,8 +13,9 @@ module.exports = function (app) {
             if (err) {
                 console.log(err);
             }
-
+   
             res.render('events', {
+                
                 events: events,
                 imageurl
 

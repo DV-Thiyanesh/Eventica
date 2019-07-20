@@ -20,18 +20,19 @@ var express = require('express'),
  require('./controller/event')(app);
  require('./controller/product')(app); 
    require('./controller/eventica')(app);
-   require('./controller/details')(app);
-
+  require('./controller/details')(app);
+    require('./controller/merchantview')(app);
 
 //app.set('view engine', 'ejs');
  // Require body-parser (to receive post data from clients)
  // var config = require('/config');
 // require('./models').connect(config.get('db'));
 const User = require('./models/User.js');
+// const Ticket=require('./models/ticket.js');
 
 const mongoose = require('mongoose')
 const path = require('path');
-const port = 8080
+const port = 80
 
 mongoose.connect('mongodb://admin:admin123@ds343887.mlab.com:43887/eventica', {
     useNewUrlParser: true
@@ -46,8 +47,8 @@ mongoose.connect('mongodb://admin:admin123@ds343887.mlab.com:43887/eventica', {
 
 
 if (!module.parent) {
-  app.listen(8080)
-  console.log('Running in port 8080');
+  app.listen(80)
+  console.log('Running in port 80');
 }
 
 app.get('/', function (req, res) {
@@ -120,18 +121,24 @@ app.get('/payment',function(req,res){
     });
   });
 
-app.get('/booking',function(req,res){
-  res.render('booking',{
+// app.get('/booking',function(req,res){
+//   res.render('booking',{
+
+//   });  
+// });
+app.get('/eventcheckout',function(req,res){
+  res.render('eventcheckout',{
 
   });
 });
-app.post('/checkout',function(req,res){
-  res.render('checkout',{
+
+app.post('/merchantcheckout',function(req,res){
+  res.render('merchantcheckout',{
 
   });
 });
-app.get('/checkout',function(req,res){
-  res.render('checkout',{
+app.get('/merchantcheckout',function(req,res){
+  res.render('merchantcheckout',{
 
   });
 });

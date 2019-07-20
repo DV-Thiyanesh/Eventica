@@ -214,7 +214,7 @@ $(document).ready(function(){
 <script>
 		paypal.minicart.render();
 
-		paypal.minicart.cart.on('checkout', function (evt) {
+		paypal.minicart.cart.on('merchantcheckout', function (evt) {
 			var items = this.items(),
 				len = items.length,
 				total = 0,

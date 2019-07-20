@@ -152,10 +152,10 @@ a.read-more:hover {
   color: #222;
 }
 section,
-.section-padding {
-  padding: 20px 0;
+.section-padding { /* changed here*/
+  padding: 5px 0;
   position: relative;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 .gradient-bg {
   position: relative;

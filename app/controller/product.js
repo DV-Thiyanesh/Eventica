@@ -20,7 +20,7 @@ module.exports = function (app) {
 
             });
 
-            console.log(product);
+            console.log("product...", product);
             
 
         });

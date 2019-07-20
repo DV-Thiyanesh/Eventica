@@ -25,6 +25,9 @@ $(function(){
             $('#ticket-val').text(ticket);
 
             return true;
+        },
+        onFinished:function(event, currentIndex) {
+            window.location.replace('http://eventica.smartchain.in/payment');
         }
     });
     $("#day").datepicker({
@@ -32,4 +35,5 @@ $(function(){
         showOn: "both",
         buttonText : '<i class="zmdi zmdi-chevron-down"></i>',
     });
+    
 });

@@ -32,7 +32,8 @@ body {
     padding-bottom: 55px;
 }
 .wizard-v6-content   {
-	width: 910px;
+    width: 700px;
+    height: 500px;
 	box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 	-o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 	-ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
@@ -53,7 +54,7 @@ body {
 }
 .wizard-v6-content .wizard-form {
 	width: 100%;
-	background: #525575;
+	background: #333;
 	border-radius: 10px;
 	-o-border-radius: 10px;
 	-ms-border-radius: 10px;
@@ -61,7 +62,7 @@ body {
 	-webkit-border-radius: 10px;
 }
 .form-register .steps {
-	padding:  35px 50px 20px;
+	padding:  15px 20px 2px;
 }
 .form-register .steps ul {
     display: flex;
@@ -175,7 +176,7 @@ body {
 	font-size: 30px;
 	color: #fff;
 	margin: 0;
-    padding: 0 0 35px;
+    padding: 0 0 15px;
 }
 .inner .form-heading span {
 	font-weight: 400;
@@ -232,7 +233,7 @@ body {
     margin-bottom: 20px;
 }
 .inner .form-row .form-holder input,
-.inner .form-row .form-holder select {
+.inner .form-row .form-holder select  {
     width: 100%;
     padding: 11.5px 20px;
     border: none;
@@ -248,7 +249,7 @@ body {
     -ms-outline: none;
     background: transparent;
     border-bottom: 1px solid;
-    border-bottom-color: rgba(255,255,255,0.3);
+    border-bottom-color: rgba(255,255,255,0.3)!important; 
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -369,12 +370,12 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 	padding-bottom: 25px;
 }
 .form-register .actions {
-	padding: 0 45px 45px;
+	padding: 0 10px 10px;
 }
 .actions ul {
 	list-style: none;
 	padding-left: 0;
-    margin: 15px 0 0;
+    /* margin: 15px 0 0; */
     display: flex;
     display: -webkit-flex;
     justify-content: center;
@@ -414,7 +415,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     font-weight: 600;
 }
 .actions ul li:hover {
-	background: #32998b
+	background: #ff0673;
 }
 .actions ul li a {
 	color: #fff;

@@ -4,7 +4,8 @@ const imageurl = "http://eventica.smartchain.in:3000/static/doc/"
 module.exports = function (app) {
 
     app.get("/details/:id", function(req, res){
-        details.findById(req.params.id).exec(function (err, details) {
+        var id=req.param.id;
+        details.findOne(id).exec(function (err, details) {
             if (err) {
                 console.log(err);
             }
