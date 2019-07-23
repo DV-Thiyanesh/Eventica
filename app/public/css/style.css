@@ -115,15 +115,16 @@ body {
   overflow: hidden;
 }
 .button {
-  background-color: #4caf50; /* Green */
+  /* background-color: #4caf50;  */
+  background-color: #000000;
   border: none;
-  color: white;
-  padding: 12px 28px;
+  color: #fff;
+  /* padding: 6px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 14px;
+  /* margin: 4px 2px; */
   cursor: pointer;
 }
 .buttonblue {

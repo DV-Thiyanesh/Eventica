@@ -32,7 +32,7 @@ const User = require('./models/User.js');
 
 const mongoose = require('mongoose')
 const path = require('path');
-const port = 80
+const port = 8080
 
 mongoose.connect('mongodb://admin:admin123@ds343887.mlab.com:43887/eventica', {
     useNewUrlParser: true
@@ -47,13 +47,25 @@ mongoose.connect('mongodb://admin:admin123@ds343887.mlab.com:43887/eventica', {
 
 
 if (!module.parent) {
-  app.listen(80)
-  console.log('Running in port 80');
+  app.listen(8080)
+  console.log('Running in port 8080');
 }
 
 app.get('/', function (req, res) {
-  res.render('firsteventica', {
-  });
+  sess = req.session;
+  address = sess.address; 
+ 
+  if(req.session.user) {
+        res.render('eventica',{
+
+        });
+  }
+          else {
+      res.render('firsteventica', {
+                       
+          });
+}
+
 });
 app.get('/eventica', function (req, res) {
   res.render('eventica', {
@@ -99,11 +111,48 @@ app.get('/exchange',function(req, res){
   });
 });
 
-app.get('/payment',function(req,res){
-  res.render('payment',{
+app.get('/merchantpayment',function(req,res){
+ 
+  if(req.session.user)
+  {
+  res.render('merchantpayment',{
 
   });
+  }
+  else{
+    
+    res.render('merchantcheckout',{
+           
+  });
+  }
 });
+app.get('/eventpayment',function(req,res){
+  
+  if(req.session.user)
+  {
+  res.render('eventpayment',{
+
+  });
+  }
+  else{
+  
+   res.render('eventcheckout',{
+                    
+  });
+  }
+    
+  
+});
+// app.get('/merchantpayment',function(req,res){
+//     res.render('merchantpayment',{
+  
+//     });
+//   });
+// app.get('/eventpayment',function(req,res){
+//     res.render('eventpayment',{
+  
+//     });
+//   });
 // app.get('/payment1',function(req,res){
 //   res.render('payment1',{
 
@@ -121,11 +170,7 @@ app.get('/payment',function(req,res){
     });
   });
 
-// app.get('/booking',function(req,res){
-//   res.render('booking',{
 
-//   });  
-// });
 app.get('/eventcheckout',function(req,res){
   res.render('eventcheckout',{
 
@@ -197,26 +242,26 @@ var subject = req.body.subject;
 
 });  
 
-app.get('/', function (req, res) {
-  sess = req.session;
+// app.get('/', function (req, res) {
+//   sess = req.session;
 
-var referral = '';
+// var referral = '';
 
-if(typeof req.param('ref')!='undefined' && req.param('ref')!='' && req.param('ref')!=null){
- referral=req.param('ref');
-}
+// if(typeof req.param('ref')!='undefined' && req.param('ref')!='' && req.param('ref')!=null){
+//  referral=req.param('ref');
+// }
 
-   if(funcs.isEmpty(sess.user)) {
-             res.render('index', {
-                layout:false,
-          referral_code:referral
-           });
-         } else {
+//    if(funcs.isEmpty(sess.user)) {
+//              res.render('eventica', {
+//                 layout:false,
+//           referral_code:referral
+//            });
+//          } else {
 
-            res.redirect('/');
-         }
+//             res.redirect('/');
+//          }
 
 
-     });
+//      });
 
 
