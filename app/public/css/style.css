@@ -25,6 +25,7 @@
 
 */
 
+
 @import url(
   https://fonts.googleapis.com/css?family=Roboto:300,
   300i,
@@ -45,7 +46,45 @@
 
 /* Typography
 ================================================== */
-
+@media screen and (max-width: 450px) {
+  .banner-item {
+    max-height: 800px;
+    color: #fff;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+  }
+  
+}
+.row img{  /*changed for phone*/
+  margin-top:20px;
+  margin-bottom: 10px;
+}
+/* @media screen and (max-width: 450px) {
+.w3l_banner_nav_right{
+  width:100%;
+  margin-left:0px;
+}
+} */
+/* @media screen and (max-width: 600px) {
+  .nav navbar-nav.responsive {position: relative;}
+  .nav navbar-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav navbar-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} */
+*{  /*extra class changed for phone*/
+box-sizing: border-box;
+}
 body {
   background: #fff;
   color: #333;
@@ -760,8 +799,8 @@ a[href^="tel"] {
   margin-bottom: 0;
 }
 .navbar-toggle {
-  float: left;
-  margin-top: 10px;
+  float: right;  /*changed for phone*/
+  margin: 30px 10px; /*changed for phone*/
   padding: 10px;
   border-radius: 3px;
   margin-right: 5px;
@@ -924,6 +963,7 @@ ul.navbar-nav > li:hover > a {
 @media (min-width: 768px) {
   ul.nav li.dropdown:hover ul.dropdown-menu {
     display: block;
+    text-align: left;
   }
 }
 @media (min-width: 767px) {

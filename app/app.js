@@ -32,7 +32,7 @@ const User = require('./models/User.js');
 
 const mongoose = require('mongoose')
 const path = require('path');
-const port = 8080
+const port = 80
 
 mongoose.connect('mongodb://admin:admin123@ds343887.mlab.com:43887/eventica', {
     useNewUrlParser: true
@@ -47,8 +47,8 @@ mongoose.connect('mongodb://admin:admin123@ds343887.mlab.com:43887/eventica', {
 
 
 if (!module.parent) {
-  app.listen(8080)
-  console.log('Running in port 8080');
+  app.listen(80)
+  console.log('Running in port 80');
 }
 
 app.get('/', function (req, res) {
@@ -121,7 +121,7 @@ app.get('/merchantpayment',function(req,res){
   }
   else{
     
-    res.render('merchantcheckout',{
+    res.render('signin',{
            
   });
   }
@@ -136,7 +136,7 @@ app.get('/eventpayment',function(req,res){
   }
   else{
   
-   res.render('eventcheckout',{
+   res.render('signin',{
                     
   });
   }

@@ -15,7 +15,7 @@ module.exports = function (app) {
             }
    
             res.render('events', {
-                
+                id:events.id,
                 events: events,
                 imageurl
 

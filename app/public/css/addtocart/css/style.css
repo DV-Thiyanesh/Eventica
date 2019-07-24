@@ -9,6 +9,7 @@ html, body{
 	font-family: 'Open Sans', sans-serif;
 	background:#ffffff;
 }
+
 a:link,
 a:visited {
   text-decoration: none;
@@ -259,8 +260,8 @@ ul.dropdown-menu.drp-mnu li a i {
 	width:80%;
 }
 .w3l_banner_nav_right{
-	margin-left: 120px;;
-	width:80%;
+	/* margin-left: 120px; */
+	width:100%; /*changed for phone*/
 }
 .navbar-nav > li {
     float: none;
@@ -1809,7 +1810,7 @@ h2.typoh2{
 }
 .typo,.privacy,.faq,.services,.events,.mail,.agileinfo_single,.w3_login{
 	padding: 5em;
-	margin-left: 120px;
+	/* margin-left: 120px; */ /*chnaged for phone */
 }
 /*--//Typography --*/
 /*-- pet-food --*/
@@ -2610,7 +2611,7 @@ margin: 3em 0 0 0em;
     text-decoration: none;
 }
 .checkout-right-basket a:hover{
-    background: #84c639;
+    background: #ff0673;
 }
 .checkout-right-basket a span {
     left: -.5em;
@@ -4149,7 +4150,7 @@ input.checkbox:checked:after {
 		padding: 0 1em 2em;
 	}
 	.typo, .privacy, .faq, .services, .events, .mail, .agileinfo_single, .w3_login {
-		padding: 2em 1em;
+		padding: 5em 1em; /*changed for phone 2em to 5em*/
 	}
 	.w3l_fruit {
 		margin-bottom: 1.5em !important;
