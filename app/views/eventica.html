@@ -21,7 +21,8 @@
 
   <!-- CSS
     ================================================== -->
-
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/assets/css/style.css">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css" />
   <!-- Template styles-->
@@ -36,47 +37,105 @@
   <link rel="stylesheet" href="css/colorbox.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <style>
-  /* .nav navbar-nav li:hover{
+    /* .nav navbar-nav li:hover{
           background-color: #ff0673;
   } */
-  /* .active{
+    /* .active{
           background-color: #ff0673;
   }   */
-  .dropdown-menu dropdown-menu-right img{
-    float: left;
-  }
-  .dropdown i:hover{
-  background:#ff0673;
-  }
-  .droplist p{
-    font-weight: 600;
-  }
-  /* .qr {
+    .dropdown-menu dropdown-menu-right img {
+      float: left;
+    }
+
+    .dropdown i:hover {
+      background: #ff0673;
+    }
+
+    .droplist p {
+      font-weight: 600;
+    }
+
+    .banner-item {
+      margin-left: 150px !important;
+    }
+
+    /* .qr {
   float: left;
   margin-left: -3%;
   width: 85px;
 } */
-#qrcode {
-  float:left;
-  width: 20px;
-  height: 30px;
-  /* margin-top:10px; */
+    #qrcode {
+      float: left;
+      width: 20px;
+      height: 30px;
+      /* margin-top:10px; */
+    }
+
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+    }
+
+    /* .sidebar {
+  margin-top: 100px;
+  padding: 0;
+  width: 100px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
-hr { 
+
+.sidebar a {
   display: block;
-  margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 1px;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
 }
+ 
+.sidebar a.active {
+  background-color: #ff0673;
+  color: rgb(253, 216, 216);
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+} 
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+} */
   </style>
 
-<script type="text/javascript" src="js/qr/jquery.min.js"></script>
-<script type="text/javascript" src="js/qr/qrcode.js"></script>
-
+  <script type="text/javascript" src="js/qr/jquery.min.js"></script>
+  <script type="text/javascript" src="js/qr/qrcode.js"></script>
 </head>
+
 <body>
   <div class="body-inner">
     <!-- Header start -->
@@ -85,101 +144,155 @@ hr {
         <div class="row">
           <!-- <div class="navbar-header">
             <div class="logo"> -->
-              <a href="/"> <img src="images/logo.png" alt="" /> </a>
-            <!-- </div> -->
-            <!-- logo end -->
+          <a href="/"> <img src="images/logo.png" alt="" /> </a>
+          <!-- </div> -->
+          <!-- logo end -->
           <!-- </div> -->
           <!-- Navbar header end -->
           <!-- <div class="site-nav-inner"> -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span> <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
-              <ul class="nav navbar-nav">
-                <li class="active"  ><a href="/">Home </a></li>
-                <li><a href="#ts-intro">About Us</a></li>
-               
-                <li><a href="#ts-speakers">Why Eventica?</a></li>
-                <li><a href="#ts-schedule">What we do?</a></li>
-                <li><a href="/events">Events</a></li>
-                <li><a href="/merchant">Merchandise</a></li>
-                <li><a href="/exchange">Exchange</a></li>
-
-
-                <li><a href="#ts-sponsors-1">Contact Us </a></li>
-                <li>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home </a></li>
+              <li><a href="#ts-intro">About Us</a></li>
+              <li><a href="#ts-speakers">Why Eventica?</a></li>
+              <li><a href="#ts-schedule">What we do?</a></li>
+              <li><a href="/events">Events</a></li>
+              <li><a href="/merchant">Merchandise</a></li>
+              <li><a href="/exchange">Exchange</a></li>
+              <li><a href="#ts-sponsors-1">Contact Us </a></li>
+              <li>
                 <div class="dropdown">
-                    <i class="fa fa-user" class="btn btn-primary dropdown-toggle" style="color: cornsilk;" aria-hidden="true" data-toggle="dropdown"></i>
-                  
+                  <i class="fa fa-user" class="btn btn-primary dropdown-toggle" style="color: cornsilk;"
+                    aria-hidden="true" data-toggle="dropdown"></i>
+
                   <ul class="dropdown-menu dropdown-menu-right" style="width:350px;">
                     <!-- <img src="https://img.icons8.com/office/80/000000/user.png"> -->
                     <input id="text" type="text" value="http://eventica.smartchain.in:8080/" style="display:none;" />
                     <div id="qrcode" style="width:25px; height:50px;"></div>
-                    
                     <script type="text/javascript">
-                    var qrcode = new QRCode(document.getElementById("qrcode"), {
-                      width : 70,
-                      height : 80
-                    });
-                    
-                    function makeCode () {		
-                      var elText = document.getElementById("text");
-                      
-                      if (!elText.value) {
-                        alert("Input a text");
-                        elText.focus();
-                        return;
-                      }
-                      
-                      qrcode.makeCode(elText.value);
-                    }
-                    
-                    makeCode();
-                    
-                    $("#text").
-                      on("blur", function () {
-                        makeCode();
-                      }).
-                      on("keydown", function (e) {
-                        if (e.keyCode == 13) {
-                          makeCode();
-                        }
+                      var qrcode = new QRCode(document.getElementById("qrcode"), {
+                        width: 70,
+                        height: 80
                       });
-                    </script>                 
-                     
-                    <span class="droplist"  style="line-break: normal; float:right;"><p>Name: <strong><%=sess.user.firstname+" "+sess.user.lastname%></strong>  </p>
-                    <p>E-Mail: <strong><%=sess.user.email%></strong></p>
-                    <p>Balance: <strong>10,000 EVN</strong></p>
-                    
+
+                      function makeCode() {
+                        var elText = document.getElementById("text");
+
+                        if (!elText.value) {
+                          alert("Input a text");
+                          elText.focus();
+                          return;
+                        }
+
+                        qrcode.makeCode(elText.value);
+                      }
+
+                      makeCode();
+
+                      $("#text").
+                        on("blur", function () {
+                          makeCode();
+                        }).
+                        on("keydown", function (e) {
+                          if (e.keyCode == 13) {
+                            makeCode();
+                          }
+                        });
+                    </script>
+
+                    <span class="droplist" style="line-break: normal; float:right;">
+                      <p>Name: <strong><%=sess.user.firstname+" "+sess.user.lastname%></strong> </p>
+                      <p>E-Mail: <strong><%=sess.user.email%></strong></p>
+                      <p>Balance: <strong>10,000 EVN</strong></p>
                       <hr>
-                    
-                    <h5 style="font-size: 16px; margin-bottom: 0px;"><a href="/eventica">Update Profile</a></h2>
-                  </span>
-                
+                      <h5 style="font-size: 16px; margin-bottom: 0px;"><a href="/eventica">Update Profile</a></h2>
+                    </span>
                   </ul>
                 </div>
               </li>
-
-
-                <li><a href="/logout">Logout </a></li>
-
-              
-              </ul>
-              <!--/ Nav ul end -->
-            </nav>
-            <!--/ Collapse end -->
+              <li><a href="/logout">Logout </a></li>
+            </ul>
+            <!--/ Nav ul end -->
+          </nav>
+          <!--/ Collapse end -->
           <!-- </div> -->
           <!--/ Site nav inner end -->
-        <!-- </div> -->
-        <!--/ Row end -->
-      </div>
-      <!--/ Container end -->
+          <!-- </div> -->
+          <!--/ Row end -->
+        </div>
+        <!--/ Container end -->
     </header>
-    <!--/ Header end -->
+    <!-- / Header end  -->
+    <!---side bar-->
+    <main class="cd-main-content" style="padding-top:100px; z-index:0 !important;">
+      <nav class="cd-side-nav js-cd-side-nav">
+        <ul class="cd-side__list js-cd-side__list">
+          <li class="cd-side__label"><span>Main</span></li>
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children">
+            <a href="#0">Overview</a>
+            <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Data</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Category 1</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Category 2</a></li>
+            </ul>
+          </li>
+          <li
+            class="cd-side__item cd-side__item--has-children cd-side__item--notifications cd-side__item--selected js-cd-item--has-children">
+            <a href="#0">Notifications<span class="cd-count">3</span></a>
+            <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a aria-current="page" href="#0">All Notifications</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Friends</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Other</a></li>
+            </ul>
+          </li>
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--comments js-cd-item--has-children">
+            <a href="#0">Comments</a>
+            <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Comments</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Edit Comment</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Delete Comment</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="cd-side__list js-cd-side__list">
+          <li class="cd-side__label"><span>Secondary</span></li>
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
+            <a href="#0">Bookmarks</a>
+            <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Bookmarks</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Edit Bookmark</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Import Bookmark</a></li>
+            </ul>
+          </li>
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--images js-cd-item--has-children">
+            <a href="#0">Images</a>
+            <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Images</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Edit Image</a></li>
+            </ul>
+          </li>
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--users js-cd-item--has-children">
+            <a href="#0">Users</a>
+            <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Users</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Edit User</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Add User</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="cd-side__list js-cd-side__list">
+          <li class="cd-side__label"><span>Action</span></li>
+          <li class="cd-side__btn"><button class="reset" href="#0">+ Button</button></li>
+        </ul>
+      </nav>
 
-    <section id="banner">
+      <!--end side bar  -->
+      <!-- <section id="banner"> -->
       <div class="banner-item bg-overlay" style="background-image:url(images/bg-main.jpg)">
         <div class="container">
           <div class="banner-content text-center">
@@ -220,8 +333,9 @@ hr {
         </div>
         <!-- Container end -->
       </div>
-      <!-- Banner item end -->
-    </section>
+    </main>
+    <!-- Banner item end -->
+    <!-- </section> -->
     <!-- Section banner end -->
     <!---------------------->
 
@@ -682,7 +796,7 @@ hr {
       </div>
       <!--/ Container end -->
     </section>
-   
+
     <section id="ts-sponsors-1" class="ts-sponsors">
       <div class="container">
         <div class="row text-center" style="padding:100px 0px 40px 0px;">
@@ -747,10 +861,10 @@ hr {
       <!--/ Container end -->
     </section>
     <!-- Sponsors end -->
- <!-- Start of Zendesk Widget script -->
- <!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=web_widget/smartchainerssupport.zendesk.com"></script> -->
- <!-- End of Zendesk Widget script -->
-     <!-- Sponsors end -->
+    <!-- Start of Zendesk Widget script -->
+    <!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=web_widget/smartchainerssupport.zendesk.com"></script> -->
+    <!-- End of Zendesk Widget script -->
+    <!-- Sponsors end -->
     <footer id="footer" class="footer ">
       <div class="container">
         <div class="row">
@@ -809,8 +923,10 @@ hr {
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap jQuery -->
+    <script src="assets/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="assets/assets/js/menu-aim.js"></script>
+    <script src="assets/assets/js/main.js"></script>
 
-   
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <!-- Counter -->
     <script type="text/javascript" src="js/jquery_002.js"></script>
@@ -824,7 +940,7 @@ hr {
     <script type="text/javascript" src="js/smoothscroll.js"></script>
 
     <script type="text/javascript" src="js/web3.js"></script>
-   
+
 
     <script type="text/javascript">
       function showSnackbar() {
@@ -845,7 +961,7 @@ hr {
     </script>
   </div>
   <!-- Body inner end -->
- 
+
   <script>
     function getTimeRemaining(endtime) {
       var t = Date.parse(endtime) - Date.parse(new Date());
@@ -889,7 +1005,7 @@ hr {
     var deadline = new Date("December 7, 2019 09:30:00");
     initializeClock("clockdiv", deadline);
   </script>
-     
+
   <div id="cboxOverlay" style="display: none;"></div>
   <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
     <div id="cboxWrapper">
