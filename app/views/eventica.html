@@ -11,6 +11,9 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <!-- Site Title -->
   <title>Home | Eventica</title>
@@ -55,9 +58,9 @@
       font-weight: 600;
     }
 
-    .banner-item {
+    /* .banner-item {
       margin-left: 150px !important;
-    }
+    } */
 
     /* .qr {
   float: left;
@@ -79,6 +82,19 @@
       margin-right: auto;
       border-style: inset;
       border-width: 1px;
+    }
+    .cd-side-nav{
+      background-color: #000000 !important;
+      z-index: 0;
+    }
+    .cd-side__list a{
+      font-size: 14px !important;
+     font: 14px roboto, sans-serif !important; 
+     font-weight: bold !important; 
+    }
+    .cd-side__list a:hover{
+      background-color: #ff0673;
+      color:#ffff;
     }
 
     /* .sidebar {
@@ -232,44 +248,44 @@ div.content {
     <main class="cd-main-content" style="padding-top:100px; z-index:0 !important;">
       <nav class="cd-side-nav js-cd-side-nav">
         <ul class="cd-side__list js-cd-side__list">
-          <li class="cd-side__label"><span>Main</span></li>
+          <!-- <li class="cd-side__label"><span>Main</span></li> -->
           <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children">
-            <a href="#0">Overview</a>
-            <ul class="cd-side__sub-list">
+            <a href="/cryptonews">Crypto News</a> 
+            <!-- <ul class="cd-side__sub-list">
               <li class="cd-side__sub-item"><a href="#0">All Data</a></li>
               <li class="cd-side__sub-item"><a href="#0">Category 1</a></li>
               <li class="cd-side__sub-item"><a href="#0">Category 2</a></li>
-            </ul>
+            </ul> -->
           </li>
           <li
             class="cd-side__item cd-side__item--has-children cd-side__item--notifications cd-side__item--selected js-cd-item--has-children">
-            <a href="#0">Notifications<span class="cd-count">3</span></a>
-            <ul class="cd-side__sub-list">
+            <a href="referral">Refer To Friends</a>
+            <!-- <ul class="cd-side__sub-list">
               <li class="cd-side__sub-item"><a aria-current="page" href="#0">All Notifications</a></li>
               <li class="cd-side__sub-item"><a href="#0">Friends</a></li>
               <li class="cd-side__sub-item"><a href="#0">Other</a></li>
-            </ul>
+            </ul> -->
           </li>
           <li class="cd-side__item cd-side__item--has-children cd-side__item--comments js-cd-item--has-children">
-            <a href="#0">Comments</a>
-            <ul class="cd-side__sub-list">
+            <a href="/chat">Chat Forum</a>
+            <!-- <ul class="cd-side__sub-list">
               <li class="cd-side__sub-item"><a href="#0">All Comments</a></li>
               <li class="cd-side__sub-item"><a href="#0">Edit Comment</a></li>
               <li class="cd-side__sub-item"><a href="#0">Delete Comment</a></li>
-            </ul>
+            </ul> -->
           </li>
         </ul>
         <ul class="cd-side__list js-cd-side__list">
-          <li class="cd-side__label"><span>Secondary</span></li>
+          <!-- <li class="cd-side__label"><span>Secondary</span></li> -->
           <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
-            <a href="#0">Bookmarks</a>
-            <ul class="cd-side__sub-list">
+            <a href="/eventhistory">Events History</a>
+            <!-- <ul class="cd-side__sub-list">
               <li class="cd-side__sub-item"><a href="#0">All Bookmarks</a></li>
               <li class="cd-side__sub-item"><a href="#0">Edit Bookmark</a></li>
               <li class="cd-side__sub-item"><a href="#0">Import Bookmark</a></li>
-            </ul>
+            </ul> -->
           </li>
-          <li class="cd-side__item cd-side__item--has-children cd-side__item--images js-cd-item--has-children">
+          <!-- <li class="cd-side__item cd-side__item--has-children cd-side__item--images js-cd-item--has-children">
             <a href="#0">Images</a>
             <ul class="cd-side__sub-list">
               <li class="cd-side__sub-item"><a href="#0">All Images</a></li>
@@ -284,55 +300,168 @@ div.content {
               <li class="cd-side__sub-item"><a href="#0">Add User</a></li>
             </ul>
           </li>
-        </ul>
-        <ul class="cd-side__list js-cd-side__list">
+        </ul> -->
+        <!-- <ul class="cd-side__list js-cd-side__list">
           <li class="cd-side__label"><span>Action</span></li>
           <li class="cd-side__btn"><button class="reset" href="#0">+ Button</button></li>
-        </ul>
+        </ul> -->
       </nav>
-
-      <!--end side bar  -->
-      <!-- <section id="banner"> -->
-      <div class="banner-item bg-overlay" style="background-image:url(images/bg-main.jpg)">
-        <div class="container">
-          <div class="banner-content text-center">
-            <div class="banner-content-wrap">
-              <div id="clockdiv">
-                <div class="countdown bg-style">
-                  <div class="counter-day">
-                    <span class="days">-44</span>
-                    <div class="smalltext">Days</div>
+     
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <!-- <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li> -->
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="banner-item bg-overlay" style="background-image:url(images/index7.jpg)">
+              <div class="container">
+                <div class="banner-content text-center">
+                  <div class="banner-content-wrap">
+                    <div id="clockdiv">
+                      <div class="countdown bg-style">
+                        <div class="counter-day">
+                          <span class="days">-44</span>
+                          <div class="smalltext">Days</div>
+                        </div>
+                        <div class="counter-hour">
+                          <span class="hours">-1</span>
+                          <div class="smalltext">Hours</div>
+                        </div>
+                        <div class="counter-minute">
+                          <span class="minutes">49</span>
+                          <div class="smalltext">Minutes</div>
+                        </div>
+                        <div class="counter-second">
+                          <span class="seconds">16</span>
+                          <div class="smalltext">Seconds</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Countdown end -->
+                    <h1 class="banner-title">
+                      Revolution in Event Management Industry
+                    </h1>
+      
+                    <p class="banner-btn text-center">
+                      <a href="/events" class="btn btn-primary">Buy Tickets</a>
+                      <a href="eventicawhitepaper.pdf" target="_blank" class="btn btn-primary">Whitepaper</a>
+                    </p>
                   </div>
-                  <div class="counter-hour">
-                    <span class="hours">-1</span>
-                    <div class="smalltext">Hours</div>
-                  </div>
-                  <div class="counter-minute">
-                    <span class="minutes">49</span>
-                    <div class="smalltext">Minutes</div>
-                  </div>
-                  <div class="counter-second">
-                    <span class="seconds">16</span>
-                    <div class="smalltext">Seconds</div>
-                  </div>
+                  <!-- Banner content wrap end -->
                 </div>
+                <!-- Banner content end -->
               </div>
-              <!-- Countdown end -->
-              <h1 class="banner-title">
-                Revolution in Event Management Industry
-              </h1>
-
-              <!-- <p class="banner-btn text-center">
-                <a href="/signin" class="btn btn-primary">Register Now</a>
-                <a href="eventicawhitepaper.pdf" target="_blank" class="btn btn-primary">Whitepaper</a>
-              </p> -->
+              <!-- Container end -->
             </div>
-            <!-- Banner content wrap end -->
+           
+            
           </div>
-          <!-- Banner content end -->
+      
+          <div class="item">
+            <div class="banner-item bg-overlay" style="background-image:url(images/index5.png)">
+              <div class="container">
+                <div class="banner-content text-center">
+                  <div class="banner-content-wrap">
+                    <div id="clockdiv1">
+                      <div class="countdown bg-style">
+                        <div class="counter-day">
+                          <span class="days">-44</span>
+                          <div class="smalltext">Days</div>
+                        </div>
+                        <div class="counter-hour">
+                          <span class="hours">-1</span>
+                          <div class="smalltext">Hours</div>
+                        </div>
+                        <div class="counter-minute">
+                          <span class="minutes">49</span>
+                          <div class="smalltext">Minutes</div>
+                        </div>
+                        <div class="counter-second">
+                          <span class="seconds">16</span>
+                          <div class="smalltext">Seconds</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Countdown end -->
+                    <h1 class="banner-title">
+                      Revolution in Event Management Industry
+                    </h1>
+      
+                    <p class="banner-btn text-center">
+                      <a href="/events" class="btn btn-primary">Buy Tickets</a>
+                      <a href="eventicawhitepaper.pdf" target="_blank" class="btn btn-primary">Whitepaper</a>
+                    </p>
+                  </div>
+                  <!-- Banner content wrap end -->
+                </div>
+                <!-- Banner content end -->
+              </div>
+              <!-- Container end -->
+            </div>
+           
+          </div>
+      
+          <div class="item">
+            <div class="banner-item bg-overlay" style="background-image:url(images/bg-main.jpg)">
+              <div class="container">
+                <div class="banner-content text-center">
+                  <div class="banner-content-wrap">
+                    <div id="clockdiv2">
+                      <div class="countdown bg-style">
+                        <div class="counter-day">
+                          <span class="days">-44</span>
+                          <div class="smalltext">Days</div>
+                        </div>
+                        <div class="counter-hour">
+                          <span class="hours">-1</span>
+                          <div class="smalltext">Hours</div>
+                        </div>
+                        <div class="counter-minute">
+                          <span class="minutes">49</span>
+                          <div class="smalltext">Minutes</div>
+                        </div>
+                        <div class="counter-second">
+                          <span class="seconds">16</span>
+                          <div class="smalltext">Seconds</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Countdown end -->
+                    <h1 class="banner-title">
+                      Revolution in Event Management Industry
+                    </h1>
+      
+                    <p class="banner-btn text-center">
+                      <a href="/events" class="btn btn-primary">Buy Tickets</a>
+                      <a href="eventicawhitepaper.pdf" target="_blank" class="btn btn-primary">Whitepaper</a>
+                    </p>
+                  </div>
+                  <!-- Banner content wrap end -->
+                </div>
+                <!-- Banner content end -->
+              </div>
+              <!-- Container end -->
+            </div>
+           
+          </div>
         </div>
-        <!-- Container end -->
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
+   
     </main>
     <!-- Banner item end -->
     <!-- </section> -->
@@ -342,7 +471,7 @@ div.content {
     <!-------------------->
     <section id="ts-intro" class="ts-intro no-padding">
       <div class="container">
-        <div class="row text-center" style="padding:100px 0px 40px 0px;">
+        <div class="row text-center" style="padding:20px 0px 40px 0px;">
           <h3 class="section-sub-title title-white" style="color:#000;">
             About the Eventica
           </h3>
@@ -816,7 +945,7 @@ div.content {
                   <i class="fa fa-envelope-o">&nbsp;</i>
                   <div class="contact-info-box-content">
                     <h4>Email:</h4>
-                    <p>info@eventica.io</p>
+                    <p>beingevent@outlook.com</p>
                   </div>
                 </div>
               </div>
@@ -880,26 +1009,23 @@ div.content {
             <div class="footer-social text-center">
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/1285978671536389" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.facebook.com/beingevent" target="_blank"><i class="fa fa-facebook"></i></a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/eventicaupdates" target="_blank"><i class="fa fa-twitter"
+                  <a href="https://twitter.com/beingevent" target="_blank"><i class="fa fa-twitter"
                       target="_blank"></i></a>
                 </li>
                 <li>
-                  <a href="https://www.youtube.com/channel/UCps8d1E0Q4v8-P4WNjHHCqA" target="_blank"><i
+                  <a href="https://www.youtube.com/channel/UCjyAFms3tfplMLBr79khb-g" target="_blank"><i
                       class="fa fa-youtube" target="_blank"></i></a>
                 </li>
+               
                 <li>
-                  <a href="https://plus.google.com/u/1/117711261836707390891" target="_blank"><i
-                      class="fa fa-google-plus"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/eventicaofficial/" target="_blank"><i
+                  <a href="https://www.instagram.com/being_event/" target="_blank"><i
                       class="fa fa-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="https://t.me/eventicaofficial" target="_blank"><i class="fa fa-paper-plane"></i></a>
+                  <a href="https://t.me/beingevent" target="_blank"><i class="fa fa-paper-plane"></i></a>
                 </li>
               </ul>
             </div>
@@ -1004,6 +1130,10 @@ div.content {
 
     var deadline = new Date("December 7, 2019 09:30:00");
     initializeClock("clockdiv", deadline);
+    var deadline1 = new Date(" October 7, 2019 09:30:00");
+    initializeClock("clockdiv1", deadline1);
+    var deadline2 = new Date(" November 7, 2019 09:30:00");
+    initializeClock("clockdiv2", deadline2);
   </script>
 
   <div id="cboxOverlay" style="display: none;"></div>

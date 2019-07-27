@@ -1,4 +1,5 @@
 const events = require('../models/event.js');
+
 const imageurl = "http://eventica.smartchain.in:3000/static/doc/"
 
 module.exports = function (app) {
@@ -15,7 +16,7 @@ module.exports = function (app) {
             }
    
             res.render('events', {
-                id:events.id,
+             
                 events: events,
                 imageurl
 

@@ -89,6 +89,7 @@ app.get('/details', function (req, res) {
   });
 });
 
+
 app.get('/signin', function (req, res) {
   res.render('signin', {
   });
@@ -110,7 +111,26 @@ app.get('/exchange',function(req, res){
 
   });
 });
+app.get('/cryptonews',function(req, res){
+  res.render('cryptonews',{
 
+  });
+});
+app.get('/chat',function(req, res){
+  res.render('chat',{
+
+  });
+});
+app.get('/referral',function(req, res){
+  res.render('referral',{
+
+  });
+});
+app.get('/eventhistory',function(req, res){
+  res.render('eventhistory',{
+
+  });
+});
 app.get('/merchantpayment',function(req,res){
  
   if(req.session.user)

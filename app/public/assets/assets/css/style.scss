@@ -18,7 +18,7 @@
   --cd-header-height: 45px;
 
   // sidebar
-  --cd-sidebar-width: 149px;
+  --cd-sidebar-width: 200px;
 
   // font
   --font-primary: 'Open Sans', sans-serif;
@@ -28,7 +28,7 @@
   :root {
     @include breakpoint(md) {
       --cd-header-height:  55px;
-      --cd-sidebar-width: 149px;
+      --cd-sidebar-width: 200px;
     }
   }
 }
@@ -56,7 +56,7 @@ a {
   
   @include breakpoint(md) {
     h1 {
-      font-weight: 300;
+      font-weight: 300 !important;
     }
   }
 }
@@ -190,7 +190,7 @@ a {
     top: calc(50% - 8px);
 		height: 16px;
 		width: 16px;
-		background: url('../img/cd-search.svg') no-repeat 0 0;
+		// background: url('../img/cd-search.svg') no-repeat 0 0;
 	}
 
 	input {
@@ -235,6 +235,7 @@ a {
 	width: var(--cd-sidebar-width);
   padding-bottom: var(--space-md);
   background-color: lightness(var(--cd-color-1), 0.7);
+  // background-color: #000000;
   box-shadow: var(--shadow-md);
   @include fontSmooth;
   transition: .2s;
