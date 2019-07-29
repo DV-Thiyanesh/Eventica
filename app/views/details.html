@@ -18,17 +18,17 @@
     ================================================== -->
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="/css/bootstrap.css" />
 <!-- Template styles-->
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="/css/style.css" />
 <!-- Responsive styles-->
 <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 <!-- FontAwesome -->
-<link rel="stylesheet" href="css/font-awesome.css" />
+<link rel="stylesheet" href="/css/font-awesome.css" />
 <!-- Animation -->
 <!-- <link rel="stylesheet" href="css/animate.css"> -->
 <!-- Colorbox -->
-<link rel="stylesheet" href="css/colorbox.css" />
+<link rel="stylesheet" href="/css/colorbox.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel='stylesheet' id='tf_numbers-style-css'
   href='https://eventica.pro/wp-content/plugins/tf-numbers-number-counter-animaton/assets/css/style.css?ver=4.9.10'
@@ -160,23 +160,12 @@
   <h3 style="padding-left:530px;">Start-up Events</h3>
   <section style="margin-top: 0px; padding-top: 0px;">
     <div class="col-md-6">
-      <img src="images/index11.png" alt="Avatar" style="width:100%" />
+      <img src="<%=imageurl+details.proimg%>" alt="Avatar" style="width:100%" />
     </div>
     <h2>Description</h2>
     <div class="col-md-6">
       <p>
-        &nbsp;&nbsp;&nbsp;An open house is a particularly warm way to
-        introduce your company to your potential hires. Hosting this event
-        after work is a good idea, as is selecting some key team members to
-        mingle with your guests. Your goal is to create a relaxed environment
-        and get useful conversations going, so keep the agenda simple and
-        casual. Networking, food and drinks and maybe a short talk or Q&A.
-        Simple doesn’t have to mean boring. Your attendees will be leaving
-        work to come to your event instead of going straight home. Make the
-        trip worth it. We like these examples of recruitment events from
-        Summa, a software company, and Bayada Pediatrics, a home healthcare
-        company. They’ve clearly thought about how to make their open house a
-        valuable experience for their candidates.
+        &nbsp;&nbsp;&nbsp;<%=details.eventdescription%>
       </p>
     </div>
   </section>
@@ -256,11 +245,11 @@
         
         <a href="https://telegram.org/"
           target="_blank">
-          <img src="images/telegram.jpeg" alt="Twitter" />
+          <img src="/images/telegram.jpeg" alt="Telegram" />
         </a>
         <a href="https://web.whatsapp.com/"
           target="_blank">
-          <img src="images/WhatsApp.png" alt="Twitter" />
+          <img src="/images/WhatsApp.png" alt="WhatsApp" />
         </a>
 
       </div>
@@ -278,9 +267,9 @@
         <div class="team-item at-gray-bg init-animate zoomIn">
           <div class="team-author">
 
-            <img width="250" height="300" src="images/speaker1.jpg" />
+            <img width="250" height="300" src="<%=imageurl+details.filename%>" />
             <div class="team-author-details ">
-              <h4 class="team-name"><a href="#" rel="bookmark">Tina Karki</a>
+              <h4 class="team-name"><a href="#" rel="bookmark"><%=details.speakerName%></a>
               </h4>
               <div class="team-details">
                 <p>Director<br />
@@ -290,11 +279,11 @@
           </div>
         </div>
       </div>
-      <div class=" col-sm-12 col-md-3">
+      <!-- <div class=" col-sm-12 col-md-3">
         <div class="team-item at-gray-bg init-animate zoomIn">
           <div class="team-author">
 
-            <img width="250" height="300" src="images/speaker2.jpg" />
+            <img width="250" height="300" src="/images/speaker2.jpg" />
 
             <div class="team-author-details ">
               <h4 class="team-name"><a href="#" rel="bookmark">Laci Dobra</a>
@@ -311,7 +300,7 @@
         <div class="team-item at-gray-bg init-animate zoomIn">
           <div class="team-author">
 
-            <img width="250" height="300" src="images/speaker3.jpg" />
+            <img width="250" height="300" src="/images/speaker3.jpg" />
             <div class="team-author-details ">
               <h4 class="team-name"><a href="#" rel="bookmark">Asle Jenny</a>
               </h4>
@@ -326,7 +315,7 @@
       <div class=" col-sm-12 col-md-3">
         <div class="team-item at-gray-bg init-animate zoomIn">
           <div class="team-author">
-            <img width="250" height="300" src="images/speaker4.jpg" />
+            <img width="250" height="300" src="/images/speaker4.jpg" />
             <div class="team-author-details ">
               <h4 class="team-name"><a href="#" rel="bookmark">John Doe</a>
               </h4>
@@ -337,14 +326,14 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
       <div class='clearfix'></div>
     </div>
     <div class=" col-sm-12 col-md-3">
       <div class="team-item at-gray-bg init-animate zoomIn">
         <div class="team-author">
 
-          <img width="250" height="300" src="images/speaker5.jpg" class="attachment-full size-full wp-post-image" />
+          <img width="250" height="300" src="/images/speaker5.jpg" class="attachment-full size-full wp-post-image" />
           <div class="team-author-details ">
             <h4 class="team-name"><a href="#" rel="bookmark">Belmiro</a></h4>
             <div class="team-details">
@@ -359,7 +348,7 @@
       <div class="team-item at-gray-bg init-animate zoomIn">
         <div class="team-author">
 
-          <img width="250" height="300" src="images/speaker6.jpg" />
+          <img width="250" height="300" src="/images/speaker6.jpg" />
           <div class="team-author-details ">
             <h4 class="team-name"><a href="#" rel="bookmark">Pona Moon</a></h4>
             <div class="team-details">
@@ -374,7 +363,7 @@
       <div class="team-item at-gray-bg init-animate zoomIn">
         <div class="team-author">
 
-          <img width="250" height="300" src="images/speaker7.jpg" /> </a>
+          <img width="250" height="300" src="/images/speaker7.jpg" /> </a>
           <div class="team-author-details ">
             <h4 class="team-name"><a href="#" rel="bookmark">Justin Don</a>
             </h4>
@@ -390,7 +379,7 @@
       <div class="team-item at-gray-bg init-animate zoomIn">
         <div class="team-author">
 
-          <img width="250" height="300" src="images/speaker8.jpg" />
+          <img width="250" height="300" src="/images/speaker8.jpg" />
           <div class="team-author-details ">
             <h4 class="team-name"><a href="#" rel="bookmark">Ruben Shth</a>
             </h4>
@@ -401,7 +390,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <div class='clearfix'></div>
   </div>
 
@@ -461,7 +450,7 @@
     </div>
   </footer>
   <script src="<path>/dist/share-buttons.js"></script>
-    <script src="js/addtocart/js/bootstrap.min.js"></script>
+    <script src="/js/addtocart/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function() {
          var navoffeset=$(".agileits_header").offset().top;
@@ -478,8 +467,8 @@
       </script>
     <!-- //script-for sticky-nav -->
     <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="js/addtocart/js/move-top.js"></script>
-    <script type="text/javascript" src="js/addtocart/js/easing.js"></script>
+    <script type="text/javascript" src="/js/addtocart/js/move-top.js"></script>
+    <script type="text/javascript" src="/js/addtocart/js/easing.js"></script>
     <script type="text/javascript">
       jQuery(document).ready(function($) {
         $(".scroll").click(function(event){		
@@ -490,7 +479,7 @@
     </script>
     <!-- start-smoth-scrolling -->
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/addtocart/js/bootstrap.min.js"></script>
+    <script src="/js/addtocart/js/bootstrap.min.js"></script>
     <script>
     $(document).ready(function(){
         $(".dropdown").hover(            
@@ -522,7 +511,7 @@
           });
       </script>
     <!-- //here ends scrolling icon -->
-    <script src="js/addtocart/js/minicart.js"></script>
+    <script src="/js/addtocart/js/minicart.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@
 	
 	<link href="fonts/news/fonts/ionicons.css" rel="stylesheet">
 	
-		
+	<!-- <link href="css/site.css" rel="stylesheet"> -->
 	<link href="css/news/styles.css" rel="stylesheet">
 
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -66,9 +66,20 @@ margin: 100px;
 				<span class="icon-bar"></span> <span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
-				<ul class="nav navbar-nav" style="padding-left: 800px; ">
-				  <li class="active" ><a href="/">Home </a></li>
+			  <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right " style="padding-left: 120px;">
+				<ul class="nav navbar-nav"  >
+						<li class="active"  ><a href="/eventica">Home </a></li>
+						<li><a href="#ts-intro">About Us</a></li>
+					  
+						<li><a href="#ts-speakers">Why Eventica?</a></li>
+						<li><a href="#ts-schedule">What we do?</a></li>
+						<li><a href="/events">Events</a></li>
+						<li><a href="/merchant">Merchandise</a></li>
+						<li><a href="/exchange">Exchange</a></li>
+		
+		
+						<li><a href="#ts-sponsors-1">Contact Us </a></li>
+								   
 				 
 				</ul>
 				<!--/ Nav ul end -->
@@ -88,8 +99,9 @@ margin: 100px;
 							<h4 class="p-title"><b>REFER TO FRIENDS</b></h4>
 							<p class="mb-20">Refer Using this Link to Get Rewards</p>
 							<form class="nwsltr-primary-1">
-								<input type="text" style="border-color: #ff0673!important;" placeholder="http://beingevent.com/5d23056594f49428c1196309"/>
-								<button  onclick="myFunction()" style="width: 80px !important;  background-color:#ff0673 !important;" >Copy Link</button>
+									<!-- <div class="link-box row"><span class="eth-sign ref-link">Your Unique Referral ID</span><input class="ref-link medium-6" type="text" name="ref-link" style="height:38px; font-size:13px;" value="" id="myInput" /><span class="tooltip"><button type="submit" class="button button-btn" style="margin: 0px;height: 38px; position: relative; top: 0px;" onclick="myFunction()" onmouseout="outFunc()"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span>Copy Link</button></span></div> -->
+								<input type="text" value="" id="myInput" style="border-color: #ff0673!important;" />
+								<button  onclick="myFunction()" onmouseout="outFunc()"  style="width: 90px !important;  background-color:#ff0673 !important; font-weight: bold !important; color:#ffffff !important;"  >Copy Link</button>
 							</form> 
 						</div>
 					</div>
@@ -100,6 +112,31 @@ margin: 100px;
 						  document.execCommand("copy");
 						  alert("Copied the text: " + copyText.value);
 						}
+						</script>
+						<script src="./js/site/stop.js"></script>
+
+						<script src="js/vendor/jquery.js"></script>
+						<script src="js/foundation.min.js"></script>
+						<script>
+						  $(document).foundation();
+						</script>
+						<script>
+				document.getElementById("myInput").value=""+window.location.host+"/signin?referral="+"<%=sess.user.id%>";
+				
+							function myFunction() {
+								var copyText = document.getElementById("myInput");
+								console.log("copytext",copyText)	
+								copyText.select();
+								document.execCommand("copy");
+								
+								var tooltip = document.getElementById("myTooltip");
+								tooltip.innerHTML = "Copied";
+							}
+							
+							function outFunc() {
+								var tooltip = document.getElementById("myTooltip");
+								tooltip.innerHTML = "Copy to clipboard";
+							}
 						</script>
 </br>
 	

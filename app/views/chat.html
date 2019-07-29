@@ -38,44 +38,131 @@
 	<!-- Colorbox -->
 	<link rel="stylesheet" href="css/colorbox.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script src="/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+<script>
+	var socket = io.connect('http://eventica.smartchain.in');
+	var name=" <%=username%>" 
+	// on connection to server, ask for user's name with an anonymous callback
+	socket.on('connect', function(){
 	
+		// call the server-side function 'adduser' and send one parameter (value of prompt)
+		socket.emit('adduser', name);
+	});
+
+	// listener, whenever the server emits 'updatechat', this updates the chat body
+	
+	socket.on('updatechat', function (username, data) {
+		$('#conversation').append('<b>'+username + ':</b> ' + data + '<br>');
+	});
+
+	// listener, whenever the server emits 'updaterooms', this updates the room the client is in
+	socket.on('updaterooms', function(rooms, current_room) {
+		$('#rooms').empty();
+		$.each(rooms, function(key, value) {
+			if(value == current_room){
+				$('#rooms').append('<div>' + value + '</div>');
+			}
+			else {
+				$('#rooms').append('<div><a href="#" onclick="switchRoom(\''+value+'\')">' + value + '</a></div>');
+			}
+		});
+	});
+
+	function switchRoom(room){
+		socket.emit('switchRoom', room);
+	}
+	
+	// on load of page
+	$(function(){
+		// when the client clicks SEND
+		$('#datasend').click( function() {
+			var message = $('#data').val();
+			$('#data').val('');
+			// tell server to execute 'sendchat' and send along one parameter
+			socket.emit('sendchat', message);
+		});
+
+		// when the client hits ENTER on their keyboard
+		$('#data').keypress(function(e) {
+			if(e.which == 13) {
+				$(this).blur();
+				$('#datasend').focus().click();
+			}
+		});
+	});
+
+</script>
 	
 </head>
 <body>
 	<div class="body-inner">
 		<!-- Header start -->
-		<header id="header" class="header header-transparent">
-		  <div class="container">
-			<div class="row">
-			  <!-- <div class="navbar-header">
-				<div class="logo"> -->
-			  <a href="/"> <img src="images/logo.png" alt="" /> </a>
-			  <!-- </div> -->
-			  <!-- logo end -->
-			  <!-- </div> -->
-			  <!-- Navbar header end -->
-			  <!-- <div class="site-nav-inner"> -->
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span> <span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
-				<ul class="nav navbar-nav" style="padding-left: 800px; ">
-				  <li class="active" ><a href="/">Home </a></li>
-				 
-				</ul>
-				<!--/ Nav ul end -->
-			  </nav>
-			  <!--/ Collapse end -->
-			  <!-- </div> -->
-			  <!--/ Site nav inner end -->
-			  <!-- </div> -->
-			  <!--/ Row end -->
-			</div>
-			<!--/ Container end -->
-		</header>
+		    <!-- Header start -->
+			<header id="header" class="header header-transparent">
+				<div class="container">
+				  <div class="row">
+					<!-- <div class="navbar-header">
+					  <div class="logo"> -->
+					<a href="/"> <img src="images/logo.png" alt="" /> </a>
+					<!-- </div> -->
+					<!-- logo end -->
+					<!-- </div> -->
+					<!-- Navbar header end -->
+					<!-- <div class="site-nav-inner"> -->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					  <span class="sr-only">Toggle navigation</span>
+					  <span class="icon-bar"></span> <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+					<nav class="collapse navbar-collapse navbar-responsive-collapse pull-right " style="padding-left: 120px;">
+						<ul class="nav navbar-nav"  >
+								<li class="active"  ><a href="/eventica">Home </a></li>
+								<li><a href="eventica/#ts-intro">About Us</a></li>
+							  
+								<li><a href="eventica/#ts-speakers">Why Eventica?</a></li>
+								<li><a href="eventica/#ts-schedule">What we do?</a></li>
+								<li><a href="/events">Events</a></li>
+								<li><a href="/merchant">Merchandise</a></li>
+								<li><a href="/exchange">Exchange</a></li>
+				
+				
+								<li><a href="#ts-sponsors-1">Contact Us </a></li>
+										   
+						 
+						</ul>
+						<!--/ Nav ul end -->
+					  </nav>
+					<!--/ Collapse end -->
+					<!-- </div> -->
+					<!--/ Site nav inner end -->
+					<!-- </div> -->
+					<!--/ Row end -->
+				  </div>
+				  <!--/ Container end -->
+			  </header>
+			  <!-- / Header end  -->
 	</br>
+</br>
+
+</br>
+</br>
+</br>	
+
+<!-- <h3> <%=username%> </h3> -->
+<h4 class="p-title" style="margin-left: 40px;color:#ff0673;"><b>CHAT FORUM</b></h4>	 
+
+<div style="float:left;border-right:1px solid black;height:355px;padding:10px;overflow:scroll-y;">
+	<b>ROOMS</b>
+	<div id="rooms"></div>
+</div>
+<div style="float:left;height:300px;overflow:auto;padding:10px;">
+	<div id="conversation"></div>
+	
+</div>
+
+</br>
 </br>
 
 </br>
@@ -84,22 +171,25 @@
 </br>
 </br>
 </br>
+
+
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
+<!-- <div style="float:left;width:300px;height:250px;overflow:scroll-y;padding:10px;">
+	
+	<input id="data" style="width:200px;" />
+	<input type="button" id="datasend" value="send" />
+</div> -->
 	</br>
 </br>
 </br>
 </br>
 </br>
-	
-</br>
-</br>
+<div style="margin-left:9%;">
+<input id="data" style="width:200px; float:left;" />
+<input type="button" id="datasend" value="send" style="background:#ff0763; color:#fff;" />
+</div>
+<br>
 <footer id="footer" class="footer ">
     <div class="container">
       <div class="row">

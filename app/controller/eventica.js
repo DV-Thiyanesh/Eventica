@@ -7,5 +7,11 @@ const users= require('../models/User.js');
 
     }); 
 
+  app.post('/referral',function(req,res){
+        sess = req.session;
+        
+
+    }); 
+
 
 }
