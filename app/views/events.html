@@ -15,7 +15,7 @@
 
   <!-- CSS
     ================================================== -->
-
+    <link rel="stylesheet" href="assets/assets/css/style.css">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <!-- Template styles-->
@@ -23,11 +23,68 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="css/font-awesome.css">
   <!-- Colorbox -->
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/colorbox.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link href="css/addtocart/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
   <!-- <link href="css/addtocart/css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
   <style>
+      /* .nav navbar-nav li:hover{
+          background-color: #ff0673;
+  } */
+    /* .active{
+          background-color: #ff0673;
+  }   */
+  .dropdown-menu dropdown-menu-right img {
+      float: left;
+    }
+
+    .dropdown i:hover {
+      background: #ff0673;
+    }
+
+    .droplist p {
+      font-weight: 600;
+    }
+
+    /* .banner-item {
+      margin-left: 150px !important;
+    } */
+
+    /* .qr {
+  float: left;
+  margin-left: -3%;
+  width: 85px;
+} */
+    #qrcode {
+      float: left;
+      width: 20px;
+      height: 30px;
+      /* margin-top:10px; */
+    }
+
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+    }
+    .cd-side-nav{
+      background-color: #000000 !important;
+      z-index: 0;
+    }
+    .cd-side__list a{
+      font-size: 14px !important;
+     font: 14px roboto, sans-serif !important; 
+     font-weight: bold !important; 
+    }
+    .cd-side__list a:hover{
+      background-color: #ff0673;
+      color:#ffff;
+    }
     @media screen and (max-width: 450px) {
       .column {
         max-width: 100% !important;
@@ -151,6 +208,8 @@
       color: black;
     }
   </style>
+   <script type="text/javascript" src="js/qr/jquery.min.js"></script>
+   <script type="text/javascript" src="js/qr/qrcode.js"></script>
 </head>
 
 <body>
@@ -189,17 +248,19 @@
 
               <!-- <li><a href="/merchant">Merchandise</a></li> -->
 
+            <% if(sess != null) {%>
 
-
-              <!-- <li><a href="/merchant">Merchandise</a></li> -->
-
-            </ul>
+                </li>
+                <li><a href="/logout">Logout </a></li>
+                <%}%>
+              </ul>
+            
           </nav>
-          <!-- </div>
-        </div> -->
-        </div>
+          <!-- </div> -->
+        </div>         
+      </div>
     </header>
-    <!-- </div> -->
+    
     <br />
 
     <div class="box">
@@ -338,7 +399,7 @@
 
 
     </div>
-  <!-- </div> -->
+  
     <!-- Start of Zendesk Widget script -->
     <!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=web_widget/smartchainerssupport.zendesk.com"></script> -->
     <!-- End of Zendesk Widget script -->
@@ -382,7 +443,7 @@
         <button class="btn btn-primary" title="Back to Top"> <i class="fa fa-angle-up"></i> </button>
       </div>
     </footer>
-    
+  </div>
 </body>
 
-</html>
+</html>   

@@ -79,18 +79,22 @@ app.get('/eventica', function (req, res) {
 });
 
 app.get('/merchant', function (req, res) {
+  // sess = req.session;
   res.render('merchantise', {
   });
 });
 app.get('/merchantview', function (req, res) {
+  // sess = req.session;
   res.render('merchantiseview', {
   });
 });
 app.get('/events', function (req, res) {
+  // sess = req.session;
   res.render('events', {
   });
 });
 app.get('/details', function (req, res) {
+  // sess = req.session;
   res.render('details', {
   });
 });
@@ -113,16 +117,19 @@ app.get('/redirect', function(req, res) {
   res.redirect(url);
 });
 app.get('/exchange',function(req, res){
+  // sess = req.session;
   res.render('exchange',{
 
   });
 });
 app.get('/cryptonews',function(req, res){
+  // sess = req.session;
   res.render('cryptonews',{
 
   });
 });
 app.get('/chat',function(req, res){
+
   sess = req.session;
   
 console.log(sess,"req.sedss")
@@ -201,12 +208,13 @@ io.sockets.on('connection', function (socket) {
 });
 
 app.get('/referral',function(req, res){
-  
+  // sess = req.session;
   res.render('referral',{
 
   });
 });
 app.get('/eventhistory',function(req, res){
+  // sess = req.session;
   res.render('eventhistory',{
 
   });
@@ -259,30 +267,33 @@ app.get('/eventpayment',function(req,res){
 //   });
  
 // });
-  app.get('/cart',function(req,res){
-    res.render('cart',{
+  // app.get('/cart',function(req,res){
+  //   res.render('cart',{
   
-    });
-  });
-  app.get('/carts',function(req,res){
-    res.render('carts',{
+  //   });
+  // });
+  // app.get('/carts',function(req,res){
+  //   res.render('carts',{
   
-    });
-  });
+  //   });
+  // });
 
 
 app.get('/eventcheckout',function(req,res){
+  // sess = req.session;
   res.render('eventcheckout',{
 
   });
 });
 
 app.post('/merchantcheckout',function(req,res){
+  sess = req.session;
   res.render('merchantcheckout',{
 
   });
 });
 app.get('/merchantcheckout',function(req,res){
+  sess = req.session;
   res.render('merchantcheckout',{
 
   });

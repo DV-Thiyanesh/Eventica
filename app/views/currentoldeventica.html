@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+    ================================================== -->
+  <meta charset="utf-8" />
+
+  <!-- Mobile Specific Metas
+    ================================================== -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- Site Title -->
+  <title>Home | Eventica</title>
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- CSS
+    ================================================== -->
+  <!-- <script>document.getElementsByTagName("html")[0].className += " js";</script> -->
+  <link rel="stylesheet" href="assets/assets/css/style.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <!-- Template styles-->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Responsive styles-->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="css/font-awesome.css" />
+  <!-- Animation -->
+  <!-- <link rel="stylesheet" href="css/animate.css"> -->
+  <!-- Colorbox -->
+  <link rel="stylesheet" href="css/colorbox.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    /* .nav navbar-nav li:hover{
+          background-color: #ff0673;
+  } */
+    /* .active{
+          background-color: #ff0673;
+  }   */
+    .dropdown-menu dropdown-menu-right img {
+      float: left;
+    }
+
+    .dropdown i:hover {
+      background: #ff0673;
+    }
+
+    .droplist p {
+      font-weight: 600;
+    }
+
+    /* .banner-item {
+      margin-left: 150px !important;
+    } */
+
+    /* .qr {
+  float: left;
+  margin-left: -3%;
+  width: 85px;
+} */
+    #qrcode {
+      float: left;
+      width: 20px;
+      height: 30px;
+      /* margin-top:10px; */
+    }
+
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+    }
+    .cd-side-nav{
+      background-color: #000000 !important;
+      z-index: 0;
+    }
+    .cd-side__list a{
+      font-size: 14px !important;
+     font: 14px roboto, sans-serif !important; 
+     font-weight: bold !important; 
+    }
+    .cd-side__list a:hover{
+      background-color: #ff0673;
+      color:#ffff;
+    }
+
+    /* .sidebar {
+  margin-top: 100px;
+  padding: 0;
+  width: 100px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #ff0673;
+  color: rgb(253, 216, 216);
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+} 
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+} */
+  </style>
+
+  <script type="text/javascript" src="js/qr/jquery.min.js"></script>
+  <script type="text/javascript" src="js/qr/qrcode.js"></script>
+</head>
+
+<body>
+  <div class="body-inner">
+    <!-- Header start -->
+    <header id="header" class="header header-transparent">
+      <div class="container">
+        <div class="row">
+          <!-- <div class="navbar-header">
+            <div class="logo"> -->
+          <a href="/"> <img src="images/logo.png" alt="" /> </a>
+          <!-- </div> -->
+          <!-- logo end -->
+          <!-- </div> -->
+          <!-- Navbar header end -->
+          <!-- <div class="site-nav-inner"> -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Home </a></li>
+              <li><a href="#ts-intro">About Us</a></li>
+              <li><a href="#ts-speakers">Why Eventica?</a></li>
+              <li><a href="#ts-schedule">What we do?</a></li>
+              <li><a href="/events">Events</a></li>
+              <li><a href="/merchant">Merchandise</a></li>
+              <li><a href="/exchange">Exchange</a></li>
+              <li><a href="#ts-sponsors-1">Contact Us </a></li>
+              <li>
+                <div class="dropdown">
+                  <i class="fa fa-user" class="btn btn-primary dropdown-toggle" style="color: cornsilk;"
+                    aria-hidden="true" data-toggle="dropdown"></i>
+
+                  <ul class="dropdown-menu dropdown-menu-right" style="width:350px;">
+                    <!-- <img src="https://img.icons8.com/office/80/000000/user.png"> -->
+                    <input id="text" type="text" value="http://eventica.smartchain.in:8080/" style="display:none;" />
+                    <div id="qrcode" style="width:25px; height:50px;"></div>
+                    <script type="text/javascript">
+                      var qrcode = new QRCode(document.getElementById("qrcode"), {
+                        width: 70,
+                        height: 80
+                      });
+
+                      function makeCode() {
+                        var elText = document.getElementById("text");
+
+                        if (!elText.value) {
+                          alert("Input a text");
+                          elText.focus();
+                          return;
+                        }
+
+                        qrcode.makeCode(elText.value);
+                      }
+
+                      makeCode();
+
+                      $("#text").
+                        on("blur", function () {
+                          makeCode();
+                        }).
+                        on("keydown", function (e) {
+                          if (e.keyCode == 13) {
+                            makeCode();
+                          }
+                        });
+                    </script>
+
+                    <span class="droplist" style="line-break: normal; float:right;">
+                      <p>Name: <strong><%=sess.user.firstname+" "+sess.user.lastname%></strong> </p>
+                      <p>E-Mail: <strong><%=sess.user.email%></strong></p>
+                      <p>Balance: <strong>10,000 EVN</strong></p>
+                      <hr>
+                      <h5 style="font-size: 16px; margin-bottom: 0px;"><a href="/eventica">Update Profile</a></h2>
+                    </span>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="/logout">Logout </a></li>
+            </ul>
+            <!--/ Nav ul end -->
+          </nav>
+          <!--/ Collapse end -->
+          <!-- </div> -->
+          <!--/ Site nav inner end -->
+          <!-- </div> -->
+          <!--/ Row end -->
+        </div>
+        <!--/ Container end -->
+    </header>
+    <!-- / Header end  -->
+    <!---side bar-->
+    <main class="cd-main-content" style="padding-top:100px; z-index:0 !important;">
+      <nav class="cd-side-nav js-cd-side-nav">
+        <ul class="cd-side__list js-cd-side__list">
+          <!-- <li class="cd-side__label"><span>Main</span></li> -->
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children">
+            <a href="/cryptonews">Crypto News</a> 
+            <!-- <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Data</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Category 1</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Category 2</a></li>
+            </ul> -->
+          </li>
+          <li
+            class="cd-side__item cd-side__item--has-children cd-side__item--notifications cd-side__item--selected js-cd-item--has-children">
+            <a href="referral">Refer To Friends</a>
+            <!-- <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a aria-current="page" href="#0">All Notifications</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Friends</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Other</a></li>
+            </ul> -->
+          </li>
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--comments js-cd-item--has-children">
+            <a href="/chat">Chat Forum</a>
+            <!-- <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Comments</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Edit Comment</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Delete Comment</a></li>
+            </ul> -->
+          </li>
+        </ul>
+        <ul class="cd-side__list js-cd-side__list">
+          <!-- <li class="cd-side__label"><span>Secondary</span></li> -->
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
+            <a href="/eventhistory">Events History</a>
+            <!-- <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Bookmarks</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Edit Bookmark</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Import Bookmark</a></li>
+            </ul> -->
+          </li>
+          <!-- <li class="cd-side__item cd-side__item--has-children cd-side__item--images js-cd-item--has-children">
+            <a href="#0">Images</a>
+            <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Images</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Edit Image</a></li>
+            </ul>
+          </li>
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--users js-cd-item--has-children">
+            <a href="#0">Users</a>
+            <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Users</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Edit User</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Add User</a></li>
+            </ul>
+          </li>
+        </ul> -->
+        <!-- <ul class="cd-side__list js-cd-side__list">
+          <li class="cd-side__label"><span>Action</span></li>
+          <li class="cd-side__btn"><button class="reset" href="#0">+ Button</button></li>
+        </ul> -->
+      </nav>
+     
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="banner-item bg-overlay" style="background-image:url(images/index7.jpg)">
+              <div class="container">
+                <div class="banner-content text-center">
+                  <div class="banner-content-wrap">
+                    <div id="clockdiv">
+                      <div class="countdown bg-style">
+                        <div class="counter-day">
+                          <span class="days">-44</span>
+                          <div class="smalltext">Days</div>
+                        </div>
+                        <div class="counter-hour">
+                          <span class="hours">-1</span>
+                          <div class="smalltext">Hours</div>
+                        </div>
+                        <div class="counter-minute">
+                          <span class="minutes">49</span>
+                          <div class="smalltext">Minutes</div>
+                        </div>
+                        <div class="counter-second">
+                          <span class="seconds">16</span>
+                          <div class="smalltext">Seconds</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Countdown end -->
+                    <h1 class="banner-title">
+                      Revolution in Event Management Industry
+                    </h1>
+      
+                    <p class="banner-btn text-center">
+                      <a href="/events" class="btn btn-primary">Buy Tickets</a>
+                      <a href="eventicawhitepaper.pdf" target="_blank" class="btn btn-primary">Whitepaper</a>
+                    </p>
+                  </div>
+                  <!-- Banner content wrap end -->
+                </div>
+                <!-- Banner content end -->
+              </div>
+              <!-- Container end -->
+            </div>
+           
+            
+          </div>
+      
+          <div class="item">
+            <div class="banner-item bg-overlay" style="background-image:url(images/index5.png)">
+              <div class="container">
+                <div class="banner-content text-center">
+                  <div class="banner-content-wrap">
+                    <div id="clockdiv1">
+                      <div class="countdown bg-style">
+                        <div class="counter-day">
+                          <span class="days">-44</span>
+                          <div class="smalltext">Days</div>
+                        </div>
+                        <div class="counter-hour">
+                          <span class="hours">-1</span>
+                          <div class="smalltext">Hours</div>
+                        </div>
+                        <div class="counter-minute">
+                          <span class="minutes">49</span>
+                          <div class="smalltext">Minutes</div>
+                        </div>
+                        <div class="counter-second">
+                          <span class="seconds">16</span>
+                          <div class="smalltext">Seconds</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Countdown end -->
+                    <h1 class="banner-title">
+                      Revolution in Event Management Industry
+                    </h1>
+      
+                    <p class="banner-btn text-center">
+                      <a href="/events" class="btn btn-primary">Buy Tickets</a>
+                      <a href="eventicawhitepaper.pdf" target="_blank" class="btn btn-primary">Whitepaper</a>
+                    </p>
+                  </div>
+                  <!-- Banner content wrap end -->
+                </div>
+                <!-- Banner content end -->
+              </div>
+              <!-- Container end -->
+            </div>
+           
+          </div>
+      
+          <div class="item">
+            <div class="banner-item bg-overlay" style="background-image:url(images/bg-main.jpg)">
+              <div class="container">
+                <div class="banner-content text-center">
+                  <div class="banner-content-wrap">
+                    <div id="clockdiv2">
+                      <div class="countdown bg-style">
+                        <div class="counter-day">
+                          <span class="days">-44</span>
+                          <div class="smalltext">Days</div>
+                        </div>
+                        <div class="counter-hour">
+                          <span class="hours">-1</span>
+                          <div class="smalltext">Hours</div>
+                        </div>
+                        <div class="counter-minute">
+                          <span class="minutes">49</span>
+                          <div class="smalltext">Minutes</div>
+                        </div>
+                        <div class="counter-second">
+                          <span class="seconds">16</span>
+                          <div class="smalltext">Seconds</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Countdown end -->
+                    <h1 class="banner-title">
+                      Revolution in Event Management Industry
+                    </h1>
+      
+                    <p class="banner-btn text-center">
+                      <a href="/events" class="btn btn-primary">Buy Tickets</a>
+                      <a href="eventicawhitepaper.pdf" target="_blank" class="btn btn-primary">Whitepaper</a>
+                    </p>
+                  </div>
+                  <!-- Banner content wrap end -->
+                </div>
+                <!-- Banner content end -->
+              </div>
+              <!-- Container end -->
+            </div>
+           
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+   
+    </main>
+    <!-- Banner item end -->
+    <!-- </section> -->
+    <!-- Section banner end -->
+    <!---------------------->
+
+    <!-------------------->
+    <section id="ts-intro" class="ts-intro no-padding">
+      <div class="container">
+        <div class="row text-center" style="padding:20px 0px 40px 0px;">
+          <h3 class="section-sub-title title-white" style="color:#000;">
+            About the Eventica
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <h3 class="intro-sub-title">
+              Revolution in Event Management Industry
+            </h3>
+            <p class="intro-desc">
+              The events industry is growing all around the world. According
+              to Meeting Professionals International, events contribute $115
+              billion to the United States gross domestic product (GDP),
+              with subsequent billions funneled to both state and federal
+              tax revenue. The event industry isn't just growing in the
+              U.S., though -- it's also getting bigger in nations like the
+              U.K., India and Japan.
+            </p>
+            <p>
+              With that growth comes a need for technology that meets the
+              consumers' expectations and makes event production easier, and
+              an influx of startups, entrepreneurs and venture capitalists
+              are working together to develop solutions for the events
+              industry.
+            </p>
+          </div>
+
+          <!-- Col end -->
+          <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="intro-video">
+              <img class="img-responsive" src="images/intro-video.jpg" alt="" />
+              <a class="popup cboxElement" href="https://www.youtube.com/embed/gkWR7DIEEdI">
+                <div class="video-icon"><i class="fa fa-play"></i></div>
+              </a>
+            </div>
+            <!-- Intro video end -->
+          </div>
+          <!-- Col end -->
+          <div class="col-md-12">
+            <p>
+              The consumer or customer is now the key element, more than
+              ever before. The evolution of technology over the last decade
+              has changed the position of the customer, consumer or buyer to
+              a place where it is no longer about B2B or B2C; it’s about a
+              company’s relationship with you. Event audiences now have
+              higher expectations than ever before, looking to be engaged
+              and gain personal and organizational value from their
+              attendance to your event. We as event planners and marketers
+              are also under increased pressure as the global economy
+              continues to take its effect on company’s budgets. The
+              necessity to prove value and return on investment is greater
+              than ever.
+            </p>
+            <p>
+              Technological advances have changed the way we communicate,
+              from broadcast to conversation and from one-to-one to
+              man-to-many. As technology continues to evolve so will the way
+              we interact with each other. These emerging technologies need
+              to be embraced and their potential realized to deliver an
+              enhanced experience for the event attendees.
+            </p>
+            <p>
+              Eventica helps in the development of Event Management Industry
+              to a truly higher level. Our goal is to build a strong and
+              secured currency through using of Blockchain technology and
+              establish a secure and transparent business practice where the
+              coin holders will have right on sharing the company wealth and
+              participating on the value of assets and cash flow. With us,
+              both vendors and consumers will be able to participate and
+              connect directly with one another.
+            </p>
+          </div>
+          <!-- Col end -->
+        </div>
+        <!-- Content row 1 end -->
+        <div class="gap-60"></div>
+        <!-- Content Row 2 end -->
+      </div>
+      <!-- Container end -->
+    </section>
+    <!-- Intro area end -->
+
+    <section id="ts-speakers" class="ts-speakers gradient-bg">
+      <div class="container">
+        <div class="row text-center" style="padding:120px 0px 40px 0px;">
+          <h3 class="section-sub-title title-white">WHY EVENTICA?</h3>
+        </div>
+        <!--/ Title row end -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="ts-speaker">
+              <div class="ts-speaker-info">
+                <p>
+                  Crypto based, decentralized systems can offer drastic
+                  reductions in cost and improved efficiencies over
+                  centralized company systems. The main hurdle of a
+                  decentralized system is for the system to gain enough
+                  users to experience the benefits of decentralization.
+                  Drawing from our experience in the advertising and
+                  promotion business, we developed a plan to bootstrap the
+                  system with tens/hundreds of thousands of active users.
+                </p>
+                <ul>
+                  <li>Massive community of users &amp; investors.</li>
+                  <li>
+                    Presale/ICO price is affordable and will be profitable
+                    remarkably.
+                  </li>
+                  <li>
+                    Professional Marketing Campaign to expand the operations
+                    worldwide, which allow us to increase the number of
+                    clients 25% per month.
+                  </li>
+                </ul>
+                <div class="col-md-6">
+                  <img src="images/mission-vision.png" class="img-responsive" alt="" />
+                </div>
+                <div class="col-md-6">
+                  <h3 class="feature-title">MISSION</h3>
+                  <p>
+                    We conduct Blockchain Expo and startup events on regular
+                    basis. This is a platform for exhibitors, ICO startups
+                    and Crypto enthusiasts. We empower event professionals,
+                    by simplifying event management complexity and by
+                    connecting people to successful events.
+                  </p>
+                  <h3 class="feature-title">VISION</h3>
+                  <p>
+                    We will challenge our skills and abilities, and create
+                    an Event management platform that’s strong, dependable
+                    and intuitive, allowing event professionals to work
+                    efficiently and effortlessly. We love events and new
+                    technologies and every day we think about new
+                    functionalities, we refine usability and we improve
+                    security in order to deliver the most valuable and
+                    stress-free user experience.
+                  </p>
+                </div>
+                <!-- Col end -->
+              </div>
+            </div>
+
+            <!-- Speaker end -->
+          </div>
+          <!-- Speaker Col 1 end -->
+
+          <!-- Speaker Col 4 end -->
+        </div>
+      </div>
+      <!--/ Container end -->
+    </section>
+    <!-- Speakers end -->
+
+    <section id="ts-schedule" class="ts-schedule">
+      <div class="container">
+        <div class="row text-center" style="padding:120px 0px 40px 0px;">
+          <h3 class="section-sub-title">WHAT WE DO?</h3>
+          <br />
+        </div>
+        <!--/ Title row end -->
+        <div class="row">
+          <div class="col-md-7">
+            <h3 class="feature-title">Virtual Events</h3>
+            <p>
+              A virtual event involves interacting people sharing a common
+              virtual environment on the web, rather than meeting in a
+              physical location. Virtual events are highly interactive,
+              looking and feeling a lot like their physical counterparts.
+            </p>
+            <p>
+              Popular uses of virtual events include virtual tradeshows,
+              virtual job fairs, virtual translation conferences, virtual
+              sales-meetings, and virtual company-wide gatherings. Virtual
+              events are used to deliver presentations, trainings,
+              departmental meetings and sessions led by stakeholders and
+              company executives to product management and human resources.
+            </p>
+            <p>
+              Virtual events are not only a way for companies control
+              budgets but also reduces their carbon footprint.
+            </p>
+          </div>
+          <!-- Col end -->
+          <div class="col-md-5">
+            <div class="intro-video">
+              <img class="img-responsive" src="images/intro-video1.jpg" alt="" />
+              <a class="popup cboxElement" href="https://www.youtube.com/embed/AoVKcPfgHN8">
+                <div class="video-icon"><i class="fa fa-play"></i></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-5">
+            <img src="images/parallax51.jpg" class="img-responsive" alt="" />
+          </div>
+          <div class="col-md-7">
+            <h3 class="feature-title">Conference &amp; Event Management</h3>
+            <p>
+              Conferences are among the most important events that
+              professional event managers organize. The term “conferences”
+              can apply to a variety of gatherings from a group of
+              researchers who meet to discuss scientific results to a group
+              of sales people who are training. Conference planning can be
+              the responsibility of a corporate employee or a professional
+              meeting planner. Everything about the planning of conferences
+              is included; from important steps in the planning process to
+              conference types and their requirements.
+            </p>
+            <p>
+              Eventica offers you solutions for your corporate and business
+              meetings, conferences, events and exhibitions, from design to
+              execution. We engage with specific industries and
+              professionals to create conference and event platforms that
+              enable new business partnerships and opportunities.
+            </p>
+            <p>
+              If you want us to simply manage your event, our team is
+              committed to delivering an excellent and flawless event
+              outcome that will leave your guests with a memorable
+              experience. With a dedicated team in place, we are able to
+              handle all your requirements, from research, program
+              development and content, speaker acquisition and management,
+              marketing and branding, operations and logistics, technical
+              solutions to local and international entertainment.
+            </p>
+          </div>
+          <!-- Col end -->
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-7">
+            <h3 class="feature-title">Exhibition Management</h3>
+            <p>
+              The exhibition is a key element of our conferences and has
+              proven to be one of the greatest and most effective forms of
+              business networking and marketing tool for showcasing an
+              organization’s services, technologies, products and solutions.
+              In addition, many event delegates and participants want to not
+              only attend the various session discussions and debates but
+              also maximize their investment and time by networking with the
+              exhibiting organizations.
+            </p>
+            <h4>Our Exhibition Management Services Include :</h4>
+            <ul>
+              <li>Data and research management</li>
+              <li>
+                Full exhibitor support for all required services, pre- and
+                post-event
+              </li>
+              <li>Comprehensive onsite exhibition management</li>
+              <li>
+                Maintaining supplier relationships and ensuring superior
+                service delivery
+              </li>
+              <li>
+                Creating and distributing exhibition technical manuals,
+                floor plans, prospectus and other materials
+              </li>
+              <li>
+                Regular financial reporting, contract management and general
+                administration
+              </li>
+            </ul>
+          </div>
+          <!-- Col end -->
+          <div class="col-md-5">
+            <img src="images/parallax52.jpg" class="img-responsive" alt="" />
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-5">
+            <img src="images/parallax53.jpg" class="img-responsive" alt="" />
+          </div>
+          <div class="col-md-7">
+            <h3 class="feature-title">
+              Consulting &amp; Advisory Services
+            </h3>
+            <p>
+              Eventica works with companies to optimize their ICO launches.
+              We offer flexible and tailored conference and event management
+              services for governments, public and private sectors. We can
+              provide advisory services, help you research and develop
+              specific programme content or provide you with targeted
+              conference, event and exhibition solutions to help you achieve
+              your desired goals. You can therefore use part or all of our
+              professional conference organizing and management services.
+            </p>
+          </div>
+          <!-- Col end -->
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Crypto news Live Channel – MediaHouse</h3>
+          </div>
+          <!-- Col end -->
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="feature-box">
+              <span class="feature-box-media">
+                <img src="images/keynotes.png" alt="" />
+              </span>
+              <div class="feature-box-content">
+                <h3 class="feature-title">Meetings and Conferences</h3>
+                <p>
+                  Eventica offers you solutions for your corporate and
+                  business meetings, conferences, events and exhibitions,
+                  from design to execution. We engage with specific
+                  industries and professionals to create conference and
+                  event platforms that enable new business partnerships and
+                  opportunities. With a dedicated team in place, we are able
+                  to handle all your requirements, from research, programme
+                  development and content, speaker acquisition and
+                  management, marketing and branding, operations and
+                  logistics, technical solutions to local and international
+                  entertainment.
+                </p>
+              </div>
+            </div>
+            <!-- Feature box 1 end -->
+
+            <div class="feature-box">
+              <span class="feature-box-media">
+                <img src="images/reinvent.png" alt="" />
+              </span>
+              <div class="feature-box-content">
+                <h3 class="feature-title">Exhibitions and Trade Shows</h3>
+                <p>
+                  Trades shows and exhibitions can prove to be brilliant
+                  ways to promote individual business as well as collective
+                  trade. Moreover, they play a pivotal role in helping
+                  businesses; meet with other players of the industry which
+                  fosters the process of learning. A trade show is
+                  essentially an event meant to exhibit the goods and
+                  services belonging to a specific industry to the potential
+                  buyers and businesses. Exhibitions are also similar in
+                  nature, with the only difference being that they are open
+                  for general public as well.
+                </p>
+              </div>
+            </div>
+            <!-- Feature box 2 end -->
+
+            <div class="feature-box last">
+              <span class="feature-box-media">
+                <img src="images/reinvent.png" alt="" />
+              </span>
+              <div class="feature-box-content">
+                <h3 class="feature-title">Product Launches</h3>
+                <p>
+                  Product launch events are essential to the existence of
+                  businesses, but are critical to startups. Product launches
+                  are designed to achieve the specific purpose of creating
+                  awareness and publicity for a particular product/brand.
+                </p>
+              </div>
+            </div>
+            <!-- Feature box 3 end -->
+          </div>
+          <!-- Col end -->
+
+          <div class="col-md-6">
+            <div class="feature-box">
+              <span class="feature-box-media">
+                <img src="images/keynotes.png" alt="" />
+              </span>
+              <div class="feature-box-content">
+                <h3 class="feature-title">Inaugurations</h3>
+                <p>
+                  We also ensure that inaugurations are held in order to
+                  boost the success ratios of different ICOs including
+                  startups as well.
+                </p>
+              </div>
+            </div>
+            <!-- Feature box 1 end -->
+
+            <div class="feature-box">
+              <span class="feature-box-media">
+                <img src="images/reinvent.png" alt="" />
+              </span>
+              <div class="feature-box-content">
+                <h3 class="feature-title">Gala Dinners</h3>
+                <p>
+                  Gala Dinner events can be held to celebrate, reward or
+                  engage an audience with a brand or service. The evening
+                  event will generally feature a three of four course meal
+                  where guests are seated. Gala dinners also often involve
+                  the presentation of awards such as long service awards,
+                  sales person of the year, etc.
+                </p>
+              </div>
+            </div>
+            <!-- Feature box 2 end -->
+
+            <div class="feature-box ">
+              <span class="feature-box-media">
+                <img src="images/keynotes.png" alt="" />
+              </span>
+              <div class="feature-box-content">
+                <h3 class="feature-title">Corporate Awards</h3>
+                <p>
+                  Corporate awards ceremony will feature four discussion
+                  panels devoted to the most topical issues – Coinization,
+                  Legal, Mining, and Coins. The leading industry experts
+                  will get together to discuss anything and everything
+                  widely disputed in the crypto world.
+                </p>
+              </div>
+            </div>
+            <!-- Feature box 3 end -->
+            <div class="feature-box last">
+              <span class="feature-box-media">
+                <img src="images/reinvent.png" alt="" />
+              </span>
+              <div class="feature-box-content">
+                <h3 class="feature-title">Anniversaries</h3>
+                <p>
+                  Celebrating anniversaries is also part of our services.
+                  Celebrating the past achievements and success stories will
+                  help in boosting the confidence of others in a positive
+                  way.
+                </p>
+              </div>
+            </div>
+            <!-- Feature box 3 end -->
+          </div>
+          <!-- Col end -->
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Eventica Specification</h3>
+            <p>
+              The reason why Eventica will be a success is because of its
+              main successful feature:
+              <b>ITP - Independent Ticket Partner Program</b>
+            </p>
+            <p>
+              ITP program is a ‘first of its kind’ program in the Event
+              Management Industry with a potential to earn thousands of
+              dollars every month without having to invest any money. (Like
+              Franchise, We can give away upto 50% discount on event ticket
+              price).
+            </p>
+          </div>
+          <!-- Col end -->
+        </div>
+      </div>
+      <!--/ Container end -->
+    </section>
+
+    <section id="ts-sponsors-1" class="ts-sponsors">
+      <div class="container">
+        <div class="row text-center" style="padding:100px 0px 40px 0px;">
+          <h3 class="section-sub-title">CONTACT US</h3>
+        </div>
+        <!--/ Title row end -->
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="sidebar sidebar-left">
+              <h3>Contact Us</h3>
+              <p>
+                Please be patient while waiting for response. (24/7
+                Support!) All Enquiries
+              </p>
+              <div class="contact-info">
+                <div class="contact-info-box">
+                  <i class="fa fa-envelope-o">&nbsp;</i>
+                  <div class="contact-info-box-content">
+                    <h4>Email:</h4>
+                    <p>beingevent@outlook.com</p>
+                  </div>
+                </div>
+              </div>
+              <!-- contact info end -->
+            </div>
+            <!-- Sidebar left end -->
+          </div>
+          <!-- Sidebar col end -->
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h3>Contact Now</h3>
+            <form action="" method="post">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control form-control-name" placeholder="Name" name="name"
+                      required="" />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control form-control-email" placeholder="Email" name="email"
+                      required="" />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea type="text" class="form-control form-control-message" name="message" id="message"
+                  placeholder="Message" rows="8" required=""></textarea>
+              </div>
+              <div class="text-right">
+                <br />
+                <button class="btn btn-primary btn-full" type="submit" name="submit">
+                  <i class="fa fa-paper-plane-o"></i> Send Message
+                </button>
+              </div>
+            </form>
+            <!-- Contact form end -->
+          </div>
+          <!-- Col end -->
+        </div>
+      </div>
+      <!--/ Container end -->
+    </section>
+    <!-- Sponsors end -->
+    <!-- Start of Zendesk Widget script -->
+    <!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=web_widget/smartchainerssupport.zendesk.com"></script> -->
+    <!-- End of Zendesk Widget script -->
+    <!-- Sponsors end -->
+    <footer id="footer" class="footer ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="copyright-info">
+              <span>Copyright © 2018 Eventica. All Rights Reserved.</span>
+            </div>
+            <!-- Copyright info end -->
+          </div>
+          <!-- Content col end -->
+          <div class="col-md-6">
+            <!-- Footer menu end -->
+            <div class="footer-social text-center">
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/beingevent" target="_blank"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/beingevent" target="_blank"><i class="fa fa-twitter"
+                      target="_blank"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCjyAFms3tfplMLBr79khb-g" target="_blank"><i
+                      class="fa fa-youtube" target="_blank"></i></a>
+                </li>
+               
+                <li>
+                  <a href="https://www.instagram.com/being_event/" target="_blank"><i
+                      class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="https://t.me/beingevent" target="_blank"><i class="fa fa-paper-plane"></i></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Footer social end -->
+          </div>
+        </div>
+        <!-- Content row end -->
+      </div>
+      <!-- Container end -->
+      <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix" style="display: block;">
+        <button class="btn btn-primary" title="Back to Top">
+          <i class="fa fa-angle-up"></i>
+        </button>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Javascript Files
+            ================================================== -->
+
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap jQuery -->
+    <script src="assets/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="assets/assets/js/menu-aim.js"></script>
+    <script src="assets/assets/js/main.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- Counter -->
+    <script type="text/javascript" src="js/jquery_002.js"></script>
+    <!-- Countdown -->
+    <script type="text/javascript" src="js/jquery_004.js"></script>
+    <!-- Waypoints -->
+    <script type="text/javascript" src="js/waypoints.js"></script>
+    <!-- Color box for Popup-->
+    <script type="text/javascript" src="js/jquery_003.js"></script>
+    <!-- Smoothscroll -->
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+
+    <script type="text/javascript" src="js/web3.js"></script>
+
+
+    <script type="text/javascript">
+      function showSnackbar() {
+        // Get the snackbar DIV
+        var x = document.getElementById("snackbar");
+
+        if (x) {
+          // Add the "show" class to DIV
+          x.className = "show";
+
+          // After 3 seconds, remove the show class from DIV
+          setTimeout(function () {
+            x.className = x.className.replace("show", "");
+          }, 3000);
+        }
+      }
+      showSnackbar();
+    </script>
+  </div>
+  <!-- Body inner end -->
+
+  <script>
+    function getTimeRemaining(endtime) {
+      var t = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor((t / 1000) % 60);
+      var minutes = Math.floor((t / 1000 / 60) % 60);
+      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      return {
+        total: t,
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+      };
+    }
+
+    function initializeClock(id, endtime) {
+      var clock = document.getElementById(id);
+      var daysSpan = clock.querySelector(".days");
+      var hoursSpan = clock.querySelector(".hours");
+      var minutesSpan = clock.querySelector(".minutes");
+      var secondsSpan = clock.querySelector(".seconds");
+
+      function updateClock() {
+        var t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+        minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+          clearInterval(timeinterval);
+        }
+      }
+
+      updateClock();
+      var timeinterval = setInterval(updateClock, 1000);
+    }
+
+    var deadline = new Date("December 7, 2019 09:30:00");
+    initializeClock("clockdiv", deadline);
+    var deadline1 = new Date(" October 7, 2019 09:30:00");
+    initializeClock("clockdiv1", deadline1);
+    var deadline2 = new Date(" November 7, 2019 09:30:00");
+    initializeClock("clockdiv2", deadline2);
+  </script>
+
+  <div id="cboxOverlay" style="display: none;"></div>
+  <div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+    <div id="cboxWrapper">
+      <div>
+        <div id="cboxTopLeft" style="float: left;"></div>
+        <div id="cboxTopCenter" style="float: left;"></div>
+        <div id="cboxTopRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxMiddleLeft" style="float: left;"></div>
+        <div id="cboxContent" style="float: left;">
+          <div id="cboxTitle" style="float: left;"></div>
+          <div id="cboxCurrent" style="float: left;"></div>
+          <button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button
+            type="button" id="cboxSlideshow"></button>
+          <div id="cboxLoadingOverlay" style="float: left;"></div>
+          <div id="cboxLoadingGraphic" style="float: left;"></div>
+        </div>
+        <div id="cboxMiddleRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxBottomLeft" style="float: left;"></div>
+        <div id="cboxBottomCenter" style="float: left;"></div>
+        <div id="cboxBottomRight" style="float: left;"></div>
+      </div>
+    </div>
+    <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+  </div>
+</body>
+
+
+</html>

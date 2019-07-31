@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" />
+
+<!-- Mobile Specific Metas
+================================================== -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+
+<!-- Site Title -->
+<title>Home | Event-Details</title>
+
+<!--Favicon-->
+<link rel="shortcut icon" href="http://www.eventica.io/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="http://www.eventica.io/images/favicon.ico" type="image/x-icon" />
+<!-- CSS
+    ================================================== -->
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.css" />
+<!-- Template styles-->
+<link rel="stylesheet" href="css/style.css" />
+<!-- Responsive styles-->
+<!-- <link rel="stylesheet" href="css/responsive.css"> -->
+<!-- FontAwesome -->
+<link rel="stylesheet" href="css/font-awesome.css" />
+<!-- Animation -->
+<!-- <link rel="stylesheet" href="css/animate.css"> -->
+<!-- Colorbox -->
+<link rel="stylesheet" href="css/colorbox.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel='stylesheet' id='tf_numbers-style-css'
+  href='https://eventica.pro/wp-content/plugins/tf-numbers-number-counter-animaton/assets/css/style.css?ver=4.9.10'
+  type='text/css' media='all' />
+<style>
+  .buttonblue {
+    /* color: #fff; */
+    background: #ff0673;  
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border-color: #ff0673;
+
+  }
+  .buttonblue a{
+    color:#fff;
+  }
+
+  p {
+    padding-left: 10px;
+    text-align: justify;
+  }
+
+  .box {
+    overflow: hidden;
+    display: block;
+
+  }
+
+  #myform {
+    text-align: center;
+    padding: 5px;
+    margin: 2%;
+  }
+
+  .qty {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+
+  .qtyplus {
+    width: 25px;
+    height: 25px;
+  }
+
+  .qtyminus {
+    width: 25px;
+    height: 25px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 10px;
+    float: left;
+    border-right: 5px;
+    background: #e0dbdb;
+  }
+
+  .row .column .card {
+    float: left;
+  }
+
+  .tickets {
+    padding-top: 10px;
+    color: blueviolet;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+
+  .ticket-button {
+
+    padding-left: 150px;
+
+  }
+
+  .vl {
+    border-left: 2px solid green;
+    height: 150px;
+    position: absolute;
+    left: -5%;
+
+    top: 0;
+  }
+
+  .screen-reader-text {
+    clip: rect(5px, 5px, 5px, 5px);
+    position: absolute !important;
+    height: 1px;
+    width: 10px;
+    overflow: hidden;
+    padding-left: 20px;
+  }
+
+  .quantity .qty {
+    height: 33px;
+    border-radius: 0;
+    font-size: 16px;
+  }
+
+  .quantity .qty {
+    width: 3.631em;
+    text-align: center;
+  }
+
+  input {
+    line-height: normal;
+    max-width: 100%;
+  }
+
+  #share-buttons img {
+    width: 45px;
+    padding: 10px;
+    border: 0;
+    box-shadow: 0;
+    /* display: inline; */
+    padding-left: 5px;
+  }
+</style>
+</head>
+<% include head %> 
+<body>
+  <br />
+  <br />
+  <br />
+  <br />
+  <h3 style="padding-left:530px;">Start-up Events</h3>
+  <section style="margin-top: 0px; padding-top: 0px;">
+    <div class="col-md-6">
+      <img src="images/index11.png" alt="Avatar" style="width:100%" />
+    </div>
+    <h2>Description</h2>
+    <div class="col-md-6">
+      <p>
+        &nbsp;&nbsp;&nbsp;An open house is a particularly warm way to
+        introduce your company to your potential hires. Hosting this event
+        after work is a good idea, as is selecting some key team members to
+        mingle with your guests. Your goal is to create a relaxed environment
+        and get useful conversations going, so keep the agenda simple and
+        casual. Networking, food and drinks and maybe a short talk or Q&A.
+        Simple doesn’t have to mean boring. Your attendees will be leaving
+        work to come to your event instead of going straight home. Make the
+        trip worth it. We like these examples of recruitment events from
+        Summa, a software company, and Bayada Pediatrics, a home healthcare
+        company. They’ve clearly thought about how to make their open house a
+        valuable experience for their candidates.
+      </p>
+    </div>
+  </section>
+  <br />
+  <br />
+  <div class="intro-pos">
+    <br />
+    <div class="col-md-6">
+      <!-- <p> -->
+      <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 1 month <i class="fa fa-inr"></i>
+      1000 <br />
+      <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 15 days <i class="fa fa-inr"></i>
+      1200 <br />
+      <input type="radio" name="S" value="S" class="checkboxclass" />Booking On Price <i class="fa fa-inr"></i> 1500
+      <br />
+      <div>
+        <label class="tickets">No.of.participants:</label>
+
+        <!-- <div class="quantity"> -->
+        <label class="screen-reader-text" for="quantity_5d130afe5e553">Quantity</label>
+        <input type="number" id="quantity_5d130afe5e553" class="input-text qty text" step="1" min="1" max=""
+          name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric"
+          aria-labelledby="Bitcoin Payment quantity" />
+        <!-- </div> -->
+
+
+        <button class="buttonblue" style="margin-left: 60px; margin-top: 10px;">
+          <!-- <i class="fa fa-inr" aria-hidden="true"></i>--> <a href="/eventcheckout" >BUY TICKET</a>
+        </button>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="vl"></div>
+    <div class="col-md-6">
+      <div class="col-md-12">
+        <div class="vl"></div>
+        <div class="form-group">
+          <input type="text" class="form-control form-control-email" placeholder="Email" name="email" required="" />
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="text" class="form-control form-control-email" placeholder="Email" name="email" required="" />
+        </div>
+      </div>
+
+      <div id="share-buttons">
+        <!-- Email -->
+        <!-- <a
+          href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+          <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+        </a> -->
+
+        <!-- Facebook -->
+        <a href="http://www.facebook.com" target="_blank">
+          <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+        </a>
+
+        <!-- Google+ -->
+        <!-- <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+          <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+        </a> -->
+
+        <!-- LinkedIn -->
+        <a href="http://www.linkedin.com" target="_blank">
+          <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+        </a>
+
+        <a href="https://twitter.com/"
+          target="_blank">
+          <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+        </a>
+        
+        <a href="https://telegram.org/"
+          target="_blank">
+          <img src="images/telegram.jpeg" alt="Twitter" />
+        </a>
+        <a href="https://web.whatsapp.com/"
+          target="_blank">
+          <img src="images/WhatsApp.png" alt="Twitter" />
+        </a>
+
+      </div>
+
+
+      <button class=" buttonblue" style="margin-left:55px; margin-top:10px; margin-bottom: 5px;">
+        <!-- <i class="fa fa-share-alt" aria-hidden="true"></i>--><a href> REFER TO FRIENDS</a>
+      </button>
+    </div>
+  </div>
+  <h3 style="padding-left: 530px;"> Event Speakers</h3>
+  <div class="container">
+    <div class="row">
+      <div class=" col-sm-12 col-md-3">
+        <div class="team-item at-gray-bg init-animate zoomIn">
+          <div class="team-author">
+
+            <img width="250" height="300" src="images/speaker1.jpg" />
+            <div class="team-author-details ">
+              <h4 class="team-name"><a href="#" rel="bookmark">Tina Karki</a>
+              </h4>
+              <div class="team-details">
+                <p>Director<br />
+                  Egar Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-3">
+        <div class="team-item at-gray-bg init-animate zoomIn">
+          <div class="team-author">
+
+            <img width="250" height="300" src="images/speaker2.jpg" />
+
+            <div class="team-author-details ">
+              <h4 class="team-name"><a href="#" rel="bookmark">Laci Dobra</a>
+              </h4>
+              <div class="team-details">
+                <p>Director<br />
+                  Ferra Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-3">
+        <div class="team-item at-gray-bg init-animate zoomIn">
+          <div class="team-author">
+
+            <img width="250" height="300" src="images/speaker3.jpg" />
+            <div class="team-author-details ">
+              <h4 class="team-name"><a href="#" rel="bookmark">Asle Jenny</a>
+              </h4>
+              <div class="team-details">
+                <p>Director<br />
+                  Beta Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-3">
+        <div class="team-item at-gray-bg init-animate zoomIn">
+          <div class="team-author">
+            <img width="250" height="300" src="images/speaker4.jpg" />
+            <div class="team-author-details ">
+              <h4 class="team-name"><a href="#" rel="bookmark">John Doe</a>
+              </h4>
+              <div class="team-details">
+                <p>Director<br />
+                  Acme Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='clearfix'></div>
+    </div>
+    <div class=" col-sm-12 col-md-3">
+      <div class="team-item at-gray-bg init-animate zoomIn">
+        <div class="team-author">
+
+          <img width="250" height="300" src="images/speaker5.jpg" class="attachment-full size-full wp-post-image" />
+          <div class="team-author-details ">
+            <h4 class="team-name"><a href="#" rel="bookmark">Belmiro</a></h4>
+            <div class="team-details">
+              <p>Director<br />
+                Hire Company</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-sm-12 col-md-3">
+      <div class="team-item at-gray-bg init-animate zoomIn">
+        <div class="team-author">
+
+          <img width="250" height="300" src="images/speaker6.jpg" />
+          <div class="team-author-details ">
+            <h4 class="team-name"><a href="#" rel="bookmark">Pona Moon</a></h4>
+            <div class="team-details">
+              <p>Director<br />
+                Crayon Company</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-sm-12 col-md-3">
+      <div class="team-item at-gray-bg init-animate zoomIn">
+        <div class="team-author">
+
+          <img width="250" height="300" src="images/speaker7.jpg" /> </a>
+          <div class="team-author-details ">
+            <h4 class="team-name"><a href="#" rel="bookmark">Justin Don</a>
+            </h4>
+            <div class="team-details">
+              <p>Director<br />
+                Decor Company</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-sm-12 col-md-3">
+      <div class="team-item at-gray-bg init-animate zoomIn">
+        <div class="team-author">
+
+          <img width="250" height="300" src="images/speaker8.jpg" />
+          <div class="team-author-details ">
+            <h4 class="team-name"><a href="#" rel="bookmark">Ruben Shth</a>
+            </h4>
+            <div class="team-details">
+              <p>Director<br />
+                Gum Company</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='clearfix'></div>
+  </div>
+
+  <br />
+   <!-- Start of Zendesk Widget script -->
+<!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=web_widget/smartchainerssupport.zendesk.com"></script> -->
+<!-- End of Zendesk Widget script -->
+    <!-- Sponsors end -->
+  <footer id="footer" class="footer ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="copyright-info">
+            <span>Copyright © 2018 Eventica. All Rights Reserved.</span>
+          </div>
+          <!-- Copyright info end -->
+        </div>
+        <!-- Content col end -->
+        <div class="col-md-6">
+          <!-- Footer menu end -->
+          <div class="footer-social text-center">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/beingevent" target="_blank"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/beingevent" target="_blank"><i class="fa fa-twitter"
+                    target="_blank"></i></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCjyAFms3tfplMLBr79khb-g" target="_blank"><i
+                    class="fa fa-youtube" target="_blank"></i></a>
+              </li>
+              <!-- <li>
+                <a href="https://plus.google.com/u/1/117711261836707390891" target="_blank"><i
+                    class="fa fa-google-plus"></i></a>
+              </li> -->
+              <li>
+                <a href="https://www.instagram.com/being_event/" target="_blank"><i
+                    class="fa fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://t.me/beingevent" target="_blank"><i class="fa fa-paper-plane"></i></a>
+              </li>
+            </ul>
+          </div>
+          <!-- Footer social end -->
+        </div>
+      </div>
+      <!-- Content row end -->
+    </div>
+    <!-- Container end -->
+    <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix" style="display: block;">
+      <button class="btn btn-primary" title="Back to Top">
+        <i class="fa fa-angle-up"></i>
+      </button>
+    </div>
+  </footer>
+  <script src="<path>/dist/share-buttons.js"></script>
+    <script src="js/addtocart/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+         var navoffeset=$(".agileits_header").offset().top;
+         $(window).scroll(function(){
+          var scrollpos=$(window).scrollTop(); 
+          if(scrollpos >=navoffeset){
+            $(".agileits_header").addClass("fixed");
+          }else{
+            $(".agileits_header").removeClass("fixed");
+          }
+         });
+         
+      });
+      </script>
+    <!-- //script-for sticky-nav -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/addtocart/js/move-top.js"></script>
+    <script type="text/javascript" src="js/addtocart/js/easing.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){		
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+      });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/addtocart/js/bootstrap.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".dropdown").hover(            
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+                $(this).toggleClass('open');        
+            },
+            function() {
+                $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+                $(this).toggleClass('open');       
+            }
+        );
+    });
+    </script>
+    <!-- here stars scrolling icon -->
+      <script type="text/javascript">
+        $(document).ready(function() {
+          /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear' 
+            };
+          */
+                    
+          $().UItoTop({ easingType: 'easeOutQuart' });
+                    
+          });
+      </script>
+    <!-- //here ends scrolling icon -->
+    <script src="js/addtocart/js/minicart.js"></script>
+</body>
+
+</html>

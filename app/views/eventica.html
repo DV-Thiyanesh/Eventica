@@ -11,9 +11,9 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
 
   <!-- Site Title -->
   <title>Home | Eventica</title>
@@ -24,7 +24,7 @@
 
   <!-- CSS
     ================================================== -->
-  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <!-- <script>document.getElementsByTagName("html")[0].className += " js";</script> -->
   <link rel="stylesheet" href="assets/assets/css/style.css">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.css" />
@@ -182,34 +182,35 @@ div.content {
               <li><a href="/exchange">Exchange</a></li>
               <li><a href="#ts-sponsors-1">Contact Us </a></li>
               <li>
-                <div class="dropdown">
-                  <i class="fa fa-user" class="btn btn-primary dropdown-toggle" style="color: cornsilk;"
-                    aria-hidden="true" data-toggle="dropdown"></i>
-
-                  <ul class="dropdown-menu dropdown-menu-right" style="width:350px;">
-                    <!-- <img src="https://img.icons8.com/office/80/000000/user.png"> -->
-                    <input id="text" type="text" value="http://eventica.smartchain.in:8080/" style="display:none;" />
-                    <div id="qrcode" style="width:25px; height:50px;"></div>
-                    <script type="text/javascript">
+                
+                  <div class="dropdown">
+                      <i class="fa fa-user" class="btn btn-primary dropdown-toggle" style="color: cornsilk;" aria-hidden="true" data-toggle="dropdown"></i>
+                    
+                    <ul class="dropdown-menu dropdown-menu-right" style="width:350px;">
+                      <!-- <img src="https://img.icons8.com/office/80/000000/user.png"> -->
+                      <input id="text" type="text" value="http://eventica.smartchain.in:8080/" style="display:none;" />
+                      <div id="qrcode" style="width:70px; height:80px;"></div>
+                      
+                      <script type="text/javascript">
                       var qrcode = new QRCode(document.getElementById("qrcode"), {
-                        width: 70,
-                        height: 80
+                        width : 70,
+                        height : 80
                       });
-
-                      function makeCode() {
+                      
+                      function makeCode () {		
                         var elText = document.getElementById("text");
-
+                        
                         if (!elText.value) {
                           alert("Input a text");
                           elText.focus();
                           return;
                         }
-
+                        
                         qrcode.makeCode(elText.value);
                       }
-
+                      
                       makeCode();
-
+                      
                       $("#text").
                         on("blur", function () {
                           makeCode();
@@ -219,21 +220,25 @@ div.content {
                             makeCode();
                           }
                         });
-                    </script>
-
-                    <span class="droplist" style="line-break: normal; float:right;">
-                      <p>Name: <strong><%=sess.user.firstname+" "+sess.user.lastname%></strong> </p>
+                      </script>                 
+                       
+                      <span class="droplist"  style="line-break: normal; float:right;"><p>Name: <strong><%=sess.user.firstname+" "+sess.user.lastname%></strong>  </p>
                       <p>E-Mail: <strong><%=sess.user.email%></strong></p>
                       <p>Balance: <strong>10,000 EVN</strong></p>
-                      <hr>
+                      
+                        <hr>
+                      
                       <h5 style="font-size: 16px; margin-bottom: 0px;"><a href="/eventica">Update Profile</a></h2>
                     </span>
-                  </ul>
-                </div>
-              </li>
-              <li><a href="/logout">Logout </a></li>
-            </ul>
-            <!--/ Nav ul end -->
+                  
+                    </ul>
+                  </div>
+                </li>
+  
+  
+                  <li><a href="/logout">Logout </a></li>
+              </ul>
+              <!--/ Nav ul end -->
           </nav>
           <!--/ Collapse end -->
           <!-- </div> -->
@@ -241,6 +246,7 @@ div.content {
           <!-- </div> -->
           <!--/ Row end -->
         </div>
+      </div>
         <!--/ Container end -->
     </header>
     <!-- / Header end  -->
@@ -274,7 +280,15 @@ div.content {
               <li class="cd-side__sub-item"><a href="#0">Delete Comment</a></li>
             </ul> -->
           </li>
-        </ul>
+          <!-- <li class="cd-side__item cd-side__item--has-children cd-side__item--comments js-cd-item--has-children">
+            <a href="/eventhistory">Events History</a> -->
+            <!-- <ul class="cd-side__sub-list">
+              <li class="cd-side__sub-item"><a href="#0">All Comments</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Edit Comment</a></li>
+              <li class="cd-side__sub-item"><a href="#0">Delete Comment</a></li>
+            </ul> -->
+          <!-- </li> -->
+     
         <ul class="cd-side__list js-cd-side__list">
           <!-- <li class="cd-side__label"><span>Secondary</span></li> -->
           <li class="cd-side__item cd-side__item--has-children cd-side__item--bookmarks js-cd-item--has-children">
@@ -285,6 +299,9 @@ div.content {
               <li class="cd-side__sub-item"><a href="#0">Import Bookmark</a></li>
             </ul> -->
           </li>
+        </ul>
+      </ul>
+    </nav>
           <!-- <li class="cd-side__item cd-side__item--has-children cd-side__item--images js-cd-item--has-children">
             <a href="#0">Images</a>
             <ul class="cd-side__sub-list">
@@ -305,14 +322,14 @@ div.content {
           <li class="cd-side__label"><span>Action</span></li>
           <li class="cd-side__btn"><button class="reset" href="#0">+ Button</button></li>
         </ul> -->
-      </nav>
+      
      
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <!-- <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li> -->
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
       
         <!-- Wrapper for slides -->
@@ -1046,13 +1063,12 @@ div.content {
     <!-- Javascript Files
             ================================================== -->
 
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap jQuery -->
     <script src="assets/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
     <script src="assets/assets/js/menu-aim.js"></script>
     <script src="assets/assets/js/main.js"></script>
-
+    <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <!-- Counter -->
     <script type="text/javascript" src="js/jquery_002.js"></script>
