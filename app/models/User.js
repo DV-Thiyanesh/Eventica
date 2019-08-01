@@ -13,6 +13,7 @@ const UserSchema = new Schema({
     },
     email: String,
     password: String,
+    referral: String,
     mobileNo: String,
     nationality: String,
     country: String,

@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
   <meta property="og:image" content="http://www.beingevent.com/public/images/index7.jpg" />
   <meta property="og:title" content="Eventica" />
-  <meta property="og:description" content="<%=details.eventName%>" />
+  
 
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:400,600,700" rel="stylesheet">
   <!-- <link href="/css/news/bootstrap.css" rel="stylesheet"> -->
@@ -53,10 +53,6 @@
     .newslink {
 
       color: black;
-    }
-    .img-fluid{
-      /* max-width: 600px; */
-    max-height: 300px;
     }
 
     .buttonblue {
@@ -175,6 +171,10 @@
       /* display: inline; */
       padding-left: 5px;
     }
+    .img-fluid{
+      /* max-width: 600px; */
+    max-height: 300px;
+    }
   </style>
 
 </head>
@@ -268,114 +268,7 @@
             &nbsp;&nbsp;&nbsp;<%=details.eventdescription%>
 
 
-            <div class="intro-pos">
-              <br />
-              <div class="col-md-6">
-                <!-- <p> -->
-                <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 1 month <i
-                  class="fa fa-inr"></i>
-                1000 <br />
-                <input type="radio" name="S" value="S" class="checkboxclass" />Before Booking 15 days <i
-                  class="fa fa-inr"></i>
-                1200 <br />
-                <input type="radio" name="S" value="S" class="checkboxclass" />Booking On Price <i
-                  class="fa fa-inr"></i> 1500
-                <br />
-
-
-
-              </div>
-
-
-              <div class="vl"></div>
-              <div class="col-md-6">
-                <div class="col-md-12">
-                  <div class="vl"></div>
-                  <div>
-                    <label class="tickets">No.of.participants:</label>
-
-                    <!-- <div class="quantity"> -->
-                    <label class="screen-reader-text" for="quantity_5d130afe5e553">Quantity</label>
-                    <input type="number" id="quantity_5d130afe5e553" class="input-text qty text" step="1" min="1" max=""
-                      name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric"
-                      aria-labelledby="Bitcoin Payment quantity" />
-                    <!-- </div> -->
-
-
-                    <button class="buttonblue" style="margin-left: 20px; margin-top: 10px;">
-                      <!-- <i class="fa fa-inr" aria-hidden="true"></i>--> <a href="/eventcheckout">BUY TICKET</a>
-                    </button>
-                  </div>
-
-                  <!-- <div class="form-group"> 
-                    <input type="text" class="form-control form-control-email" placeholder="Email" name="email" required="" />
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-email" placeholder="Email" name="email" required="" />
-                  </div>
-                </div> -->
-
-                  <div id="share-buttons">
-
-                    <!-- <a data-href="http://beingevent.com/details/<%=details.id%>" data-layout="button"
-                      data-size="small"><a target="_blank"
-                        href="https://www.facebook.com/sharer/sharer.php?u=http://www.beingevent.com/details/<%=details.id%>&amp;src=sdkpreparse"
-                        class="fb-xfbml-parse-ignore"> <img
-                          src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a> -->
-                          <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.beingevent.com/details/<%=details.id%>&title=<%=details.eventName%>" target="_blank" rel="noopener">
-                            <img  src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
-                        </a>
-                        
-
-                      <a
-                        href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.beingevent.com/details/<%=details.id%>&title=<%=details.eventName%>&summary=beingevent.com&source=Eventica"> <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /></a>
-
-                      <a
-                        href='https://twitter.com/share?url=http://www.beingevent.com/details/<%=details.id%>&text=<%=details.eventName%> '>
-                        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
-
-                      <a
-                        href='https://telegram.me/share/url?url=http://www.beingevent.com/details/<%=details.id%>&text=<%=details.eventName%> '>
-                        <img src="/images/telegram.jpeg" alt="Telegram" /></a>
-
-
-                      <!-- <a target="_blank" href="https://web.whatsapp.com/send?text=www.beingevent.com%2Fevents" data-action="share/whatsapp/share"> <img src="/images/WhatsApp.png" alt="Twitter" /></a> -->
-
-                      <!-----for mobile-->
-
-
-                      <!-- <script>
-  For whatsapp web
-
-<a target="_blank" href="https://web.whatsapp.com/send?text=<< need to add url which you want to share >>" data-original-title="whatsapp" rel="tooltip" data-placement="left" data-action="share/whatsapp/share"></a>
-
-for mobile app
-
-<a href="http://whatsapp://send?text=<< need to add url which you want to share >>" data-original-title="whatsapp" rel="tooltip" class="btn btn-whatsapp" data-placement="left"></a>
-  var currentLocation = window.location.href;
-  cosole.log("current",currentLocation); -->
-                      <!-- // document.getElementById("demo").innerHTML = 
-// "The full URL of this page is:<br>" + window.location.href; -->
-                      <!-- </script> -->
-
-                      <a
-                        href='whatsapp://send?text=<%=details.eventName%>: http://www.beingevent.com/details/<%=details.id%>'>
-                        <img src="/images/WhatsApp.png" alt="WhatsApp" /></a>
-
-                  </div>
-
-
-                  <!-- <button class=" buttonblue" style="margin-left:55px; margin-top:10px; margin-bottom: 5px;">
-                   <i class="fa fa-share-alt" aria-hidden="true"></i>-->
-                  <!-- <a href> REFER TO FRIENDS</a> -->
-                  <!-- </button>  -->
-                </div>
-              </div>
-
-            </div>
-
+           
 
 
 

@@ -227,7 +227,7 @@
 		if(events.eventDate < date){ %>
 	  <div class="column">
 		<div class="card">
-		  <a href="/details">
+		  <a href="/historydetails/<%=events.id%>">
 			<div class="images">
 			  <img src="<%=imageurl+events.proimg%>" alt="Avatar">
 			</div>
@@ -236,8 +236,7 @@
 				<span class="eveHeadWrap"><%=events.eventName%></span>
 			  </h2>
 			  <div class="info">
-				<span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-				  2019
+				<span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> <%=events.eventDate%>
 				</span>
 			  </div>
 
@@ -263,7 +262,7 @@
 		<% if(events.eventDate < date){ %>
 	  <div class="column">
 		<div class="card">
-		  <a href="/details">
+		  <a href="/historydetails/<%=events.id%>">
 			<div class="images">
 			  <img src="<%=imageurl+events.proimg%>" alt="Avatar">
 			</div>
@@ -272,8 +271,7 @@
 				<span class="eveHeadWrap"><%=events.eventName%></span>
 			  </h2>
 			  <div class="info">
-				<span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-				  2019</span>
+				<span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> <%=events.eventDate%></span>
 			  </div>
 
 			</div>
@@ -299,7 +297,7 @@
 		<% if(events.eventDate < date){ %>
 	  <div class="column">
 		<div class="card">
-		  <a href="/details">
+		  <a href="/historydetails/<%=events.id%>">
 			<div class="images">
 			  <img src="<%=imageurl+events.proimg%>" alt="Avatar">
 			</div>
@@ -308,14 +306,42 @@
 				<span class="eveHeadWrap"><%=events.eventName%></span>
 			  </h2>
 			  <div class="info">
-				<span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> September 22,
-				  2019</span>
+				<span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> <%=events.eventDate%></span>
 			  </div>
 			</div>
 		</div>
 
 	  </div>
 	  <%} %>
+	  <%} %>
+	  <% }); %>
+	  </a>
+	</div>
+	<h3 class="subheading-1"><span>SPECIAL EVENTS</span></h3>
+
+	<!-- <div class="first-row"> -->
+	<div class="container-fluid">
+	  <% events.forEach(function(events){ %>
+	  <% if(events.eventType=="Special_Events"){ %>
+	   
+	  <div class="column">
+		<div class="card">
+		  <a href="/details/<%=events.id%>">
+			<div class="images">
+			  <img src="<%=imageurl+events.proimg%>" alt="Avatar">
+			</div>
+			<div class="inner-container">
+			  <h2>
+				<span class="eveHeadWrap"><%=events.eventName%></span>
+			  </h2>
+			  <div class="info">
+				<span content="2019-09-22 08:00:00" class="spanclass"><i class="icon2-calendar-o"></i> <%=events.eventDate%></span>
+			  </div>
+			</div>
+		</div>
+
+	  </div>
+	 
 	  <%} %>
 	  <% }); %>
 	  </a>

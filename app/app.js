@@ -24,7 +24,7 @@ var express = require('express'),
     require('./controller/merchantview')(app);
      require('./controller/eventhistory')(app);
       require('./controller/news')(app);
-
+ require('./controller/historydetails')(app);
 
 
    
@@ -98,16 +98,31 @@ app.get('/details', function (req, res) {
   res.render('details', {
   });
 });
-
-
-app.get('/signin', function (req, res) {
-  res.render('signin', {
+app.get('/historydetails', function (req, res) {
+  // sess = req.session;
+  res.render('historydetails', {
   });
 });
-app.get('/signup', function (req, res) {
-  res.render('signup', {
+app.get('/referralsignup', function (req, res) {
+  //  console.log("query",req.query);
+  res.render('referralsignup', {
+    
   });
 });
+app.post('/referralsignup', function (req, res) {
+  //  var url=req.query;
+   console.log(req.query);
+  
+});
+
+// app.get('/signin', function (req, res) {
+//   res.render('signin', {
+//   });
+// });
+// app.get('/signup', function (req, res) {
+//   res.render('signup', {
+//   });
+// });
 app.get('/forgot', function (req, res) {
   res.render('forgot', {
   });
@@ -216,6 +231,12 @@ app.get('/referral',function(req, res){
 app.get('/eventhistory',function(req, res){
   // sess = req.session;
   res.render('eventhistory',{
+
+  });
+});
+app.get('/historydetails',function(req, res){
+  // sess = req.session;
+  res.render('historydetails',{
 
   });
 });

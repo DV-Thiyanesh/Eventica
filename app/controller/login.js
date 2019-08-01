@@ -29,6 +29,15 @@ module.exports = function (app) {
       layout: false
     });
   });
+app.get('/referralsignup', function (req, res) {
+
+      res.render('referralsignup', {
+               pageTitle: 'Welcome - ' ,
+                  layout: false ,
+                  referral: req.query.referral         
+           });
+     //res.redirect('/signin');
+  });
 
 
 
@@ -104,6 +113,57 @@ module.exports = function (app) {
       }
     });
   });
+
+
+app.post("/referralsignup", function (req, res) {
+
+    sess = req.session;
+    
+    var email = req.body.email;
+    var password = req.body.password;
+    var repeatpassword = req.body.repeatpassword;
+    var firstname = req.body.firstname;
+    var lastname = req.body.lastname;
+    var referral=req.body.referral;
+   
+    const userData = req.body;
+
+    // var currency = "USD";
+    //  if (country == "Korea, Republic of") {
+    //       currency = "KRW"
+    //  } 
+        
+       //userData["status"] = config.get('general.userSignupInitStatus'); // "PENDING";
+        // userData["currency"] = currency;
+
+    const newUser = new User(userData);
+
+    if (password != repeatpassword) {
+      //  req.flash('error', 'Password and Confirm password are not same....');
+      return res.redirect('/referralsignup');
+    }
+
+
+    User.findOne({ email: req.body.email }, (errUser, userFound) => {
+      if (errUser) {
+        req.flash('error', 'Sign up...error, please try again...');
+        return res.redirect('/referralsignup');
+      }
+      if (userFound) {
+        req.flash('error', 'User account exists for this email address, reset password if you forgot the password');
+        return res.redirect('/referralsignup');
+      }
+      else {
+        newUser.save((err) => {
+          if (err) { console.log(err); throw err.message; }
+          // mail chimp integration 
+         
+          sess.user = newUser;
+          res.redirect("/eventica");
+        }); // save
+      } // if user found
+    }); //findUser
+  }); // signup 
 
 
 

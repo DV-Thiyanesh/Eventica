@@ -6,17 +6,24 @@ const users= require('../models/User.js');
              
 
     }); 
+    // app.post('/referralsignup',function(req,res){
+         
+        
+    //     var url=req.query;
+    //   console.log(url);
+    //  }); 
 
-   app.post('/referral',function(req,res){
-         sess = req.session;
+//    app.post('/referral',function(req,res){
+//          sess = req.session;
         
 
-     }); 
- app.post('/events',function(req,res){
-        sess = req.session;
+//      }); 
+//  app.post('/events',function(req,res){
+//         sess = req.session;
         
 
-    }); 
+//     }); 
+    
 //      app.post('/merchant',function(req,res){
 //         sess = req.session;
         
